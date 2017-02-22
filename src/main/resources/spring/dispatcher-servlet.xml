@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>  
+<beans  xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">  
+	<!-- 业务系统 的url mapping定义在各自的配置文件中，不要配在这里 -->
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">  
+        <property name="mappings">  
+            <props>  
+            </props>  
+        </property>  
+    </bean>    
+</beans>  

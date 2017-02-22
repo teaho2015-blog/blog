@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- 定时任务— -->
+    <bean id="generateBlogCacheQuartzJobBean" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="jobClass">
+            <value>
+                com.tea.share.business.spring.manage.quartz.jobs.GenerateBlogCacheQuartzJobBean
+            </value>
+        </property>
+        <property name="jobDataAsMap">
+            <map>
+                <entry key="blogNextService" value-ref="blogNextService" />
+                <entry key="timeout" value="5" />
+                <!--<entry key="jobId" value="job_warningRecord_sx" />-->
+                <entry key="jobId" value="job_generate_blogNext" />
+                <entry key="jobName" value="生成博客阅读列表" />
+                <entry key="jobLogService" value-ref="jobLogService" />
+                <entry key="jobControlService" value-ref="jobControlService" />
+
+            </map>
+        </property>
+    </bean>
+    <bean id="quartzCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="generateBlogCacheQuartzJobBean" />
+        <property name="cronExpression">
+            <!-- 定义规则：秒 分 时  日 月 周 ，以下规则表示每个月1号1点执行0 0 1 1 * ? -->
+            <value>0 0 * * * ?</value>
+        </property>
+    </bean>
+    <!-- 定时任务— -->
+
+
+    <!-- 启动定时器 -->
+    <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="quartzCronTrigger"/>
+                <!--<ref bean="warningRecordNlQuartzJobBeanTrigger"/>
+                <ref bean="warningRecordWwQuartzJobBeanTrigger"/>
+                <ref bean="warningRecordDsfQuartzJobBeanTrigger"/>-->
+            </list>
+        </property>
+        <property name="autoStartup">
+            <value type="java.lang.Boolean">true</value>
+        </property>
+    </bean>
+
+</beans>

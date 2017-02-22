@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd"
+       default-lazy-init="true" default-autowire="byName">
+
+
+    <util:list id="EmailAndNullChecker">
+        <bean class="com.tea.frame.checker.impl.ums.EmailAddressChecker"/>
+        <bean class="com.tea.frame.checker.impl.ums.NullChecker"/>
+    </util:list>
+
+
+    <util:list id="AddTokenChecker">
+        <bean class="com.tea.frame.checker.impl.AndLogicChecker">
+            <constructor-arg ref="EmailAndNullChecker"/>
+        </bean>
+        <bean class="com.tea.frame.checker.impl.ums.TokenChecker">
+            <constructor-arg name="lengthLimit" value="1"/>
+        </bean>
+    </util:list>
+
+    <bean id="finalUserSignupCheck" class="com.tea.frame.checker.impl.AndLogicChecker">
+        <constructor-arg ref="AddTokenChecker"/>
+    </bean>
+</beans>

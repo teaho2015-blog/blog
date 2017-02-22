@@ -1,0 +1,27 @@
+use homepage;
+CREATE TABLE `S_USER` (
+  `ID` varchar(50) not null comment '主键id',
+  `USERNAME` varchar(100) comment '用户名',
+  `PASSWORD` varchar (100) comment '密码',
+  `ROLE` varchar(20) comment '角色',
+  `EMAIL` varchar(100) comment '邮件',
+  `TELEPHONE` varchar (50) comment '电话',
+  `IP` varchar (50) comment  'ip',
+  `SESSIONID` varchar (50) comment  'sessionid',
+  `SYS_RESERVER1`  varchar (50),
+  `SYS_RESERVER2`  varchar (50),
+  `SYS_RESERVER3`  varchar (50),
+  `SYS_RESERVER4`  varchar (50),
+  `SYS_RESERVER5`  varchar (50),
+  `CREATOR_ID` varchar (50)  ,
+  `CREATOR_NAME` varchar (150) comment '名字' ,
+  `CREATE_TIME` datetime comment '时间' ,
+  `UPDATOR_ID` varchar (50) ,
+  `UPDATOR_NAME` varchar (150),
+  `UPDATE_TIME` datetime ,
+  `DELETOR_ID` varchar (50) ,
+  `DELETOR_NAME` varchar (150),
+  `DELETE_TIME` datetime ,
+  `DELETE_FLAG` varchar(2) default '0' comment '删除标记',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8  COMMENT='用户表';

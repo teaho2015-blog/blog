@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/security/spring-security.xsd">
+
+
+    <!--  Spring-Security 的配置 -->
+    <!-- 注意开启use-expressions.表示开启表达式.
+    see:http://www.family168.com/tutorial/springsecurity3/html/el-access.html
+     -->
+    <security:debug />
+
+    <security:global-method-security pre-post-annotations="enabled" secured-annotations="enabled"  />
+    <security:http auto-config="true" use-expressions="true"   authentication-manager-ref="myManager" >
+        <security:access-denied-handler error-page="/manage/denied" />
+        <security:intercept-url pattern="/manage/login" access="permitAll"/>
+        <security:intercept-url pattern="/static/*" access="permitAll"/>
+        <!--<security:intercept-url pattern="/main/admin" access="hasRole('ROLE_ADMIN'),hasRole('ROLE_USER')"/>-->
+        <security:intercept-url pattern="/manage/*" access="hasRole('ROLE_USER')" />
+
+        <security:csrf  disabled="true" />
+
+        <security:headers>
+            <security:frame-options policy="SAMEORIGIN" />
+        </security:headers>
+
+        <security:form-login
+                login-page="/manage/login"
+                authentication-failure-url="/manage/login?error=true"
+                username-parameter="username"
+                password-parameter="password"
+                login-processing-url="/manage/login"
+                default-target-url="/manage"
+
+                />
+        <!--default-target-url="/main/common"-->
+        <!--authentication-success-forward-url="/main/common"-->
+
+        <!--authentication-success-handler-ref="customSuccessHandler"-->
+        <security:logout
+                invalidate-session="true"
+                logout-success-url="/manage/login"
+                logout-url="/manage/logout"/>
+
+        <!-- Uncomment to limit the number of sessions a user can have -->
+        <security:session-management invalid-session-url="/page/manage/timeout.jsp">
+            <security:concurrency-control max-sessions="1" error-if-maximum-exceeded="true" />
+        </security:session-management>
+
+    </security:http>
+
+
+    <!-- 指定一个自定义的authentication-manager :customUserDetailsService -->
+    <security:authentication-manager id="myManager" alias="myManager">
+        <security:authentication-provider user-service-ref="customUserDetailsService">
+            <!--<security:password-encoder ref="passwordEncoder"/>-->
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+    <!-- 对密码进行MD5编码 -->
+   <!-- <bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.Md5PasswordEncoder" />
+-->
+    <!--
+        通过 customUserDetailsService,Spring会自动的用户的访问级别.
+        也可以理解成:以后我们和数据库操作就是通过customUserDetailsService来进行关联.
+     -->
+    <bean id="customUserDetailsService" class="com.tea.manage.service.CustomUserDetailsService">
+    <!--    <property name="userDAO" ref="userDAO"/>-->
+    </bean>
+
+   <!-- <bean id="userDAO" class="com.tea.homepage.manage.dao.UserDAO"/>-->
+
+</beans>

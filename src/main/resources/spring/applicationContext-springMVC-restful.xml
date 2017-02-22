@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd"
+       default-lazy-init="true" default-autowire="byName" >
+    <!-- 注解驱动 -->
+    <mvc:annotation-driven />
+
+    <!-- 扫描包 -->
+    <context:component-scan base-package="com.tea.blog.**.controller" />
+
+
+    <!--文件处理-->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="utf-8" />
+    </bean>
+
+    <!-- 对静态资源文件的访问 不支持访问WEB-INF目录 -->
+    <mvc:default-servlet-handler />
+
+    <!-- 对静态资源文件的访问 支持访问WEB-INF目录 -->
+     <mvc:resources location="/static/" mapping="/static/**" />
+    <!--
+        //这个在指定当控制器有多方法时
+        例如：jhdj.action?action=save
+    -->
+    <!--<bean id="paramResolver"
+          class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+        <property name="paramName" value="do" /> &lt;!&ndash; 应用例子:<form action="wb.do?do=你想要调用的方法名">这样提交后就会调用到对应的controller中的相应方法 &ndash;&gt;
+    </bean>-->
+
+    <!-- 配置控制器 -->
+    <!--<bean id="commonController" class="com.tea.share.common.controller.CommonController"
+          name="/common.do">
+        <property name="methodNameResolver" ref="paramResolver"></property>
+    </bean>-->
+
+
+    <!-- HandlerMapping处理各控制器的跳转请求 -->
+    <!-- 用于页面跳转,根据请求的不同跳转到不同页面，如请求index.do则跳转到/index.jsp -->
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="index">findJsp</prop><!-- 表示/index转向index.jsp页面 -->
+            </props>
+        </property>
+    </bean>
+
+    <!-- @deprecated in Spring 3.2 in favor of
+ * {@link org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping RequestMappingHandlerMapping} -->
+    <!--<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"/>-->
+    <!-- update: new settings-->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" >
+        <property name="interceptors">
+            <list>
+                <ref bean="localeChangeInterceptor"/>
+            </list>
+        </property>
+
+    </bean>
+    <!-- /.HandlerMapping处理各控制器的跳转请求 -->
+
+    <!-- 控制器controller  -->
+    <bean id="findJsp"
+          class="org.springframework.web.servlet.mvc.UrlFilenameViewController" />
+    <!-- /.控制器controller  -->
+
+
+
+
+    <!-- 配置视图解析器，将ModelAndView及字符串解析为具体的页面 -->
+    <!-- 视图解析 -->
+    <!--	<bean id="viewResolver"-->
+    <!--		class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+    <!--		<property name="contentType" value="text/html;charset=GBK" />-->
+    <!--		<property name="prefix" value="/"></property>-->
+    <!--		<property name="suffix" value=""></property>-->
+    <!--	</bean>-->
+    <!--	-->
+    <bean id="urlBasedViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver" >
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+        <property name="prefix" value="/" />
+        <property name="suffix" value="" />
+    </bean>
+
+    <!-- 输出对象转String支持 -->
+    <bean id="stringConverter"
+          class="org.springframework.http.converter.StringHttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>text/plain;charset=UTF-8</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- 输出对象转JSON支持 -->
+    <bean id="jsonConverter"
+          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+
+    <!--
+    *更新:用spring建议的取代旧设置
+     * @deprecated in Spring 3.2 in favor of
+    * {@link org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter RequestMappingHandlerAdapter}
+  -->
+    <!--<bean-->
+            <!--class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">-->
+        <!--<property name="messageConverters">-->
+            <!--<list>-->
+                <!--<ref bean="stringConverter" />-->
+                <!--<ref bean="jsonConverter" />-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <ref bean="stringConverter" />
+                <ref bean="jsonConverter" />
+            </list>
+        </property>
+    </bean>
+
+    <!-- exception mapping 待配     -->
+    <!-- Mapping exception to the handler view -->
+    <!--<bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
+        <!--&lt;!&ndash; to /commons/error.jsp &ndash;&gt;-->
+        <!--<property name="defaultErrorView" value="/commons/error"/>-->
+        <!--<property name="exceptionMappings">-->
+            <!--<props>-->
+            <!--</props>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="order" value="1"/>
+        <!--设置日志输出级别，不定义则默认不输出警告等错误日志信息. -->
+        <property name="warnLogCategory" value="WARN" />
+        <!-- 默认错误页面，就是不在exceptionMappings指定范围内 -->
+        <property name="defaultErrorView" value="redirect:/error"/>
+        <!--指定前台获取exception信息的值，例如${exceptionInfo}-->
+        <!--<property name="exceptionAttribute" value="exceptionInfo"/>-->
+        <!-- 定义需要特殊处理的异常，如当发生IOException异常时跳转到error/ioexp视图-->
+        <property name="exceptionMappings"><!--key为异常类，可以是全路径，错误页面或Controller路径！会自动跳转到对应url -->
+            <props>
+                <!--记得用全限定类名-->
+                <prop key="java.io.IOException">redirect:/register</prop>
+                <prop key="java.sql.SQLException">redirect:/error/sqlexp</prop>
+                <prop key="java.lang.NullPointerException">redirect:/error/code</prop>
+                <prop key="java.io.UnsupportedEncodingException">redirect:/error/code</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="localeChangeInterceptor"
+          class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+        <property name="paramName" value="lang"/>
+    </bean>
+
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+        <property name="defaultLocale" value="zh_CN"/>
+    </bean>
+
+</beans>
