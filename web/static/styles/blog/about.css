@@ -1,0 +1,22 @@
+@media only screen and (min-width: 768px) {
+    .intro-header {
+        min-height: 0;
+        height: auto;
+        width: 100%;
+
+    }
+
+}
+
+
+p {
+    font-size: 14px;
+}
+
+.contact-list a {
+    -webkit-transition: color .2s linear;
+    -moz-transition: color .2s linear;
+    -ms-transition: color .2s linear;
+    -o-transition: color .2s linear;
+    transition: color .2s linear;
+}

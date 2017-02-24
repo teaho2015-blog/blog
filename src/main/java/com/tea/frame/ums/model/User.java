@@ -7,7 +7,6 @@
  */
 package com.tea.frame.ums.model;
 
-import com.sun.xml.internal.bind.v2.model.core.ID;
 import com.tea.frame.valueObject.GenericFormat;
 import org.springframework.jdbc.core.RowMapper;
 

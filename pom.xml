@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>homepage</groupId>
-    <artifactId>homepage</artifactId>
+    <groupId>blog</groupId>
+    <artifactId>blog</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -22,10 +22,27 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>utf-8</encoding>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <failOnMissingWebXml>true</failOnMissingWebXml>
+                   <archiveClasses>false</archiveClasses>
+                    <!--  <attachClasses>false</attachClasses>-->
+                    <webResources>
+                        <resource>
+                            <directory>web</directory>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+
 
         </plugins>
     </build>
@@ -34,7 +51,6 @@
     <dependencies>
 
         <!-- spring framework -->
-        <!-- a micro spring framework called boot -->
         <!-- <dependency>
              <groupId>org.springframework.boot</groupId>
              <artifactId>spring-boot-starter-web</artifactId>
@@ -468,7 +484,7 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-framework-bom</artifactId>
-                <version>4.2.7.RELEASE</version>
+                <version>${spring-mainproject.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

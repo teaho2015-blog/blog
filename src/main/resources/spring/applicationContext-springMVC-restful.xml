@@ -152,7 +152,7 @@
         <!-- 定义需要特殊处理的异常，如当发生IOException异常时跳转到error/ioexp视图-->
         <property name="exceptionMappings"><!--key为异常类，可以是全路径，错误页面或Controller路径！会自动跳转到对应url -->
             <props>
-                <!--记得用全限定类名-->
+                <!--用全限定类名-->
                 <prop key="java.io.IOException">redirect:/register</prop>
                 <prop key="java.sql.SQLException">redirect:/error/sqlexp</prop>
                 <prop key="java.lang.NullPointerException">redirect:/error/code</prop>
