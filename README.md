@@ -1,1 +1,1 @@
-# blog
+# blog[![Build Status](https://travis-ci.org/teaho2015/blog.svg?branch=master)](https://travis-ci.org/teaho2015/blog) [![][Badges: Github Issues Open]][Links: Github Issues open] [![][Badges: Github Issues Closed]][Links: Github Issues Closed]
