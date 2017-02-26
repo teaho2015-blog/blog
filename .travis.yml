@@ -5,6 +5,15 @@ jdk:
 install:
   - mvn install -Dmaven.test.skip=true
   
+deploy:
+  provider: releases
+  api_key: ${api_key}
+  file: "build/artifacts.war"
+  skip_cleanup: true
+  on:
+    #all_branches: true
+    # tags: true
+  
 notifications:
   email:
     - teaho2015@gmail.com
