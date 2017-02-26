@@ -8,11 +8,11 @@ install:
 deploy:
   provider: releases
   api_key: ${api_key}
-  file: "build/artifacts.war"
+  file: "./target/blog.war"
   skip_cleanup: true
   on:
     #all_branches: true
-    # tags: true
+     tags: true
   
 notifications:
   email:
