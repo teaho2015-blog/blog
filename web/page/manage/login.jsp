@@ -21,17 +21,17 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="${pageContext.request.contextPath}/static/images/title.jpg">
+    <link rel="icon" href="<%-- ${pageContext.request.contextPath} --%>/static/images/title.jpg">
     <title>Blog Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="${pageContext.request.contextPath}/static/library/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="<%-- ${pageContext.request.contextPath} --%>/static/library/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <!-- Bootstrap theme -->
-    <link href="${pageContext.request.contextPath}/static/library/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="<%-- ${pageContext.request.contextPath} --%>/static/library/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">
 
 
     <!-- Custom styles for this template -->
-    <link href='${pageContext.request.contextPath}/static/styles/manage/login.css' rel='stylesheet' type='text/css'>
+    <link href='<%-- ${pageContext.request.contextPath} --%>/static/styles/manage/login.css' rel='stylesheet' type='text/css'>
 
     <%--<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->--%>
     <%--<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->--%>
@@ -84,13 +84,13 @@
 </body>
 <!-- Bootstrap core JavaScript
 ================================================== -->
-<script type="text/javascript" src='${pageContext.request.contextPath}/static/library/jquery/jquery-1.10.2.js'></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/library/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src='<%-- ${pageContext.request.contextPath} --%>/static/library/jquery/jquery-1.10.2.js'></script>
+<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/library/bootstrap/dist/js/bootstrap.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <%--<script src="${pageContext.request.contextPath}/static/library/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>--%>
 
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/library/security/md5.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/scripts/manage/login.js"></script>
+<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/library/security/md5.js"></script>
+<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/scripts/manage/login.js"></script>
 
 <script type="text/javascript">
 //    $("#inputPassword2").bind("propertychange input",function(){

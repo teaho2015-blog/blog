@@ -25,16 +25,16 @@
     <meta http-equiv="description" content="This is my page">
 
     <!-- Bootstrap core CSS -->
-    <link href="${pageContext.request.contextPath}/static/library/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="<%-- ${pageContext.request.contextPath} --%>/static/library/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <!-- Bootstrap theme -->
     <%--<link href="${pageContext.request.contextPath}/static/library/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">--%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/styles/manage/blog_editor.css"/>
+    <link rel="stylesheet" href="<%-- ${pageContext.request.contextPath} --%>/static/styles/manage/blog_editor.css"/>
     <!-- 配置文件 -->
-    <script type="text/javascript" src="${pageContext.request.contextPath}/static/library/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/library/ueditor/ueditor.config.js"></script>
     <!-- 编辑器源码文件 -->
-    <script type="text/javascript" src="${pageContext.request.contextPath}/static/library/ueditor/ueditor.all.js"></script>
+    <script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/library/ueditor/ueditor.all.js"></script>
     <!-- 语言包文件(建议手动加载语言包，避免在ie下，因为加载语言失败导致编辑器加载失败) -->
-    <script type="text/javascript" src="${pageContext.request.contextPath}/static/library/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/library/ueditor/lang/zh-cn/zh-cn.js"></script>
 </head>
 <body>
 <section class="container">
@@ -81,9 +81,9 @@
 </script>
 <!-- Bootstrap core JavaScript
 ================================================== -->
-<script type="text/javascript" src='${pageContext.request.contextPath}/static/library/jquery/jquery-1.10.2.js'></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/library/bootstrap/dist/js/bootstrap.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/scripts/manage/blog_editor.js"></script>
+<script type="text/javascript" src='<%-- ${pageContext.request.contextPath} --%>/static/library/jquery/jquery-1.10.2.js'></script>
+<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/library/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/scripts/manage/blog_editor.js"></script>
 
 <script type="text/javascript">
 //    function beforeSubmit() {

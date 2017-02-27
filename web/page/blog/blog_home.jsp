@@ -21,23 +21,23 @@
 
     <title>Tea's Blog</title>
 
-    <link rel="icon" href="${pageContext.request.contextPath}/static/images/t.png" />
+    <link rel="icon" href="<%-- ${pageContext.request.contextPath} --%>/static/images/t.png" />
 
     <!-- Bootstrap Core CSS -->
-    <link href="${pageContext.request.contextPath}/static/library/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="<%-- ${pageContext.request.contextPath} --%>/static/library/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="${pageContext.request.contextPath}/static/styles/blog/blog-theme.css" rel="stylesheet">
+    <link href="<%-- ${pageContext.request.contextPath} --%>/static/styles/blog/blog-theme.css" rel="stylesheet">
 
-    <link href="${pageContext.request.contextPath}/static/styles/blog/blog-home.css" rel="stylesheet">
+    <link href="<%-- ${pageContext.request.contextPath} --%>/static/styles/blog/blog-home.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="${pageContext.request.contextPath}/static/library/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<%-- ${pageContext.request.contextPath} --%>/static/library/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- progress bar -->
-    <link href='${pageContext.request.contextPath}/static/library/nprogress/nprogress.css' rel='stylesheet' type='text/css'>
+    <link href='<%-- ${pageContext.request.contextPath} --%>/static/library/nprogress/nprogress.css' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -59,7 +59,7 @@
                 <span class="sr-only">Toggle navigation</span>
                 Menu <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="${pageContext.request.contextPath}/">Tea's Blog</a>
+            <a class="navbar-brand" href="<%-- ${pageContext.request.contextPath} --%>/">Tea's Blog</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -72,7 +72,7 @@
                     <a href="javascript:;">归档</a>
                 </li>
                 <li>
-                    <a href="${pageContext.request.contextPath}/about">关于/ 联系</a>
+                    <a href="<%-- ${pageContext.request.contextPath} --%>/about">关于/ 联系</a>
                 </li>
                 <!--<li>-->
                 <!--<a href="post.html">Sample Post</a>-->
@@ -89,7 +89,7 @@
 
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
-<header class="intro-header" style="background-image: url('${pageContext.request.contextPath}/static/images/blog/blog-home-bg.jpg'); position : relative;">
+<header class="intro-header" style="background-image: url('<%-- ${pageContext.request.contextPath} --%>/static/images/blog/blog-home-bg.jpg'); position : relative;">
     <div class="mask"></div>
     <div class="container">
 
@@ -196,7 +196,7 @@
         </div>
         <div class="template hidden">
             <div class="post-preview">
-                <a href="/article/" data-context-path="${pageContext.request.contextPath}">
+                <a href="/article/" data-context-path="<%-- ${pageContext.request.contextPath} --%>">
                     <h2 class="post-title">
                         ${blog.title}
                     </h2>
@@ -251,21 +251,21 @@
 </footer>
 
 <!-- jQuery -->
-<script type="text/javascript" src='${pageContext.request.contextPath}/static/library/jquery/jquery-1.10.2.js'></script>
+<script type="text/javascript" src='<%-- ${pageContext.request.contextPath} --%>/static/library/jquery/jquery-1.10.2.js'></script>
 <!-- Bootstrap core JavaScript  -->
-<script src="${pageContext.request.contextPath}/static/library/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="<%-- ${pageContext.request.contextPath} --%>/static/library/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <!-- Theme JavaScript -->
-<script src="${pageContext.request.contextPath}/static/scripts/blog/blog-theme.min.js"></script>
+<script src="<%-- ${pageContext.request.contextPath} --%>/static/scripts/blog/blog-theme.min.js"></script>
 
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/library/jquery/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/library/jquery/jquery.easing.1.3.js"></script>
 <!-- https://github.com/keenwon/jqPaginator -->
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/library/jqPaginator/jqPaginator.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/library/moment/moment-with-locales.js"></script>
+<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/library/jqPaginator/jqPaginator.min.js"></script>
+<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/library/moment/moment-with-locales.js"></script>
 <!-- nprogress -->
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/library/nprogress/nprogress.js"></script>
+<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/library/nprogress/nprogress.js"></script>
 
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/scripts/blog/blog-home.js"></script>
+<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/scripts/blog/blog-home.js"></script>
 
 
 
