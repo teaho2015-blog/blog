@@ -26,22 +26,19 @@
     <!-- Theme CSS -->
     <link href="<%-- ${pageContext.request.contextPath} --%>/static/styles/blog/blog-theme.css" rel="stylesheet">
 
-
-
-
-    <link href="<%-- ${pageContext.request.contextPath} --%>/static/styles/blog/about.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="<%-- ${pageContext.request.contextPath} --%>/static/library/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- Custom Fonts -->
+    <link href="<%-- ${pageContext.request.contextPath} --%>/static/library/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link href="<%-- ${pageContext.request.contextPath} --%>/static/styles/blog/about.css" rel="stylesheet">
 
 </head>
 
@@ -114,8 +111,8 @@
             <p>联系方式：</p>
             <ul class="list-inline contact-list">
                 <li>
-                    <a href="javascript:;" target="_blank">
-                                <span class="fa-stack fa-lg">
+                    <a href="javascript:;" target="_blank" data-toggle="tooltip" data-placement="bottom" title="暂未公开。">
+                                <span class="fa-stack fa-lg custom-fa-mid">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
                                 </span>
@@ -131,16 +128,16 @@
 
                  </li>-->
                 <li>
-                    <a href="https://github.com/teaho2015/" target="_blank">
-                                <span class="fa-stack fa-lg">
+                    <a href="https://github.com/teaho2015/" target="_blank"  data-toggle="tooltip" data-placement="top" title="https://github.com/teaho2015/">
+                                <span class="fa-stack fa-lg custom-fa-mid">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                                 </span>
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:;" target="_blank">
-                                <span class="fa-stack fa-lg">
+                    <a href="javascript:;" target="_blank" data-toggle="tooltip" data-placement="bottom" title="敬请期待">
+                                <span class="fa-stack fa-lg custom-fa-mid">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-stack-1x fa-inverse">豆</i>
                                 </span>
@@ -148,17 +145,17 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/_tea_ho/" target="_blank">
-                                <span class="fa-stack fa-lg">
+                    <a href="https://www.instagram.com/_tea_ho/" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram:_tea_ho">
+                                <span class="fa-stack fa-lg custom-fa-mid">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
                                 </span>
 
                     </a>
                 </li>
-                <li>
-                    <a href="mailto:teaho2015@gmail.com" target="_blank">
-                                <span class="fa-stack fa-lg">
+                <li <%--data-rotate-y="270deg" &lt;%&ndash;data-move-x="150%"&ndash;%&gt; style="transition: all 1s ease, opacity 0s ease; /*opacity: 0;*/ transform: translateX(150%) rotateY(270deg);"--%>>
+                    <a href="mailto:teaho2015@gmail.com" target="_blank" data-toggle="tooltip" data-placement="bottom" title="E-mail:teaho2015@gmail.com">
+                                <span class="fa-stack fa-lg custom-fa-mid">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
                                 </span>
@@ -219,6 +216,10 @@
 
 <!-- Theme JavaScript -->
 <script src="<%-- ${pageContext.request.contextPath} --%>/static/scripts/blog/blog-theme.min.js"></script>
+
+<%--<script src="&lt;%&ndash; ${pageContext.request.contextPath} &ndash;%&gt;/static/library/jquery/jquery.smoove.min.js"></script>--%>
+
+<script src="/static/scripts/blog/about.js"></script>
 
 </body>
 

@@ -50,8 +50,8 @@ public class ManageServiceImpl implements ManageService {
 //            e.printStackTrace();//有待改进应输出错误
 //        }
             String image_url = filePath.replace(rpath, "");
-//            image_url = image_url.replace("\\","/"); //comment 20161124
-            image_url = image_url.substring(1);
+//            image_url = image_url.substring(1);
+            image_url = image_url.replace(File.separator, "/");
             blog.setImage_url(image_url);
 
         } else if (blog.getImage_url() ==null||"".equals(blog.getImage_url())){

@@ -5,9 +5,7 @@
         width: 100%;
 
     }
-
 }
-
 
 p {
     font-size: 14px;
@@ -20,3 +18,17 @@ p {
     -o-transition: color .2s linear;
     transition: color .2s linear;
 }
+/*.custom-fa-mid {
+    font-size: 1.;
+}*/
+
+.tooltip.bottom {
+    margin-top: 12px;
+}
+
+.tooltip.top {
+    margin-top: -12px;
+}
+
+
+

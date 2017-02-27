@@ -16,7 +16,7 @@
     <mvc:annotation-driven />
 
     <!-- 扫描包 -->
-    <context:component-scan base-package="com.tea.blog.**.controller" />
+    <context:component-scan base-package="com.tea.**.controller" />
 
 
     <!--文件处理-->

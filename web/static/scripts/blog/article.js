@@ -129,8 +129,6 @@ ArticleAnimator.contentizeElement = function($el, d){
   $el.find('h3.byline time').html(moment().diff(moment(d.date),'months')>2?moment(d.date).locale("zh_cn").format('MMMM Do YYYY a'): moment(d.date).locale("zh_cn").fromNow());
   //$el.find('h3.byline .author').html(d.creator_name); // reserved
   this.nextPostIndex[d.id] = d.elderid;
-  //$el.find('.blogid').val(d.blog.id);
-  //this.setCurrentLikeStatus($el,d,index);
   //this.setCurrentTooltip();
 
 
