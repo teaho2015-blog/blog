@@ -2,12 +2,13 @@ package com.tea.frame.jdbc.support;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 分页对象. 包含当前页数据及分页信息如总记录数.
  *
  */
-public class Page implements Serializable {
+public class Page<T> implements Serializable {
 
     private static int DEFAULT_PAGE_SIZE = 20;
 
@@ -15,7 +16,7 @@ public class Page implements Serializable {
 
     private long start; // 当前页第一条数据在List中的位置,从0开始
 
-    private Object data; // 当前页中存放的记录,类型一般为List
+    private List<T> data; // 当前页中存放的记录,类型一般为List
 
     private long totalCount; // 总记录数
 
@@ -23,7 +24,7 @@ public class Page implements Serializable {
      * 构造方法，只构造空页.
      */
     public Page() {
-        this(0, 0, DEFAULT_PAGE_SIZE, new ArrayList());
+        this(0, 0, DEFAULT_PAGE_SIZE, new ArrayList<T>());
     }
 
     /**
@@ -40,14 +41,14 @@ public class Page implements Serializable {
      *            本页包含的数据
 
      */
-    public Page(long start, long totalSize, int pageSize, Object data) {
+    public Page(long start, long totalSize, int pageSize, List<T> data) {
         this.pageSize = pageSize;
         this.start = start;
         this.totalCount = totalSize;
         this.data = data;
     }
 
-    public Page(int pageNo, long totalSize, int pageSize, Object data) {
+    public Page(int pageNo, long totalSize, int pageSize, List<T> data) {
         this.pageSize = pageSize;
         this.start = getStartOfPage(pageNo, pageSize);
         this.totalCount = totalSize;
@@ -99,7 +100,7 @@ public class Page implements Serializable {
      * 2011.8.22 zengbin 开放设置数据，为了可以在页面提交时updateModel阶段能更新模型
      * @param result
      */
-    public void setResult(Object result){
+    public void setResult(List<T> result){
         data = result;
     }
 
@@ -150,5 +151,11 @@ public class Page implements Serializable {
 
         return (pageNo - 1) * pageSize;
     }
+
+    public boolean isEmpty() {
+        return (data == null || data.isEmpty());
+    }
+
+
 
 }
