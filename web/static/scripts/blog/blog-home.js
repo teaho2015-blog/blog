@@ -200,13 +200,12 @@ $(function() {
                     console.log("type : "+ type);
                     _blogPager.currentPageNum = num;
                     NProgress.start();
-
                     createPost({
                         index : num
                     }, function () {
                         console.debug(pageState());
                         history.pushState( pageState(), '', constants.url.pathnamePrefix + "/" + num);
-                        setTimeout("NProgress.done()", .2 * 1000);
+                        setTimeout("NProgress.done()", .3 * 1000);
                         if(type == "change") {
                             $('html, body').stop().animate({
                                 scrollTop: $("#" + constants.css.id.mainWrapper).offset().top

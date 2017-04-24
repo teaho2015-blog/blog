@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
-       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="
@@ -130,33 +132,38 @@
         </property>
     </bean>
 
-    <!-- exception mapping 待配     -->
-    <!-- Mapping exception to the handler view -->
-    <!--<bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
-        <!--&lt;!&ndash; to /commons/error.jsp &ndash;&gt;-->
-        <!--<property name="defaultErrorView" value="/commons/error"/>-->
-        <!--<property name="exceptionMappings">-->
-            <!--<props>-->
-            <!--</props>-->
-        <!--</property>-->
-    <!--</bean>-->
+    <!-- follow the order to resolve exceptions -->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver" p:order="1" />
 
-    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
-        <property name="order" value="1"/>
+    <bean class="org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver" p:order="2" />
+
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver" >
+        <property name="order" value="3"/>
         <!--设置日志输出级别，不定义则默认不输出警告等错误日志信息. -->
         <property name="warnLogCategory" value="WARN" />
         <!-- 默认错误页面，就是不在exceptionMappings指定范围内 -->
-        <property name="defaultErrorView" value="redirect:/error"/>
+        <property name="defaultErrorView" value="forward:/page/httpCode/500.jsp"/>
         <!--指定前台获取exception信息的值，例如${exceptionInfo}-->
         <!--<property name="exceptionAttribute" value="exceptionInfo"/>-->
         <!-- 定义需要特殊处理的异常，如当发生IOException异常时跳转到error/ioexp视图-->
         <property name="exceptionMappings"><!--key为异常类，可以是全路径，错误页面或Controller路径！会自动跳转到对应url -->
             <props>
                 <!--用全限定类名-->
-                <prop key="java.io.IOException">redirect:/register</prop>
-                <prop key="java.sql.SQLException">redirect:/error/sqlexp</prop>
-                <prop key="java.lang.NullPointerException">redirect:/error/code</prop>
-                <prop key="java.io.UnsupportedEncodingException">redirect:/error/code</prop>
+                <!--<prop key="com.tea.blog.exception.NotFoundException">redirect:/error</prop>-->
+                <!--<prop key="java.io.IOException">redirect:/register</prop>-->
+                <prop key="com.tea.blog.exception.NotFoundException">forward:/page/httpCode/404.jsp</prop>
+                <prop key="java.io.IOException">forward:/page/httpCode/500.jsp</prop>
+                <prop key="java.sql.SQLException">forward:/page/httpCode/500.jsp</prop>
+                <prop key="java.lang.NullPointerException">forward:/page/httpCode/500.jsp</prop>
+                <prop key="java.io.UnsupportedEncodingException">forward:/page/httpCode/500.jsp</prop>
+            </props>
+        </property>
+        <property name="statusCodes">
+            <props>
+                <prop key="forward:/page/httpCode/404.jsp">404</prop>
+                <prop key="forward:/page/httpCode/500.jsp">500</prop>
+                <prop key="forward:/page/httpCode/401.jsp">401</prop>
+                <prop key="forward:/page/httpCode/415.jsp">415</prop>
             </props>
         </property>
     </bean>
