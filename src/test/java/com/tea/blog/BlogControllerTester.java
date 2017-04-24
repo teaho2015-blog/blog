@@ -6,11 +6,14 @@ package com.tea.blog;
 
 
 import com.tea.blog.controller.BlogAPIController;
+import com.tea.blog.dao.BlogDAO;
 import com.tea.blog.service.BlogService;
-import com.tea.blog.service.BlogServiceImpl;
+import com.tea.util.TestUtil;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -25,6 +28,7 @@ import static org.springframework.test.web.servlet.setup.MockMvcBuilders.*;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
+//@RunWith(MockitoJUnitRunner.class)
 @ContextConfiguration(locations = {"classpath:spring/applicationContext-springMVC-restful.xml",
         "classpath:spring/applicationContext-datasource.xml",
         "classpath:spring/applicationContext-myBatis.xml",
@@ -34,22 +38,35 @@ public class BlogControllerTester {
 
     private MockMvc mockMvc;
 
+    @Autowired
     private BlogAPIController blogAPIController;
 
+    @Autowired
     private BlogService blogService;
 
     @Autowired
     private WebApplicationContext webApplicationContext;
 
-//    @Autowired
-//    private TodoService todoServiceMock;
+    @Mock
+    private BlogAPIController blogAPIControllerMock;
+
+    @Mock
+    private BlogService blogServiceMock;
+
+    @Mock
+    private BlogDAO blogDAOMock;
+
+
+    /*@Autowired
+    private TodoService todoServiceMock;*/
 
     @Before
     public void setup() {
-//        MockitoAnnotations.initMocks(this);
-        this.blogAPIController = new BlogAPIController();
-        this.blogService = new BlogServiceImpl();
-        this.blogAPIController.setBlogService(blogService);
+        MockitoAnnotations.initMocks(this);
+//all switch to Mock, init below obj if needed in each method rather than here
+//        this.blogAPIController = new BlogAPIController();
+//        this.blogService = new BlogServiceImpl();
+//        this.blogAPIController.setBlogService(blogService);
 
 //        this.mockMvc = MockMvcBuilders.standaloneSetup(blogAPIController).build();
 
@@ -92,8 +109,8 @@ public class BlogControllerTester {
     public void getPage_ControllerNotfound() throws Exception {
         when(blogService.getPage(1))/*.thenThrow(new TodoNotFoundException(""))*/;
 
-        mockMvc.perform(get("/api/todo/{id}", 1))
-                .andExpect(status().isNotFound());
+//        mockMvc.perform(get("/api/todo/{id}", 1))
+//                .andExpect(status().isNotFound());
 
         verify(blogService, times(1)).getPage(1);
         verifyNoMoreInteractions(blogService);
@@ -122,9 +139,14 @@ public class BlogControllerTester {
                 .andExpect(jsonPath("$.description", is("Lorem ipsum")))
                 .andExpect(jsonPath("$.title", is("Foo")))*/;
 
+//        verify(blogService, times(1)).getPage(1);
 //        verify(todoServiceMock, times(1)).findById(1L);
 //        verifyNoMoreInteractions(todoServiceMock);
     }
+
+
+
+
 
 
     public BlogService getBlogService() {
