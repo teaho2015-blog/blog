@@ -7,6 +7,7 @@
 package com.tea.blog.dao;
 
 import com.tea.blog.domain.Blog;
+import com.tea.blog.dto.BlogDTO;
 import com.tea.blog.vo.BlogVO;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;

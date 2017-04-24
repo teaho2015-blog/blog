@@ -85,7 +85,7 @@
                 <div class="page-heading">
                     <h1>About Me</h1>
                     <hr class="small">
-                    <!--<span class="subheading">This is what I do.</span>-->
+                    <span class="subheading">Too young, too simple, sometimes naive.</span>
                 </div>
             </div>
         </div>

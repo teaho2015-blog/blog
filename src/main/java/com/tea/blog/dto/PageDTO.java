@@ -2,9 +2,9 @@
  * @author teaho2015@gmail.com
  * since 2017/2/21
  */
-package com.tea.blog.vo;
+package com.tea.blog.dto;
 
-public class PageVO {
+public class PageDTO {
 
     private int pageSize; // 每页的记录数
 

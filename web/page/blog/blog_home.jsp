@@ -98,7 +98,7 @@
                 <div class="site-heading">
                     <h1>Tea's Blog</h1>
                     <hr class="small">
-                    <span class="subheading">Curiocity is my original sin.</span>
+                    <span class="subheading"><%--知行合一--%>Curiocity is my favorite sin.</span>
 
                 </div>
                 <div class="page-scroller">

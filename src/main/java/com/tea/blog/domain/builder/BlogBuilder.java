@@ -1,9 +1,6 @@
 /**
- * Created with IntelliJ IDEA.
- * User: 庭亮
- * Date: 15-4-5
- * Time: 下午9:49
- * To change this template use File | Settings | File Templates.
+ * @author teaho2015@gmail.com
+ * since 2017/3/10
  */
 package com.tea.blog.domain.builder;
 
@@ -128,7 +125,6 @@ public class BlogBuilder {
         blog.setCreator_id(creator_id);
         blog.setCreator_name(creator_name);
         blog.setCreate_time(create_time);
-        blog.setDate(date);
         blog.setUpdator_id(updator_id);
         blog.setUpdator_name(updator_name);
         blog.setUpdate_time(update_time);

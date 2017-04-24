@@ -2,7 +2,7 @@
  * @author teaho2015@gmail.com
  * since 2017/2/21
  */
-package com.tea.blog;
+package com.tea.util;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -32,4 +32,20 @@ public class TestUtil {
 
         return builder.toString();
     }
+
+    public static String generateRedirectViewPath(String path) {
+        StringBuilder redirectViewPath = new StringBuilder();
+        redirectViewPath.append("redirect:");
+        redirectViewPath.append(path);
+        return redirectViewPath.toString();
+    }
+
+    public static String generateForwardViewPath(String path) {
+        StringBuilder redirectViewPath = new StringBuilder();
+        redirectViewPath.append("forward:");
+        redirectViewPath.append(path);
+        return redirectViewPath.toString();
+    }
+
+
 }

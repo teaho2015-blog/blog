@@ -1,13 +1,11 @@
 /**
- * Created with IntelliJ IDEA.
- * User: 庭亮
- * Date: 15-3-27
- * Time: 下午9:55
- * To change this template use File | Settings | File Templates.
+ * @author teaho2015@gmail.com
+ * since 2017/1/10
  */
 package com.tea.blog.controller;
 
 
+import com.tea.blog.exception.NotFoundException;
 import com.tea.frame.jdbc.support.Page;
 import com.tea.blog.domain.Blog;
 import com.tea.blog.service.BlogService;
@@ -26,10 +24,15 @@ public class BlogController {
     /** 日志实例 */
     private  final Logger logger = Logger.getLogger(getClass());
 
-    private final static String BLOG_HOME_URL = "/page/blog/blog_home.jsp";
-    private final static String ARTICLE_URL = "/page/blog/article.jsp";
-    private final static String ABOUT_URL = "/page/blog/about.jsp";
-    private final static int DEFAULT_PAGE_NUM = 1;
+    protected final static String BLOG_HOME_URL = "/page/blog/blog_home.jsp";
+    protected final static String ARTICLE_URL = "/page/blog/article.jsp";
+    protected final static String ABOUT_URL = "/page/blog/about.jsp";
+    protected final static int DEFAULT_PAGE_NUM = 1;
+
+    protected static final String MODEL_NAME_BLOGLIST = "blogList";
+    protected static final String MODEL_NAME_BLOGTOTALPAGENUM = "blogTotalPageNum";
+    protected static final String MODEL_NAME_CURRENTPAGENUM = "currentPageNum";
+    protected static final String MODEL_NAME_PAGESIZE = "pageSize";
 
     private BlogService blogService;
 
@@ -39,13 +42,17 @@ public class BlogController {
     Object viewBlog(HttpServletRequest request) {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("forward:" +  BLOG_HOME_URL);
-        Page page = blogService.getPage(DEFAULT_PAGE_NUM);
 
-        mv.addObject("blogList", page.getResult());
-//        mv.addObject("blogTotalNum", page.getTotalCount());
-        mv.addObject("blogTotalPageNum", page.getTotalPageCount());
-        mv.addObject("currentPageNum", page.getCurrentPageNo());
-        mv.addObject("pageSize", page.getPageSize());
+        Page page = null;
+        try {
+            page = blogService.getPage(DEFAULT_PAGE_NUM);
+            mv.addObject(MODEL_NAME_BLOGLIST, page.getResult());
+            mv.addObject(MODEL_NAME_BLOGTOTALPAGENUM, page.getTotalPageCount());
+            mv.addObject(MODEL_NAME_CURRENTPAGENUM, page.getCurrentPageNo());
+            mv.addObject(MODEL_NAME_PAGESIZE, page.getPageSize());
+        } catch (NotFoundException e) {
+            logger.info("page data is empty, but nullable page is allow for home page!!", e);
+        }
 
         return mv;
     }
@@ -62,7 +69,7 @@ public class BlogController {
     @RequestMapping(value = "/page/{pageNum:\\d+}", method = RequestMethod.GET)
     @ResponseStatus(code = HttpStatus.OK)
     public @ResponseBody
-    Object viewBlogPage(HttpServletRequest request,@PathVariable("pageNum") int pageNum) {
+    Object viewBlogPage(HttpServletRequest request,@PathVariable("pageNum") int pageNum) throws NotFoundException {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("forward:" +  BLOG_HOME_URL);
         Page page = blogService.getPage(pageNum);
@@ -97,18 +104,6 @@ public class BlogController {
         return mv;
     }
 
-
-
-    @RequestMapping(value = "/article/{id:^\\w+$}/elderOne", method = RequestMethod.GET)
-    @ResponseStatus(code = HttpStatus.OK)
-    public @ResponseBody
-    Object getNextArticle(HttpServletRequest request,@PathVariable("id") String id) {
-        ModelAndView mv = new ModelAndView();
-        mv.setViewName("forward:" +  BLOG_HOME_URL);
-        Blog blog = blogService.getElderArticle(id);
-        mv.addObject("article", blog);
-        return mv;
-    }
 
     public BlogService getBlogService() {
         return blogService;

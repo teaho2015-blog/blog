@@ -1,25 +1,24 @@
 /**
- * Created with IntelliJ IDEA.
- * User: 庭亮
- * Date: 15-4-7
- * Time: 下午4:18
- * To change this template use File | Settings | File Templates.
+ * @author teaho2015@gmail.com
+ * since 2017/1/10
  */
 package com.tea.blog.service;
 
+import com.tea.blog.exception.NotFoundException;
+import com.tea.blog.vo.BlogVO;
 import com.tea.frame.jdbc.support.Page;
 import com.tea.blog.domain.Blog;
-import com.tea.blog.vo.BlogVO;
+import com.tea.blog.dto.BlogDTO;
 
 public interface BlogService {
-    public Page getPage(int pageNum);
+    Page getPage(int pageNum) throws NotFoundException;
 
-    public Page getPage(int pageNum, int pageSize);
+    Page getPage(int pageNum, int pageSize, boolean checkEmpty) throws NotFoundException;
 
-    public Blog getArticle(String id);
+    Blog getArticle(String id) throws NotFoundException;
 
-    public BlogVO getArticleAttachElderId(String id);
+    BlogVO getArticleAttachElderId(String id) throws NotFoundException;
 
-    public Blog getElderArticle(String id);
+    Blog getElderArticle(String id) throws NotFoundException;
 
 }

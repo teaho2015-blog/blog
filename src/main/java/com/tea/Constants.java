@@ -18,4 +18,13 @@ public class Constants {
         public static final String DEFAULT_IMAGE_URL = "/static/images/blog/default-blog-image.jpg";
         public static final int DEFAULT_PAGE_SIZE = 5;
     }
+
+    public static class URL {
+        private URL(){}
+        public static final String HTTPCODE_404 = "/page/httpCode/404.jsp";
+        public static final String HTTPCODE_401 = "/page/httpCode/401.jsp";
+        public static final String HTTPCODE_415 = "/page/httpCode/415.jsp";
+        public static final String HTTPCODE_500 = "/page/httpCode/500.jsp";
+
+    }
 }

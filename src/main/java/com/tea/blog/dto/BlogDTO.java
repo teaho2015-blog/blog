@@ -5,7 +5,7 @@
  * Time: 下午9:49
  * To change this template use File | Settings | File Templates.
  */
-package com.tea.blog.vo;
+package com.tea.blog.dto;
 
 import org.springframework.jdbc.core.RowMapper;
 
@@ -16,7 +16,8 @@ import java.sql.Timestamp;
 import java.util.Date;
 
 
-public class BlogVO implements RowMapper<BlogVO>{
+
+public class BlogDTO implements RowMapper<BlogDTO>{
     @Id
     private String id;
     private String image_url;
@@ -184,8 +185,8 @@ public class BlogVO implements RowMapper<BlogVO>{
     }
 
     @Override
-    public BlogVO mapRow(ResultSet rs, int rowNum) throws SQLException {
-        BlogVO bb = new BlogVO();
+    public BlogDTO mapRow(ResultSet rs, int rowNum) throws SQLException {
+        BlogDTO bb = new BlogDTO();
         bb.setId(rs.getString("id"));
         bb.setImage_url(rs.getString("image_url"));
         bb.setDate(rs.getDate("date"));
