@@ -21,6 +21,8 @@ before_install:
  #- sed -i "s/jdbc\.url=.*/${jdbc_url}/g" src/main/resources/properties/jdbc.properties
  #- sed -i "s/jdbc\.username=.*/${jdbc_username}/g" src/main/resources/properties/jdbc.properties
 - sed -i "s/jdbc\.password=.*/${jdbc_password}/g" src/main/resources/properties/jdbc.properties
+- openssl aes-256-cbc -K $encrypted_1fc90f464345_key -iv $encrypted_1fc90f464345_iv -in travis.enc -out travis -d
+- mkdir /home/lauchapps/testtravis
 env:
   global:
   - secure: wp+1ibMEDszPB1To2Ae6g+9gRSI8u2xzTVfQfoNOnISN+gVK40454e9PR8oqnaRUcLuJolbC9phdG6Egmn++qrEzasqDp1a2D+xJfPPvnRg0LdheRcQsZA1V6KYLGgtRDgYa5Z2uulAYz6qISRuAjd8VVyH20xdtPLKDJ++y3cdVYA7wrmRaNbVBLbRBhq9ML3vIz/Ze41mr0TGmNNN48bpiSVqmrvosqoJ+MKCy8e+PH8unXQ01JeKV+Oack6ZxHhEhGXdxS0MrKo5K7mSGoCPTpjgzN+hZ5uFfMV69ATzqCuQstdjRBwH3BplvvN/lepvwi601lwMup6rm6WnmtN0Ny3cCjhpHeZYr1jw5BLZmRJYwE1/RqBGhBv+cl9M50iRvfkyeoVA2SAkbxk+44+St+5z25vLlZQuAlUzZENod84QY8bx86s/IWDwl4aP2xkvzM0I2VUgVkOUDbC4yx4T9Q2oc/ivvaS4CbC/8E+OAaPMOeGwv+QLyvVMbmEgtzzs7gnPkk7Xx1S83nopDpNRvLCDEJH63uv4c2xXP4z+kYV2/RYXZ4QApmWnpcLu9hjezJPizkp0IQHtHytrbcoiS2vNxu2kuctKQ36EVaN5/4M6T2g+KBfYgwTMAoyaUiwi4fQ/fTNGWRMi/JF3Aa/FrRkdKQ/Ga6Zv/H1k35+k=
