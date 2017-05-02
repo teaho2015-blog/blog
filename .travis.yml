@@ -18,9 +18,9 @@ notifications:
 #- openssl aes-256-cbc -K $encrypted_1fc90f464345_key -iv $encrypted_1fc90f464345_iv
 #  -in travis.enc -out travis -d
 before_install:
-  -sed -i "s/jdbc\.url=.*/${jdbc_url}/g" src/main/resources/properties/jdbc.properties
-  -sed -i "s/jdbc\.username=.*/${jdbc_username}/g" src/main/resources/properties/jdbc.properties
-  -sed -i "s/jdbc\.password=.*/${jdbc_password}/g" src/main/resources/properties/jdbc.properties
+  - sed -i "s/jdbc\.url=.*/${jdbc_url}/g" src/main/resources/properties/jdbc.properties
+  - sed -i "s/jdbc\.username=.*/${jdbc_username}/g" src/main/resources/properties/jdbc.properties
+  - sed -i "s/jdbc\.password=.*/${jdbc_password}/g" src/main/resources/properties/jdbc.properties
 env:
   global:
   - secure: hoiIoLjz2XxEyIv+4N1rjO9MOko2WIn8ndPfSiC+eHaXdCq7n91/qdTPVpVXF97xuVp6E4Xs0sk3L2NrUecyYbcOEne2lgV31Gi92EXN2T5ZBAwwxmVA1pREo3gSTtQp2YEFMhOka7DDfcC8Ivga3kAgsgnpbifsQ4sH7FXtyzA8jk99qfR/7Khnmz2IgJcr7iEmwRGtgWgE6+xIhqojg5lfWUE9VJzdhLcx2qti+RE4eKItYNQ885jvxzBc2XsQnTIh5BKHMZidVRoQogFPZqPdNWwGDnTXCYxJiKkrAMfg/xBbIk1bOGsy9HeNxmNumnOyr96yAgBrKjrIbinsz5t7q4FRzwEGlF0yTEkoFjPZgYOKLYTvkXBm2aqIECmLSDyfIbY4EHN0yfloRQQer0D1OyaQVjfbIpoekykjs5vLTOgDVnP/fUZ8MMjRAdL6WCwiqmDVzoE8NRhbJpbu+Whyq1FlZvyeswIAvgmNNrORrPYhySjN+sA6yDfylobk7jMCZH0cThHlCEJrvI79NB3jRm8Ag178qw4uhDSzNvI1k/8xz23c7oB+pPgCfH8WX+PyTmMNS3SVM6icG8FM1+oFoZOG8/p4gW+zMnUQITHtC2jqlFXpzA0oxSwiB6fThikS7+q/lUzkfSci0K+sM58bjEz3/Z2O3N2CeYID9LE=
