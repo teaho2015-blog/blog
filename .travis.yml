@@ -35,6 +35,6 @@ after_success:
 - cat ~/.ssh/known_hosts
 - export SSHPASS=$DEPLOY_PASS
 #- sshpass -e ssh -o stricthostkeychecking=no -o UserKnownHostsFile=/dev/null $DEPLOY_USER@$DEPLOY_HOST "sh /home/lauchapps/test.sh"
-- sshpass -e ssh -o stricthostkeychecking=no $DEPLOY_USER@$DEPLOY_HOST "sh /home/lauchapps/test.sh"
-- sshpass -e scp -vvv -o stricthostkeychecking=no ./target/blog.war $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
-- sshpass -e ssh -o stricthostkeychecking=no $DEPLOY_USER@$DEPLOY_HOST "sh $DEPLOY_PATH/blog/blog_deploy.sh"
+- sshpass -e ssh -vv -o stricthostkeychecking=no -o UserKnownHostsFile=/dev/null $DEPLOY_USER@$DEPLOY_HOST "sh /home/lauchapps/test.sh"
+- sshpass -e scp -vvv -o stricthostkeychecking=no -o UserKnownHostsFile=/dev/null ./target/blog.war $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
+- sshpass -e ssh -vvv -o stricthostkeychecking=no -o UserKnownHostsFile=/dev/null $DEPLOY_USER@$DEPLOY_HOST "sh $DEPLOY_PATH/blog/blog_deploy.sh"
