@@ -33,5 +33,6 @@ addons:
     - sshpass
 after_success:
 - export SSHPASS=$DEPLOY_PASS
-- sshpass -e scp ./target/blog.war $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH -o stricthostkeychecking=no
-- sshpass -p "$SSHPASS" ssh $DEPLOY_USER@$DEPLOY_HOST  $DEPLOY_PATH/blog/blog_deploy.sh -o stricthostkeychecking=no
+- sshpass ssh -o stricthostkeychecking=no $DEPLOY_USER@$DEPLOY_HOST "sh /home/lauchapps/test.sh"
+- sshpass -e scp -o stricthostkeychecking=no ./target/blog.war $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
+- sshpass -p "$SSHPASS" ssh -o stricthostkeychecking=no $DEPLOY_USER@$DEPLOY_HOST "sh $DEPLOY_PATH/blog/blog_deploy.sh"
