@@ -23,10 +23,6 @@ before_install:
 - sed -i "s/jdbc\.password=.*/${jdbc_password}/g" src/main/resources/properties/jdbc.properties
 env:
   global:
-  - secure: wp+1ibMEDszPB1To2Ae6g+9gRSI8u2xzTVfQfoNOnISN+gVK40454e9PR8oqnaRUcLuJolbC9phdG6Egmn++qrEzasqDp1a2D+xJfPPvnRg0LdheRcQsZA1V6KYLGgtRDgYa5Z2uulAYz6qISRuAjd8VVyH20xdtPLKDJ++y3cdVYA7wrmRaNbVBLbRBhq9ML3vIz/Ze41mr0TGmNNN48bpiSVqmrvosqoJ+MKCy8e+PH8unXQ01JeKV+Oack6ZxHhEhGXdxS0MrKo5K7mSGoCPTpjgzN+hZ5uFfMV69ATzqCuQstdjRBwH3BplvvN/lepvwi601lwMup6rm6WnmtN0Ny3cCjhpHeZYr1jw5BLZmRJYwE1/RqBGhBv+cl9M50iRvfkyeoVA2SAkbxk+44+St+5z25vLlZQuAlUzZENod84QY8bx86s/IWDwl4aP2xkvzM0I2VUgVkOUDbC4yx4T9Q2oc/ivvaS4CbC/8E+OAaPMOeGwv+QLyvVMbmEgtzzs7gnPkk7Xx1S83nopDpNRvLCDEJH63uv4c2xXP4z+kYV2/RYXZ4QApmWnpcLu9hjezJPizkp0IQHtHytrbcoiS2vNxu2kuctKQ36EVaN5/4M6T2g+KBfYgwTMAoyaUiwi4fQ/fTNGWRMi/JF3Aa/FrRkdKQ/Ga6Zv/H1k35+k=
-  - secure: EYWSGNJJvWJpN62m0LGk/DYRpjmtrGEZHok21IcNh80CJlkJllTivtHv1dTjaGscjsAt3+dmkOmZy2YGUe/K3W7y7/+BNOBLSxq8Nxx3wAKgFomwJGjf/VNSOSjNQnn268Cm6aEioCQn4FdpKa0eE3ZKHwJ2NGUE1kcBUJT0Iawvak1/8zoZejGh+mliAS/w8xJVn7QrQbAhlAOyrUwpzigTUUKVosCfWvYPmlSa22yPm7llZjSGmkWZZyUKCXiGCHvhAyyanj1kfaBEj7E6CaFC81hiHH6MFVwsPLg+48cWkUabRoBsk3q+wwZ9DMX977qSQ0Xngd318JCsEISjkr8DkLlnhkPePjkTW/jkRXKAOBf6833tXAiP0ynDbXyct76R2Fy7j7u1FGzfuIj7oeR9Vryib4OMMllZ9txS+jZfA5Y0Pv1TyqKuXu6C675tu1RqjSCZ7P2JZBU+8xRsAQa0Y/0NMA2jRnOrhDC6Y7zwUy2zeSHDsB8BmVVchOHI+HvQH670vFTRnyOBWAQs5T3mz9XeNC1cryuBDy/TMFlqTvOIuBFUuJc9yh1qKy7RgELnyYIgNr5Mr1otCGSw0I6mpsepH9n4L9Zvp272oI0zLbg+XBc+JwXrSh5tSxZf2zcfQpkfNj4oebReXWVbphzzVgMwm1yxdwIhsshBX4s=
-  - secure: QlzNnAz3WsaNQ2wqhLA6M96yVN93paad9bhcRenFgqmndh19p4VsR6B0cqh79f9uaLuO8dEETmDMZmQqkLSpEEA4UGBjTxw2JQqRNVQv086x778N7Gwz+BCZjQbav3ARf+ohAwE9owbkMNRVg5n33UjpAaVvI5l185aEqHIWI/PrpvcGRDY+2m3AboWu2JENqnL10C7Gny6/3PHs9hvXNlbojmJUj0N0L6kNWXfPR51WWzv2M5Lfwuf2MaCP/nrqMYzbb5boU0jPzdzSw4A1N4m917q9qI5vsJsFYXGlN8tJhuPhxW82WAKVqUbbpb+P/C2LPhVi837LRWfmBIcY4iC3x7fXVeJ/9PTRfqTj/PAO8FmSidlPqYgJ/n8wg3l9DJ9IMUugjxDwyPSgakwhOszlcKDndzbOG57x1ttEBbbI0sofekK1l4+PvjaImEQPvkfLo4MsJVPQ/m1FZ6dXYSSSXWh0u8PIaLPeqtWTHE/9+ToM3Nyq5Nq4y0yMVVWOs4ZC+MHZK8rwC5bBI2hOSWMOODhTPYJ/OOQwckmdxyUB3RxRvTOj/pFySfLPa1LYrn3Wn0oTUkUdCPf7Jxb+pZI/5o6hLZaSrfyt8wiKBEnCr/T3VzA52nfHR3Qvk4+B79KAy0A/xy3vhOh950QahE2p5bfCmnTpzFtMJ/OJeHY=
-  - secure: e0Uj0lrxOXoqKsQV9Pb6YusNjUq9dQ4MhELoL1yoakCNnrZwXR1zWMzQP1W4yZ6toPVXHsVwJDuBW8LsqnZqlujLPpnvcRQT/S0HueFamr1ojdhmEd7/xrjHk9aiNiR7e0aARnbiWvQ9Bi02uT5H5X+0SIPacisr5W75+V4q0tTVpni/YoqsrbxwUs7JDfkKXC4FZjasYd10B2W6pbur7P6c9XiqImI6fOIE16yPAUg7/liUWhGB8YEsmkexJla0uEXCucAIAJgPan81Q6oahg4VomW1TZ2BhfS1x6OG+S5BFrHWzUIO284b8n4OXg6Nz1bdMLjmMTDGs8mesPsEvEpK1CFgZ1t+ihasY7C7bA2uP7AlGh+7PXwr6tCV1c9mipcbVEo6eu/geKQyJsh1Qa38B4SI+awxtjKp33TknKzJb0lSYGZfgOqlEMKAfvJa9ulZPB/FaytXHwv8lCnvLJl7ck9PpeZjHfpiXL7oDiIzbrjQT07gO/kAdVpcuXTJ+P3L8gOvlBWcGHctUvrvzMzIxBQorUAg9X1apHbtEFzJ/ywMHae6Fmjti9U8E087UVyWqNIycLQnoZuhCQtr9BxF13vWSKMZDtSupRAAbHnqHQ7o75kW/+321TAsZJ+0fOotpn7xe4ljECCxDjcW2GO/Kc29KBDPNL/dSZbS3Mc=
 addons:
   apt:
     packages:
@@ -36,6 +32,7 @@ addons:
 after_success:
 - cat ~/.ssh/known_hosts
 - export SSHPASS=$DEPLOY_PASS
-- sshpass -e ssh -o stricthostkeychecking=no -o UserKnownHostsFile=/dev/null $DEPLOY_USER@$DEPLOY_HOST "sh /home/lauchapps/test.sh"
-- sshpass -e scp -o stricthostkeychecking=no ./target/blog.war $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
-- sshpass -p "$SSHPASS" -e ssh -o stricthostkeychecking=no $DEPLOY_USER@$DEPLOY_HOST "sh $DEPLOY_PATH/blog/blog_deploy.sh"
+#- sshpass -e ssh -o stricthostkeychecking=no -o UserKnownHostsFile=/dev/null $DEPLOY_USER@$DEPLOY_HOST "sh /home/lauchapps/test.sh"
+- sshpass -e ssh -o stricthostkeychecking=no $DEPLOY_USER@$DEPLOY_HOST "sh /home/lauchapps/test.sh"
+- sshpass -e scp -vvv -o stricthostkeychecking=no ./target/blog.war $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
+- sshpass -e ssh -o stricthostkeychecking=no $DEPLOY_USER@$DEPLOY_HOST "sh $DEPLOY_PATH/blog/blog_deploy.sh"
