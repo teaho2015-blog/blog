@@ -31,7 +31,10 @@ addons:
   apt:
     packages:
     - sshpass
+  ssh_known_hosts:
+  - $DEPLOY_HOST
 after_success:
+- cat ~/.ssh/known_hosts
 - export SSHPASS=$DEPLOY_PASS
 - sshpass ssh -o stricthostkeychecking=no -o UserKnownHostsFile=/dev/null $DEPLOY_USER@$DEPLOY_HOST "sh /home/lauchapps/test.sh"
 - sshpass -e scp -o stricthostkeychecking=no ./target/blog.war $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
