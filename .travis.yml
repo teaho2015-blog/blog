@@ -32,7 +32,7 @@ addons:
     packages:
     - sshpass
   ssh_known_hosts:
-  - $DEPLOY_HOST
+  - 45.32.76.154
 after_success:
 - cat ~/.ssh/known_hosts
 - export SSHPASS=$DEPLOY_PASS
