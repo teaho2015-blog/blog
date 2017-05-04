@@ -14,28 +14,16 @@ deploy:
 notifications:
   email:
   - teaho2015@gmail.com
-#before_install: #one way to link server test2
-#- openssl aes-256-cbc -K $encrypted_1fc90f464345_key -iv $encrypted_1fc90f464345_iv
-#  -in travis.enc -out travis -d
 before_install:
 - sed -i "s|jdbc\.url=.*|${jdbc_url}|g" src/main/resources/properties/jdbc.properties
 - sed -i "s/jdbc\.username=.*/${jdbc_username}/g" src/main/resources/properties/jdbc.properties
 - sed -i "s/jdbc\.password=.*/${jdbc_password}/g" src/main/resources/properties/jdbc.properties
-#env:
-#  global:
-#  - secure: C6HK9HYQi2dAsCcP8R33pXKVt9kGUywB56y1s2mINFe+IaDINGOZoNIYIfgfpzICcB0GaQwQowJY4t77xnliNNkNggmj1lqhlKz+ZXF0lgx+HoLF9xiA5pGpGxUZieurDuKuFHAJtZnloU5jHRwCpinwO//RquGK15gN+JHcfEO+Xr7Ne8/wJxMlyXPmib92JkhXgPok0hJyB6wioOHcZjjqFK2efGeBncBhvKKeqcpNoZ9PQyhJZkoIJJxDQc24OEWvC9RBh0tzXJDjfF36N/I9uVH3WWklhPXmLBSpFUNXZQPl78nesFH/xPG2XrpaL75oksYSdYPLyH3YXkU2R2Y3vUtnOv993z/EMBa+fv6ZXNcArmso9VucVGHjchjPzql3Je45P/RU/4TukPGyWK3pxYLhgCg7tXBnKooGOkw8JUmc7GCB5uQhg7gw8c6h5NfBYr4U7gb1nlsbRGUQl498g/d/z60xjgUeQdFV4tZbNImMY0S74L/zypHFTkWpMZslT6ofPQFHfwrry76hwa7qnlWi8NbHIA8gTOMJpcl85XSPCsrfbPNpr09s8SRUzFHYwcSfgSx2ChwPRRk7kVrmoa7egbxSONXr6MZkDKnsabjmqYwQrxZCgzs99vnCwqHm6dNO0IQZVSF88abuuCoTMEzZNNIDOA4EtcPapsI=
-#  - secure: ATW0hip8UwdnedAJ1TqW/x4JbWGa0SF91nkn5VwIVbY3wjDWLHabuaVC9iiWF3r4A1l1G4JJZcwXUUSWed+oA3s3MUgsICj8oys8qDG3/+8GG/tltXhlKHERwqafOXnZlXULXi3iZH42AXdOwQpXNfytKd3k3g9rzcscxb+cEf3KR785REdBfx3qG96nrbpO4GsXOxFMZPwOPlLs5FH3mY6k+8rUeEb7n/BmNEQX0J18arPGEAkxOoBgn1pIYrZHC2NyKgzkzDAj5wvyul3jhh5FB4C7O6i4ttn65HTM+2q5mOOfGVczMhAyxJ4KjFqeOSqdAJcROb4DL8/a/81yTxC59Xt09N+dt8T+31xdeFKy65RhqQrc5tJ6Koq7zcK9/wNKTVn/TEiHmCnsfKzB4yeEIonVxHIecZ2gPChZcLV+I6pE2RvsKr8qLj5oBQIPwrLfxzL04T/lorb68qHAGTUdFeQ01ha6P8wKgx/bK+ad5as2macn0JS8CbLv6dQLu+XtKq7EoV+q9vXRZkVnzWRNK/+iWssDlKIO68Ey8WNpnHTMF5ebKpXhtnLcMvqAowg8e8oTXboxt+G28U9oTlPF7n0mrc5BkbC83+eGiIMVyoAO10YQ+FFFNdzDoCcSloqTICSA4v9wc/to/TBf9LNYhG8DqcHdSQH/V1KaoW8=
-#  - secure: E4Q5cePaJX/3tYnF0SofDOoRHQyH6XnVWXP4ZPXazccmVBv2QhSN4s61eS6y89TRctzUgXFO5EC31wlommyA+uuF1W3HhNPYq8P3YR7ODTi4kxFo4Fz+bWfuArqf2coJTJbM6DivLRSY1LsicUAtPGiOBZfZMt2dbMrEytYtbL6gmBsFxXRCuYmzl9dxnzz074fw7jMcGSn2nBt3/mhn75mz3eWpJ2FMcYh5HDnKMfnIt7ZHZfWzMrDBo8l10bcn6QX0YkCCLmlCQzKCrJNx/LoYXGBX5LT5vSDaivkrNIuAqBOaSBJZ47ds7IzBDz/rFsxCFwcggPNzPYVeRX7s/MNnD45cjeTUyYZGS/tLKDNWgUe/TOlkAreQ+g8lYP/VNX2lNlcn1l8Zsabg9gLqPDRPJ+K6WicnqKEJp98XmgcpEqV+j2tYg+2jA6eZtPcvvnxOZsv8dpscrnMIfeYh4gnqM55DO9fU//FHipjF87pgcMWD7IhSoJsIAq8T0/bfzC+NAwN43MEVQoLCeidFKYckLoHJA0sKR7NrzMk9HsK5TNc7ZwDqrrJj5jBa0UhRLfkJsg569x2EKhsTZ9c8+L3R1NEf3Eu2IyLg07g2rtZInhBfupz13l9WqMOUpFe8nOlY4/Svi9RRzqkejdyLuvVPeU8/XqcaFwkiqeLgy5o=
-#  - secure: G5K1lAC8DlBltigjR/ScTQupH3MewUviR+4NLa6zFXnuzN+JLOhNGczc9VA6j8aDsniIFugzSycUVOnICo7dNgxm2SvjeZ61XxHwhZcUEhxGYhM2lqLBJZYNfUYHXlkDJvN5zVKCJ9kZ77Bkp6xHgls25+ELSToXdvx4L1wWeEQ8MKjJpK+BNxbCTWEcIaEuZLjz0T2XuFZF3VzYPGiz4/dry16ZQWzMdx4Rv+rHTH5R2WBqugCeqOVXHEMu7Ze2vCFZR5cOowp+YDfe4OGauHFu+LCzdbQH/h9VmMprwcDbhOcgk2ahrUvyQqp2RubdsZ9obGuhERhelUwM0v3pkfSAst2xQYC4pkq0AtF4stfjaRicVkwC4Rt0yRhAbXnxBToAVQMCAYDK1slMu54SIciG4wDhUn04zHxZQkBQRtYqRk26bZ9vkRYciw1BqpY10Jicb3KuX1D1NGbGUOo6C45rJ28N87kXA/gvqzuwRCVJ4t96iTWd3WJ/nZBEtRcnu0X6THMs0XB2pINLMydijCn3rzeBfjlqseW3l2x8pXNXDeVqoHOHkzx7mHlfV6gWJE9RXeTkruchHEgcrzADGGaJMUIi+5TehEkvaZ5Kh9w5nsXv2kpu+StIMqE/iGGKupVfg/hesJtc7omvgGedYTk2fRwNy4C6+sIy/vC5Ygk=
 addons:
   apt:
     packages:
     - sshpass
- # ssh_known_hosts: 45.32.76.154:22
 after_success:
 - cat ~/.ssh/known_hosts
 - export SSHPASS=$DEPLOY_PASS
-#- sshpass -e ssh -o stricthostkeychecking=no -o UserKnownHostsFile=/dev/null $DEPLOY_USER@$DEPLOY_HOST "sh /home/lauchapps/test.sh"
-- sshpass -e ssh -vv -o stricthostkeychecking=no -o UserKnownHostsFile=/dev/null  $DEPLOY_USER@$DEPLOY_HOST "sh /home/lauchapps/test.sh"
 - sshpass -e scp -vvv -o stricthostkeychecking=no -o UserKnownHostsFile=/dev/null ./target/blog.war $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
 - sshpass -e ssh -vvv -o stricthostkeychecking=no -o UserKnownHostsFile=/dev/null  $DEPLOY_USER@$DEPLOY_HOST $DEPLOY_PATH/blog/blog_deploy.sh
