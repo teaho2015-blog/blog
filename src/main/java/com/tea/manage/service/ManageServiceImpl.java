@@ -35,20 +35,15 @@ public class ManageServiceImpl implements ManageService {
             String orginalFileName = image.getOriginalFilename();
             StringBuffer path = new StringBuffer();
             path.append(rpath);
-            path.append(separator);
-            path.append("static"+separator+"images"+separator+"blog");
+            path.append(Constants.BLOG.DEFAULT_HEAD_IMAGE_FILEPATH);
             //set file name
             String filePath = path.toString() + separator + blog.getId() + orginalFileName.substring(orginalFileName.lastIndexOf("."),orginalFileName.length());
-//        try {
             File f = new File(path.toString());
             if (!f.exists()) {
                 f.mkdirs();
             }
             FileCopyUtils.copy(image.getBytes(), new File(filePath));
 
-//        } catch (IOException e) {
-//            e.printStackTrace();//有待改进应输出错误
-//        }
             String image_url = filePath.replace(rpath, "");
 //            image_url = image_url.substring(1);
             image_url = image_url.replace(File.separator, "/");

@@ -4,6 +4,8 @@
  */
 package com.tea;
 
+import java.io.File;
+
 public class Constants {
 
     public static class USER{
@@ -17,6 +19,7 @@ public class Constants {
         private BLOG(){}
         public static final String DEFAULT_IMAGE_URL = "/static/images/blog/default-blog-image.jpg";
         public static final int DEFAULT_PAGE_SIZE = 5;
+        public static final String DEFAULT_HEAD_IMAGE_FILEPATH = File.separator + "static" + File.separator+"images" + File.separator + "blog";
     }
 
     public static class URL {

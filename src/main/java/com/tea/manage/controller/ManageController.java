@@ -80,7 +80,6 @@ public class ManageController {
     @ResponseStatus(code = HttpStatus.OK)
     public @ResponseBody
     Object viewBlogEditorPage() {
-
         return new ModelAndView("forward:"+ BLOG_EDITOR_URL);
     }
 
@@ -89,8 +88,7 @@ public class ManageController {
     public @ResponseBody
     Object postBlog(Blog blog,@RequestParam("image") MultipartFile image, HttpServletRequest request) throws IOException {
         manageService.newBlog(blog, image, request);
-
-        return "{state : success}";
+        return "{state : \"success\"}";
     }
 
     public ManageService getManageService() {
