@@ -85,7 +85,7 @@
                 <div class="page-heading">
                     <h1>About Me</h1>
                     <hr class="small">
-                    <span class="subheading">Too young, too simple, sometimes naive.</span>
+                    <span class="subheading"></span>
                 </div>
             </div>
         </div>
@@ -96,7 +96,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <p>代码渣，伪文青。</p>
+            <p>代码渣，伪文青。希望做到知行合一。</p>
             <p>专注于填坑。由于擅长于挖坑，所以经常在填坑的同时又挖了许多坑。</p>
             <p>业余大概逃不开读书，看电影，听音乐，看NBA，拍照这几件事。</p>
             <p>从现在到未来很长一段时间里，应该会是一名后台工程师。</p>
@@ -160,6 +160,14 @@
                                     <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
                                 </span>
 
+                    </a>
+                </li>
+                <li>
+                    <a href="http://wordpress.teaho.net" target="_blank" data-toggle="tooltip" data-placement="top" title="我的wordpress">
+                                <span class="fa-stack fa-lg custom-fa-mid">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-wordpress fa-stack-1x fa-inverse"></i>
+                                </span>
                     </a>
                 </li>
             </ul>

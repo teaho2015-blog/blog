@@ -74,12 +74,6 @@
                 <li>
                     <a href="<%-- ${pageContext.request.contextPath} --%>/about">关于/ 联系</a>
                 </li>
-                <!--<li>-->
-                <!--<a href="post.html">Sample Post</a>-->
-                <!--</li>-->
-                <!--<li>
-                    <a href="contact.html">Contact</a>
-                </li>-->
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -98,7 +92,7 @@
                 <div class="site-heading">
                     <h1>Tea's Blog</h1>
                     <hr class="small">
-                    <span class="subheading"><%--知行合一--%>Curiocity is my favorite sin.</span>
+                    <span class="subheading">Curiocity is my favorite sin.</span>
 
                 </div>
                 <div class="page-scroller">
