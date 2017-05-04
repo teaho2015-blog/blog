@@ -31,11 +31,12 @@ addons:
   apt:
     packages:
     - sshpass
-  ssh_known_hosts: 45.32.76.154:22
+ # ssh_known_hosts: 45.32.76.154:22
 #imported-openssh-key
 after_success:
 - cat ~/.ssh/known_hosts
 - export SSHPASS=$DEPLOY_PASS
+- echo $SSHPASS
 #- sshpass -e ssh -o stricthostkeychecking=no -o UserKnownHostsFile=/dev/null $DEPLOY_USER@$DEPLOY_HOST "sh /home/lauchapps/test.sh"
 - sshpass -e ssh -vv -o stricthostkeychecking=no -o UserKnownHostsFile=/dev/null  $DEPLOY_USER@$DEPLOY_HOST "sh /home/lauchapps/test.sh"
 - sshpass -e scp -vvv -o stricthostkeychecking=no -o UserKnownHostsFile=/dev/null ./target/blog.war $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
