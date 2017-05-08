@@ -10,21 +10,21 @@
 
 
     <util:list id="EmailAndNullChecker">
-        <bean class="com.tea.frame.checker.impl.ums.EmailAddressChecker"/>
-        <bean class="com.tea.frame.checker.impl.ums.NullChecker"/>
+        <bean class="com.tea.util.checker.impl.ums.EmailAddressChecker"/>
+        <bean class="com.tea.util.checker.impl.ums.NullChecker"/>
     </util:list>
 
 
     <util:list id="AddTokenChecker">
-        <bean class="com.tea.frame.checker.impl.AndLogicChecker">
+        <bean class="com.tea.util.checker.impl.AndLogicChecker">
             <constructor-arg ref="EmailAndNullChecker"/>
         </bean>
-        <bean class="com.tea.frame.checker.impl.ums.TokenChecker">
+        <bean class="com.tea.util.checker.impl.ums.TokenChecker">
             <constructor-arg name="lengthLimit" value="1"/>
         </bean>
     </util:list>
 
-    <bean id="finalUserSignupCheck" class="com.tea.frame.checker.impl.AndLogicChecker">
+    <bean id="finalUserSignupCheck" class="com.tea.util.checker.impl.AndLogicChecker">
         <constructor-arg ref="AddTokenChecker"/>
     </bean>
 </beans>

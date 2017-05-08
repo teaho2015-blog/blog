@@ -7,7 +7,7 @@
  */
 package com.tea.manage.domain;
 
-import com.tea.frame.valueObject.GenericFormat;
+import com.tea.util.valueObject.GenericFormat;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

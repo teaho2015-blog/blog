@@ -6,11 +6,10 @@ package com.tea.blog.service;
 
 import com.tea.blog.exception.NotFoundException;
 import com.tea.blog.vo.BlogVO;
-import com.tea.frame.jdbc.support.Page;
+import com.tea.util.jdbc.support.Page;
 import com.tea.Constants;
 import com.tea.blog.dao.BlogDAO;
 import com.tea.blog.domain.Blog;
-import com.tea.blog.dto.BlogDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

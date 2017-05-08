@@ -8,16 +8,14 @@ package com.tea.blog.controller;
 import com.tea.Constants;
 import com.tea.blog.exception.NotFoundException;
 import com.tea.blog.vo.BlogVO;
-import com.tea.frame.jdbc.support.Page;
+import com.tea.util.jdbc.support.Page;
 import com.tea.blog.domain.Blog;
 import com.tea.blog.service.BlogService;
-import com.tea.blog.dto.BlogDTO;
 import com.tea.blog.dto.PageDTO;
 import org.apache.log4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.HandlerMapping;
 
 import javax.servlet.http.HttpServletRequest;
 

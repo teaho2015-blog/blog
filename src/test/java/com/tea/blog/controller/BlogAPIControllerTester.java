@@ -12,7 +12,7 @@ import com.tea.blog.domain.builder.BlogBuilder;
 import com.tea.blog.exception.NotFoundException;
 import com.tea.blog.service.BlogService;
 import com.tea.blog.vo.BlogVO;
-import com.tea.frame.jdbc.support.Page;
+import com.tea.util.jdbc.support.Page;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

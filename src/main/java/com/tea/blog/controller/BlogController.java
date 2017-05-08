@@ -6,8 +6,7 @@ package com.tea.blog.controller;
 
 
 import com.tea.blog.exception.NotFoundException;
-import com.tea.frame.jdbc.support.Page;
-import com.tea.blog.domain.Blog;
+import com.tea.util.jdbc.support.Page;
 import com.tea.blog.service.BlogService;
 import org.apache.log4j.Logger;
 import org.springframework.http.HttpStatus;
