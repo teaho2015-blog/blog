@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 public class BlogController {
 
     /** 日志实例 */
-    private  final Logger logger = Logger.getLogger(getClass());
+    protected final Logger logger = Logger.getLogger(getClass());
 
     protected final static String BLOG_HOME_URL = "/page/blog/blog_home.jsp";
     protected final static String ARTICLE_URL = "/page/blog/article.jsp";
