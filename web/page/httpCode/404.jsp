@@ -78,14 +78,14 @@
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
 <header class="intro-header" style="">
-    <%--<div class="mask"></div>--%>
+    <div class="mask"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="page-heading">
                     <h1>404</h1>
                     <hr class="small">
-                    <span class="subheading">找不到该请求页面。</span>
+                    <span class="subheading">找不到该请求页面。<!-- Not Found --></span>
                 </div>
             </div>
         </div>
