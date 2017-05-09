@@ -7,8 +7,8 @@
  */
 package com.tea.common.dao;
 
-import com.tea.frame.util.UUIDGenerator;
 import com.tea.common.model.JobControl;
+import com.tea.util.UUIDGenerator;
 import org.springframework.jdbc.core.ColumnMapRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;

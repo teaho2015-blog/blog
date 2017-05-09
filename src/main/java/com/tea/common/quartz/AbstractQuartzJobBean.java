@@ -7,9 +7,9 @@
  */
 package com.tea.common.quartz;
 
-import com.tea.frame.util.ExceptionUtil;
 import com.tea.common.service.JobControlService;
 import com.tea.common.service.JobLogService;
+import com.tea.util.ExceptionUtil;
 import org.apache.commons.lang.exception.ExceptionUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

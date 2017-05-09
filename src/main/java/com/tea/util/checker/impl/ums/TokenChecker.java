@@ -1,6 +1,7 @@
 package com.tea.util.checker.impl.ums;
 
-import com.tea.frame.ums.model.User;
+
+import com.tea.manage.domain.User;
 
 /**
  * check if it fulfilled the required length

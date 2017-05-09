@@ -1,8 +1,8 @@
 package com.tea.util.checker.impl.ums;
 
+import com.tea.manage.domain.User;
 import com.tea.util.checker.Checker;
 import com.tea.util.exception.IncompatibleObjectException;
-import com.tea.frame.ums.model.User;
 import com.tea.util.valueObject.GenericFormat;
 
 /**

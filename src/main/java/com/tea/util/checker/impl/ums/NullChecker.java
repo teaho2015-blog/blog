@@ -1,6 +1,6 @@
 package com.tea.util.checker.impl.ums;
 
-import com.tea.frame.ums.model.User;
+import com.tea.manage.domain.User;
 import org.springframework.util.StringUtils;
 
 /**

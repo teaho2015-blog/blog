@@ -4,8 +4,8 @@
  */
 package com.tea.blog.domain.builder;
 
-import com.tea.frame.util.UUIDGenerator;
 import com.tea.blog.domain.Blog;
+import com.tea.util.UUIDGenerator;
 
 import java.sql.Timestamp;
 import java.util.Date;

@@ -7,9 +7,9 @@
  */
 package com.tea.common.service;
 
-import com.tea.frame.util.UUIDGenerator;
 import com.tea.common.dao.JobLogDAO;
 import com.tea.common.model.JobLog;
+import com.tea.util.UUIDGenerator;
 
 import java.sql.Timestamp;
 

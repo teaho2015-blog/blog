@@ -7,8 +7,8 @@
  */
 package com.tea.common.dao;
 
-import com.tea.frame.util.UUIDGenerator;
 import com.tea.common.model.JobLog;
+import com.tea.util.UUIDGenerator;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.sql.Timestamp;
