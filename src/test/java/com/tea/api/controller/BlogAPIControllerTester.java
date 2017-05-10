@@ -2,7 +2,7 @@
  * @author teaho2015@gmail.com
  * since 2017/2/16
  */
-package com.tea.blog.controller;
+package com.tea.api.controller;
 
 
 import com.tea.Constants;
