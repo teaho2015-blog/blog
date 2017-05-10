@@ -86,6 +86,15 @@ public class BlogAPIController {
 
     }
 
+    @ExceptionHandler({NullPointerException.class})
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public Object handleNullPointException(HttpServletRequest request, NotFoundException e) {
+        return "{  \"message\": \"NullPointerException, "+ e.getMessage() +"\"," +
+                "  \"documentation_url\": \"http://blog.teaho.net/api/v1\"" +
+                "}";
+
+    }
+
     public BlogService getBlogService() {
         return blogService;
     }

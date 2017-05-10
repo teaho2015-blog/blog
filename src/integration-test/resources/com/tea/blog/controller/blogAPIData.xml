@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <b_blog id="id1" image_url="/image/url.jpg" date="2017-01-01" title="fooTitle1" title_secondary="title_secondary1" content="content1" creator_id="SYSTEM_GENERATE" creator_name="SYSTEM_GENERATE" create_time="2017-01-01 11:13:28" delete_flag="0"/>
+    <b_blog id="id2" image_url="/image/url2.jpg" date="2017-01-02" title="fooTitle2" title_secondary="title_secondary2" content="content2" creator_id="SYSTEM_GENERATE" creator_name="SYSTEM_GENERATE" create_time="2017-01-02 11:13:28" delete_flag="0"/>
+</dataset>
+
