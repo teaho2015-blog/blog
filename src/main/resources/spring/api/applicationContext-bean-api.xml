@@ -13,7 +13,7 @@ default-lazy-init="true" default-autowire="byName">
 
 
     <bean id="blogAPIController"
-          class="com.tea.blog.controller.BlogAPIController" >
+          class="com.tea.api.controller.BlogAPIController" >
         <property name="blogService" ref="blogService" />
 
     </bean>

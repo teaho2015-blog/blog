@@ -6,6 +6,7 @@ package com.tea.blog.controller;
 
 
 import com.tea.Constants;
+import com.tea.api.controller.BlogAPIController;
 import com.tea.util.TestUtil;
 import com.tea.blog.domain.Blog;
 import com.tea.blog.domain.builder.BlogBuilder;
