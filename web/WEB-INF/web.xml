@@ -42,7 +42,7 @@
             <!--classpath:spring/applicationContext-bean-ums.xml-->
 
             <!-- security -->
-            classpath:spring/applicationContext-security.xml
+            <!--classpath:spring/applicationContext-security.xml-->
 
             classpath:spring/applicationContext-myBatis.xml
 
