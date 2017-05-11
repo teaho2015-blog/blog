@@ -92,7 +92,7 @@ public class Page<T> implements Serializable {
     /**
      * 取当前页中的记录.
      */
-    public Object getResult() {
+    public List<T> getResult() {
         return data;
     }
 

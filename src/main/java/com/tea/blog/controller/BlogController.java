@@ -5,7 +5,7 @@
 package com.tea.blog.controller;
 
 
-import com.tea.blog.exception.NotFoundException;
+import com.tea.common.exception.NotFoundException;
 import com.tea.util.jdbc.support.Page;
 import com.tea.blog.service.BlogService;
 import org.apache.log4j.Logger;

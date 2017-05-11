@@ -10,7 +10,7 @@ import com.tea.blog.dao.BlogDAO;
 import com.tea.blog.vo.BlogVO;
 import com.tea.blog.domain.Blog;
 import com.tea.blog.domain.builder.BlogBuilder;
-import com.tea.blog.exception.NotFoundException;
+import com.tea.common.exception.NotFoundException;
 import com.tea.util.jdbc.support.Page;
 import org.junit.Before;
 import org.junit.Test;
