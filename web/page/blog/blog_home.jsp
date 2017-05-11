@@ -59,7 +59,7 @@
                 <span class="sr-only">Toggle navigation</span>
                 Menu <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="<%-- ${pageContext.request.contextPath} --%>/">Tea's Blog</a>
+            <a class="navbar-brand" href="/">Tea's Blog</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -92,7 +92,7 @@
                 <div class="site-heading">
                     <h1>Tea's Blog</h1>
                     <hr class="small">
-                    <span class="subheading">Curiocity is my favorite sin.</span>
+                    <span class="subheading">Trust the process.</span>
 
                 </div>
                 <div class="page-scroller">
@@ -212,32 +212,6 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <!--<ul class="list-inline text-center contact-list">
-                    <li>
-                        <a href="#">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                </ul>-->
                 <p class="copyright text-muted">Copyright &copy; Tea's Blog 2016.All rights reserved. My works are licensed under <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>. </p>
             </div>
         </div>
