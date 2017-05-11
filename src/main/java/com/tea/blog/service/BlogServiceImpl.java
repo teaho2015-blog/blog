@@ -4,7 +4,7 @@
  */
 package com.tea.blog.service;
 
-import com.tea.blog.exception.NotFoundException;
+import com.tea.common.exception.NotFoundException;
 import com.tea.blog.vo.BlogVO;
 import com.tea.util.jdbc.support.Page;
 import com.tea.Constants;
@@ -19,12 +19,12 @@ public class BlogServiceImpl implements BlogService {
     private BlogDAO blogDAO;
 
     @Override
-    public Page getPage(int pageNum) throws NotFoundException{
+    public Page<Blog> getPage(int pageNum) throws NotFoundException{
         return getPage(pageNum, Constants.BLOG.DEFAULT_PAGE_SIZE, false);
     }
 
     @Override
-    public Page getPage(int pageNum, int pageSize, boolean checkEmpty) throws NotFoundException {
+    public Page<Blog> getPage(int pageNum, int pageSize, boolean checkEmpty) throws NotFoundException {
         Page<Blog> page = new Page<>(pageNum, blogDAO.getTotalNum(), pageSize,
                 blogDAO.getBlogList(Page.getStartOfPage(pageNum,pageSize), pageSize ));
         if (checkEmpty && page.isEmpty()) {

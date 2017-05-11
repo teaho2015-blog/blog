@@ -151,7 +151,7 @@
                 <!--用全限定类名-->
                 <!--<prop key="com.tea.blog.exception.NotFoundException">redirect:/error</prop>-->
                 <!--<prop key="java.io.IOException">redirect:/register</prop>-->
-                <prop key="com.tea.blog.exception.NotFoundException">forward:/page/httpCode/404.jsp</prop>
+                <prop key="com.tea.common.exception.NotFoundException">forward:/page/httpCode/404.jsp</prop>
                 <prop key="java.io.IOException">forward:/page/httpCode/500.jsp</prop>
                 <prop key="java.sql.SQLException">forward:/page/httpCode/500.jsp</prop>
                 <prop key="java.lang.NullPointerException">forward:/page/httpCode/500.jsp</prop>

@@ -4,15 +4,15 @@
  */
 package com.tea.blog.service;
 
-import com.tea.blog.exception.NotFoundException;
+import com.tea.common.exception.NotFoundException;
 import com.tea.blog.vo.BlogVO;
 import com.tea.util.jdbc.support.Page;
 import com.tea.blog.domain.Blog;
 
 public interface BlogService {
-    Page getPage(int pageNum) throws NotFoundException;
+    Page<Blog> getPage(int pageNum) throws NotFoundException;
 
-    Page getPage(int pageNum, int pageSize, boolean checkEmpty) throws NotFoundException;
+    Page<Blog> getPage(int pageNum, int pageSize, boolean checkEmpty) throws NotFoundException;
 
     Blog getArticle(String id) throws NotFoundException;
 

@@ -6,12 +6,12 @@ package com.tea.api.controller;
 
 
 import com.tea.Constants;
-import com.tea.blog.exception.NotFoundException;
+import com.tea.api.dto.*;
+import com.tea.common.exception.NotFoundException;
 import com.tea.blog.vo.BlogVO;
 import com.tea.util.jdbc.support.Page;
 import com.tea.blog.domain.Blog;
 import com.tea.blog.service.BlogService;
-import com.tea.blog.dto.PageDTO;
 import org.apache.log4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -37,13 +37,13 @@ public class BlogAPIController {
     @ResponseStatus(code = HttpStatus.OK)
     public @ResponseBody
     Object getPage(@PathVariable("id") int id) throws NotFoundException {
-        Page page = blogService.getPage(id, Constants.BLOG.DEFAULT_PAGE_SIZE, true);
-        PageDTO pageVO = new PageDTO();
-        pageVO.setData(page.getResult());
-        pageVO.setCurrentPageNum(page.getCurrentPageNo());
-        pageVO.setPageSize(page.getPageSize());
-        pageVO.setTotalPageCount(page.getTotalPageCount());
-        return pageVO;
+        Page<Blog> page = blogService.getPage(id, Constants.BLOG.DEFAULT_PAGE_SIZE, true);
+        return PageDTO.newBuilder()
+                .currentPageNum(page.getCurrentPageNo())
+                .pageSize(page.getPageSize())
+                .totalPageCount(page.getTotalPageCount())
+                .data(page.getResult())
+                .build();
     }
 
     @RequestMapping(value = "/article/{id:^\\w+$}", method = RequestMethod.GET)
@@ -51,7 +51,7 @@ public class BlogAPIController {
     public @ResponseBody
     Object getArticle(HttpServletRequest request, @PathVariable("id") String id) throws NotFoundException {
         Blog blog = blogService.getArticle(id);
-        return blog;
+        return BlogDTO.newBuilder().parse(blog).build();
     }
 
     @RequestMapping(value = "/article/{id:^\\w+$}/attachElderId", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
@@ -59,17 +59,15 @@ public class BlogAPIController {
     public @ResponseBody
     Object getArticleAttachElderId(HttpServletRequest request,@PathVariable("id") String id) throws NotFoundException {
         BlogVO blogVO = blogService.getArticleAttachElderId(id);
-        return blogVO;
+        return BlogAttachIdDTO.newBuilder().parse(blogVO).build();
     }
-
-
 
     @RequestMapping(value = "/article/{id:^\\w+$}/elderOne", method = RequestMethod.GET)
     @ResponseStatus(code = HttpStatus.OK)
     public @ResponseBody
     Object getElderArticle(HttpServletRequest request,@PathVariable("id") String id) throws NotFoundException {
         Blog blog = blogService.getElderArticle(id);
-        return blog;
+        return BlogDTO.newBuilder().parse(blog).build();
     }
 
 
@@ -77,22 +75,16 @@ public class BlogAPIController {
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public Object handleNotFoundException(HttpServletRequest request, NotFoundException e) {
 //        request.removeAttribute(HandlerMapping.PRODUCIBLE_MEDIA_TYPES_ATTRIBUTE);
-        return "{  \"message\": \"NotFoundException, "+ e.getMessage() +"\"," +
-                "  \"documentation_url\": \"http://blog.teaho.net/api/v1\"" +
-                "}";
+        return NotFoundDTO.newBuilder().defualtDocumentation_url().message("NotFoundException, "+ e.getMessage()).build();
 //        HttpHeaders headers = new HttpHeaders();
 //        headers.setContentType(MediaType.TEXT_PLAIN);
 //        return new ResponseEntity<String>(ex.getMessage(), headers, HttpStatus.BAD_REQUEST);
-
     }
 
     @ExceptionHandler({NullPointerException.class})
-    @ResponseStatus(HttpStatus.NOT_FOUND)
-    public Object handleNullPointException(HttpServletRequest request, NotFoundException e) {
-        return "{  \"message\": \"NullPointerException, "+ e.getMessage() +"\"," +
-                "  \"documentation_url\": \"http://blog.teaho.net/api/v1\"" +
-                "}";
-
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public Object handleNullPointException(HttpServletRequest request, NullPointerException e) {
+        return InternalErrorDTO.newBuilder().defualtDocumentation_url().message("NullPointerException, "+ e.getMessage()).build();
     }
 
     public BlogService getBlogService() {

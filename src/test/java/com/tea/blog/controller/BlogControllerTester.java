@@ -9,7 +9,7 @@ import com.tea.Constants;
 import com.tea.util.TestUtil;
 import com.tea.blog.domain.Blog;
 import com.tea.blog.domain.builder.BlogBuilder;
-import com.tea.blog.exception.NotFoundException;
+import com.tea.common.exception.NotFoundException;
 import com.tea.blog.service.BlogService;
 import com.tea.util.jdbc.support.Page;
 import org.junit.Before;
