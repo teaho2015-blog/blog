@@ -50,7 +50,7 @@
 
             <!-- common -->
             classpath:spring/common/applicationContext-common-service.xml
-            classpath:spring/common/applicationContext-bean-api.xml
+            classpath:spring/api/applicationContext-bean-api.xml
 
 
             <!-- manage -->
