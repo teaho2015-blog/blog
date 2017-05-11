@@ -42,7 +42,7 @@
             <!--classpath:spring/applicationContext-bean-ums.xml-->
 
             <!-- security -->
-            classpath:spring/applicationContext-security.xml
+            <!--classpath:spring/applicationContext-security.xml-->
 
             classpath:spring/applicationContext-myBatis.xml
 
@@ -50,7 +50,7 @@
 
             <!-- common -->
             classpath:spring/common/applicationContext-common-service.xml
-            classpath:spring/common/applicationContext-bean-api.xml
+            classpath:spring/api/applicationContext-bean-api.xml
 
 
             <!-- manage -->
