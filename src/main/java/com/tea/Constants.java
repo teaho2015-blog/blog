@@ -22,6 +22,11 @@ public class Constants {
         public static final String DEFAULT_HEAD_IMAGE_FILEPATH = File.separator + "static" + File.separator+"images" + File.separator + "blog";
     }
 
+    public static class COMMON {
+        private COMMON() {}
+        public static final String DEVELOPMENT_PAGE_URL = "/page/common/development.jsp";
+    }
+
     public static class URL {
         private URL(){}
         public static final String HTTPCODE_404 = "/page/httpCode/404.jsp";

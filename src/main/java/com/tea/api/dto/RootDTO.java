@@ -11,6 +11,6 @@ public class RootDTO {
 
     public final String blog_page_url = "http://blog.teaho.net/api/v1/blog/page/{int_id}";
 
-    public final String blog_article_url = "http://blog.teaho.net/api/v1/blog/article/{int_id}";
+    public final String blog_article_url = "http://blog.teaho.net/api/v1/blog/article/{id}";
 
 }

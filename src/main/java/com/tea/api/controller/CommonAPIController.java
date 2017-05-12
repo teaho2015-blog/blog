@@ -10,6 +10,7 @@ import com.tea.api.dto.RootDTO;
 import com.tea.common.exception.NotFoundException;
 import org.apache.log4j.Logger;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -27,7 +28,7 @@ public class CommonAPIController {
         return new RootDTO();
     }
 
-    @RequestMapping(value = "/**", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
+    @RequestMapping(value = "/**", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseStatus(code = HttpStatus.NOT_FOUND)
     public @ResponseBody
     Object defaultNotFound() {
