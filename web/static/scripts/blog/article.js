@@ -1,7 +1,4 @@
 /*
-获得当前的hostpath+projectname的string
-*/
-/*
       jQuery Setup                                                           
 ************************************************************************/ 
 /*jQuery.ajaxSetup({
@@ -17,7 +14,7 @@ var ArticleAnimator = ArticleAnimator || {
   animationDuration:  500,
   postCount:          5,
   currentPostIndex:   "DEFAULT",
-  nextPostIndex:   {}, //add on 20161207
+  nextPostIndex:   {},
   postCache:          {},
   pageTemplate:       null
 };
@@ -63,14 +60,14 @@ ArticleAnimator.load = function(){
       self.bindWindowScroll();
     })
   })
-}
+};
 
 ArticleAnimator.makeSelections = function(){
   this.$page         = $('.page');
   this.pageTemplate  = elementToTemplate( this.$page.clone() );
   this.$current      = this.currentElementClone();
   this.$next         = this.nextElementClone();
-}
+};
 
 ArticleAnimator.getPost = function(index, callback){
   callback = callback || $.noop;
@@ -89,14 +86,8 @@ ArticleAnimator.getPost = function(index, callback){
 };
 
 ArticleAnimator.getNextPostIndex = function(index){
-  //return (index === this.postCount) ? 1 : index + 1
-  //return this.nextPostIndex;
   return this.nextPostIndex[index];
-}
-
-/*ArticleAnimator.genNextPostIndex = function(index){
-  return this.currentPostIndex + this.constants.ajax.nextPostUrlAfterFix;
-}*/
+};
 
 ArticleAnimator.createPost = function(opts, callback){
   opts      = opts || {};
@@ -115,10 +106,13 @@ ArticleAnimator.createPost = function(opts, callback){
   }
   this.getPost(index, function(d){
     self.contentizeElement(self['$' + type], d);
+    if(type == 'current') {
+      self.refreshTitle();
+    }
     callback && callback();
   });
 
-}
+};
 
 ArticleAnimator.contentizeElement = function($el, d){
 
@@ -129,10 +123,8 @@ ArticleAnimator.contentizeElement = function($el, d){
   $el.find('h3.byline time').html(moment().diff(moment(d.date),'months')>2?moment(d.date).locale("zh_cn").format('MMMM Do YYYY a'): moment(d.date).locale("zh_cn").fromNow());
   //$el.find('h3.byline .author').html(d.creator_name); // reserved
   this.nextPostIndex[d.id] = d.elderid;
-  //this.setCurrentTooltip();
 
-
-}
+};
 
 ArticleAnimator.animatePage = function(callback){
   var self              = this;
@@ -158,7 +150,7 @@ ArticleAnimator.animatePage = function(callback){
 
       callback();
   }, self.animationDuration );
-}
+};
 
 ArticleAnimator.bindGotoNextClick = function(){
   var self  = this;
@@ -173,7 +165,8 @@ ArticleAnimator.bindGotoNextClick = function(){
       self.bindGotoNextClick();
       //history.pushState( pageState(), '', "#" + self.currentPostIndex);
       history.pushState( pageState(), '', self.constants.url.prefix + "/" + self.currentPostIndex);
-      $html.find("head>title").text(self.postCache[self.currentPostIndex].title || self.constants.defaultTitle);
+
+      self.refreshTitle();
     });
   });
 };
@@ -182,7 +175,6 @@ ArticleAnimator.bindPopstate = function(){
   var self = this;
   $window.on('popstate', function(e){
 
-    //20170202
     if( !history.state /*|| self.initialLoad*/ ){
       //self.initialLoad = false;
       return;
@@ -197,7 +189,7 @@ ArticleAnimator.bindPopstate = function(){
     self.createPost({ type: 'next' });
     self.bindGotoNextClick();
   });
-}
+};
 
 ArticleAnimator.bindWindowScroll = function(){
   var self = this;
@@ -205,20 +197,24 @@ ArticleAnimator.bindWindowScroll = function(){
     if ( !self.canScroll ) 
       ev.preventDefault()
   })
-}
+};
 
 ArticleAnimator.refreshCurrentAndNextSelection = function(){
   this.$current      = $('.page.current');
   this.$next         = $('.page.next');
-}
+};
+
+ArticleAnimator.refreshTitle = function() {
+  $html.find("head>title").text(this.postCache[this.currentPostIndex].title || this.constants.defaultTitle);
+};
 
 ArticleAnimator.nextElementClone = function(){
   return this.$page.clone().removeClass('hidden').addClass('next content-hidden');
-}
+};
 
 ArticleAnimator.currentElementClone = function(){
   return this.$page.clone().removeClass('hidden').addClass('current');
-}
+};
 
 /*    
       Helper Functions.                                                      
@@ -256,4 +252,4 @@ $(document).ready(function(){
   /* Let's get it started. */
   ArticleAnimator.load();
 
-})
+});
