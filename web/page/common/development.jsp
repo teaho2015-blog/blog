@@ -1,6 +1,6 @@
 <%--
   create by : teaho2015@gmail.com
-  Date: 2017/2/18
+  Date: 2017/5/3
   Time: 23:01
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -17,7 +17,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Tea's Blog - About</title>
+    <title>Tea's Blog - development</title>
     <link rel="icon" href="/static/images/t.png" />
 
     <!-- Bootstrap Core CSS -->
@@ -97,7 +97,7 @@
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <br/>
-            暂时只有那么两三条放出来的api，也不需authorization的，比较简单易懂，直接看这里<a href="http://blog.teaho.net/api/v1">http://blog.teaho.net/api/v1</a>。
+            <p>暂时只有那么两三条放出来的api，也不需authorization的，比较简单易懂，直接看这里<a href="/api/v1">http://blog.teaho.net/api/v1</a>。</p>
             <br/><br/><br/>
 
         </div>

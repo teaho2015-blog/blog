@@ -104,10 +104,7 @@
             <br/>
             <hr/>
             <br/>
-            <p>本站内容除特殊说明外皆为原创(包括内容配图)，并受 <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>Creative Commons BY-NC-SA 4.0</a> 开源协议保护。</p>
 
-            <br/>
-            <br/>
             <p>联系方式：</p>
             <ul class="list-inline contact-list">
                 <li>
@@ -154,7 +151,7 @@
                     </a>
                 </li>
                 <li <%--data-rotate-y="270deg" &lt;%&ndash;data-move-x="150%"&ndash;%&gt; style="transition: all 1s ease, opacity 0s ease; /*opacity: 0;*/ transform: translateX(150%) rotateY(270deg);"--%>>
-                    <a href="mailto:teaho2015@gmail.com" target="_blank" data-toggle="tooltip" data-placement="bottom" title="E-mail:teaho2015@gmail.com">
+                    <a href="mailto:teaho2015#gmail.com(replace '#' with '@')" target="_blank" data-toggle="tooltip" data-placement="bottom" title="E-mail:teaho2015#gmail.com(replace '#' with '@')">
                                 <span class="fa-stack fa-lg custom-fa-mid">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
@@ -172,7 +169,12 @@
                 </li>
             </ul>
 
-            <br/><br/><br/>
+            <br/>
+            <br/>
+            <br/>
+            <p>本站内容除特殊说明外皆为原创(包括内容配图)，并受 <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>Creative Commons BY-NC-SA 4.0</a> 开源协议保护。</p>
+            <p> <a href="/development/">API说明</a></p>
+            <br/><br/>
         </div>
     </div>
 </div>
