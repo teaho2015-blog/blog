@@ -5,12 +5,14 @@
 package com.tea.api.dto;
 
 import com.tea.Builder;
+import com.tea.api.url.DevelopmentPath;
+import com.tea.api.url.Domain;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class InternalErrorDTO {
-    private String documentation_url = "http://blog.teaho.net/development";
+    private String documentation_url = new DevelopmentPath(new Domain()).getName();
 
     private String message = "";
 
@@ -64,7 +66,7 @@ public class InternalErrorDTO {
         }
 
         public InnerBuilder defualtDocumentation_url() {
-            buildObj.documentation_url = "http://blog.teaho.net/development";
+            buildObj.documentation_url = new DevelopmentPath(new Domain()).getName();
             return this;
         }
 

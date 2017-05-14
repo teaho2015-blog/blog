@@ -5,12 +5,14 @@
 package com.tea.api.dto;
 
 
+import com.tea.api.url.*;
+
 public class RootDTO {
 
-    public final String documentation_url = "http://blog.teaho.net/development";
+    public final String documentation_url = new DevelopmentPath(new Domain()).getName();
 
-    public final String blog_page_url = "http://blog.teaho.net/api/v1/blog/page/{int_id}";
+    public final String blog_page_url = new IntIdPlaceHolderPath(new PagePath(new BlogPath(new APIPath(new Domain())))).getName();
 
-    public final String blog_article_url = "http://blog.teaho.net/api/v1/blog/article/{id}";
+    public final String blog_article_url =  new IdPlaceHolderPath(new ArticlePath(new BlogPath(new APIPath(new Domain())))).getName();
 
 }

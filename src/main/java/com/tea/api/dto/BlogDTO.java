@@ -8,6 +8,7 @@
 package com.tea.api.dto;
 
 import com.tea.Builder;
+import com.tea.api.url.*;
 import com.tea.blog.domain.Blog;
 
 import java.sql.Timestamp;
@@ -296,8 +297,8 @@ public class BlogDTO {
                     .deletor_name(blog.getDeletor_name())
                     .delete_time(blog.getDelete_time())
                     .delete_flag(blog.getDelete_flag())
-                    .html_url("http://blog.teaho.net/article/"+blog.getId())
-                    .attachedElderId_url("http://blog.teaho.net/api/v1/blog/article/"+blog.getId()+"/attachElderId");
+                    .html_url( new UniversalPath(new ArticlePath(new Domain()), blog.getId()).getName())
+                    .attachedElderId_url(new AttachElderIdPath(new UniversalPath(new ArticlePath(new BlogPath(new APIPath(new Domain()))), blog.getId())).getName());
             return this;
         }
 
