@@ -17,7 +17,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Tea's Blog - About</title>
+    <title>Tea's Blog - 404</title>
     <link rel="icon" href="<%-- ${pageContext.request.contextPath} --%>/static/images/t.png" />
 
     <!-- Bootstrap Core CSS -->

@@ -1,6 +1,6 @@
 <%--
   create by : teaho2015@gmail.com
-  Date: 2017/4/24
+  Date: 2017/2/18
   Time: 23:01
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -17,7 +17,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Tea's Blog - 415</title>
+    <title>Tea's Blog - 405</title>
     <link rel="icon" href="<%-- ${pageContext.request.contextPath} --%>/static/images/t.png" />
 
     <!-- Bootstrap Core CSS -->
@@ -83,9 +83,9 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="page-heading">
-                    <h1>414</h1>
+                    <h1>404</h1>
                     <hr class="small">
-                    <span class="subheading">不支持的内容类型请求。<!-- unsupport media type --></span>
+                    <span class="subheading">不允许的请求方法<!-- Mehtod Not Allow. --></span>
                 </div>
             </div>
         </div>

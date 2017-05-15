@@ -290,6 +290,11 @@
     </error-page>
 
     <error-page>
+        <error-code>405</error-code>
+        <location>/page/httpCode/405.jsp</location>
+    </error-page>
+
+    <error-page>
         <error-code>415</error-code>
         <location>/page/httpCode/415.jsp</location>
     </error-page>
