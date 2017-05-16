@@ -100,6 +100,7 @@ ArticleAnimator.createPost = function(opts, callback){
   }
 
   var index = (type == 'next') ? this.getNextPostIndex( this.currentPostIndex) : this.currentPostIndex;
+  //if id == null, hide next click trigger
   if(index == null || index == undefined || index == "") {
     self.$next.addClass(self.constants.css.class.hide);
     return;
@@ -184,8 +185,8 @@ ArticleAnimator.bindPopstate = function(){
     //self.nextPostIndex[self.currentPostIndex] = history.state.nextIndex;
     self.$current.replaceWith( history.state.current );
     self.$next.replaceWith( history.state.next );
-
     self.refreshCurrentAndNextSelection();
+    self.refreshTitle();
     self.createPost({ type: 'next' });
     self.bindGotoNextClick();
   });
