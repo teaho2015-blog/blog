@@ -107,5 +107,8 @@
         });
     });
 </script>--%>
+
+<c:import url="../util/google-analytics.jsp"/>
+
 </html>
 

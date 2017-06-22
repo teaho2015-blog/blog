@@ -90,5 +90,5 @@
 //        $("#blog-body").val(editor.getContent());
 //    }
 </script>
-
+<c:import url="../util/google-analytics.jsp"/>
 </html>

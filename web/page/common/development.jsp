@@ -126,6 +126,7 @@
 <!-- Theme JavaScript -->
 <script src="/static/scripts/blog/blog-theme.min.js"></script>
 
+<c:import url="../util/google-analytics.jsp"/>
 
 </body>
 

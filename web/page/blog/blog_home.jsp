@@ -235,6 +235,7 @@
 
 <script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/scripts/blog/blog-home.js"></script>
 
+<c:import url="../util/google-analytics.jsp"/>
 
 
 </body>

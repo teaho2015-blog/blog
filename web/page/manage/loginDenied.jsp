@@ -16,5 +16,6 @@
 <h1>你的权限不够!</h1>
 <p>只有拥有Admin权限才能访问!</p>
 <a href="<c:url value="/manage/login" />">返回</a>
+<c:import url="../util/google-analytics.jsp"/>
 </body>
 </html>

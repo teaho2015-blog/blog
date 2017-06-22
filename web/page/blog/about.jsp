@@ -230,7 +230,7 @@
 <%--<script src="&lt;%&ndash; ${pageContext.request.contextPath} &ndash;%&gt;/static/library/jquery/jquery.smoove.min.js"></script>--%>
 
 <script src="/static/scripts/blog/about.js"></script>
-
+<c:import url="../util/google-analytics.jsp"/>
 </body>
 
 </html>

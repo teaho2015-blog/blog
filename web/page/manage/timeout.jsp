@@ -17,5 +17,6 @@ Your session appears to have timed out. Please <a href="/manage/login">start aga
 
 </p>
 </div>
+<c:import url="../util/google-analytics.jsp"/>
 </body>
 </html>

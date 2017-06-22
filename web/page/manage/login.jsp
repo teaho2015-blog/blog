@@ -97,4 +97,6 @@
 //        $("#inputPassword").val(hex_md5($("#inputPassword2").val()));
 //    });
 </script>
+
+<c:import url="../util/google-analytics.jsp"/>
 </html>

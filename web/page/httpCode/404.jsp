@@ -149,6 +149,7 @@
 <!-- Theme JavaScript -->
 <script src="<%-- ${pageContext.request.contextPath} --%>/static/scripts/blog/blog-theme.min.js"></script>
 
+<c:import url="../util/google-analytics.jsp"/>
 
 </body>
 
