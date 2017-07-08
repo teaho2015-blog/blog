@@ -13,7 +13,7 @@
 <h2>Invalid Session</h2>
 
 <p>
-Your session appears to have timed out. Please <a href="/manage/login">start again</a>.
+Your session appears to have timed out. Please <a href="/">start again</a>.
 
 </p>
 </div>
