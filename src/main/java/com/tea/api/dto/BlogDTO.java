@@ -284,7 +284,7 @@ public class BlogDTO {
             id(blog.getId())
                     .image_url(blog.getImage_url())
                     .date(blog.getDate() == null ? null : (Date) blog.getDate().clone())
-                    .content(blog.getContent())
+                    .content("")
                     .title(blog.getTitle())
                     .title_secondary(blog.getTitle_secondary())
                     .creator_id(blog.getCreator_id())
