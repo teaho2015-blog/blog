@@ -84,6 +84,7 @@ public class PageDTO {
                 pageDTO.data = new ArrayList<>();
             }
             for (Blog o : data) {
+                o.setContent("");
                 pageDTO.data.add(BlogDTO.newBuilder().parse(o).build());
             }
             return this;
