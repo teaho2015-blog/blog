@@ -12,12 +12,19 @@ import com.tea.blog.vo.BlogVO;
 import com.tea.util.jdbc.support.Page;
 import com.tea.blog.domain.Blog;
 import com.tea.blog.service.BlogService;
+import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 @RestController
@@ -25,7 +32,7 @@ import javax.servlet.http.HttpServletRequest;
 public class BlogAPIController {
 
     /** 日志实例 */
-    private  final Logger logger = Logger.getLogger(getClass());
+    private static final Logger logger = Logger.getLogger(BlogAPIController.class);
 
     private final static int DEFAULT_PAGE_NUM = 1;
 
@@ -53,6 +60,14 @@ public class BlogAPIController {
         return BlogDTO.newBuilder().parse(blog).build();
     }
 
+    @RequestMapping(value = "/article/{id:^\\w+$}", method = RequestMethod.DELETE)
+    @ResponseStatus(code = HttpStatus.OK)
+    public @ResponseBody
+    Object deleteArticle(HttpServletRequest request, @PathVariable("id") String id) {
+        blogService.deleteArticle(id);
+        return "success";
+    }
+
     @RequestMapping(value = "/article/{id:^\\w+$}/attachElderId", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     public @ResponseBody
@@ -70,6 +85,35 @@ public class BlogAPIController {
     }
 
 
+    @RequestMapping(value = "/article", method = RequestMethod.POST)
+    @ResponseStatus(code = HttpStatus.OK)
+    public @ResponseBody
+    Object postBlog(Blog blog, HttpServletRequest request) {
+        Assert.hasText(blog.getImage_url(), "image url null");
+        Assert.hasText(blog.getTitle(), "title is null");
+        Assert.hasText(blog.getTitle_secondary(), "title_secondary is null");
+        Assert.hasText(blog.getContent(), "content is null");
+        blogService.createBlog(blog);
+        SimpleDataDTO<String> simpleDataDTO = new SimpleDataDTO<>();
+        simpleDataDTO.setMessage("success");
+        return simpleDataDTO;
+    }
+
+
+    @RequestMapping(value = "/image", method = RequestMethod.POST)
+    @ResponseStatus(code = HttpStatus.OK)
+    public @ResponseBody
+    Object uploadImage(HttpServletRequest request, @RequestParam("image") MultipartFile image) throws IOException {
+
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("link", blogService.addImage(request, image));
+        SimpleDataDTO<JSONObject> dataDTO = new SimpleDataDTO<>();
+        dataDTO.setData(jsonObject);
+        return dataDTO;
+    }
+
+
+
     @ExceptionHandler({NotFoundException.class})
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public Object handleNotFoundException(HttpServletRequest request, NotFoundException e) {
@@ -85,6 +129,16 @@ public class BlogAPIController {
     public Object handleNullPointException(HttpServletRequest request, NullPointerException e) {
         return InternalErrorDTO.newBuilder().defualtDocumentation_url().message("NullPointerException, "+ e.getMessage()).build();
     }
+
+    @ExceptionHandler({IOException.class})
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public Object handleIOException(HttpServletRequest request, IOException e) {
+        List<String> list = Arrays.asList(e.getStackTrace()).stream()
+                .map(StackTraceElement::toString)
+                .collect(Collectors.toList());
+        return InternalErrorDTO.newBuilder().defualtDocumentation_url().message("IOException, " + e.getMessage()).addErrors(list).build();
+    }
+
 
     public BlogService getBlogService() {
         return blogService;
