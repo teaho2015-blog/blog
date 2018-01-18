@@ -3,6 +3,9 @@ jdk:
 - oraclejdk8
 install:
 - mvn install -Dmaven.test.skip=true -Dmaven.javadoc.skip=true
+branches:
+  only:
+  - master
 deploy:
   provider: releases
   api_key: "${api_key}"
