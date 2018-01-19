@@ -60,6 +60,8 @@ public class BlogAPIController {
         return BlogDTO.newBuilder().parse(blog).build();
     }
 
+
+
     @RequestMapping(value = "/article/{id:^\\w+$}", method = RequestMethod.DELETE)
     @ResponseStatus(code = HttpStatus.OK)
     public @ResponseBody
@@ -94,6 +96,21 @@ public class BlogAPIController {
         Assert.hasText(blog.getTitle_secondary(), "title_secondary is null");
         Assert.hasText(blog.getContent(), "content is null");
         blogService.createBlog(blog);
+        SimpleDataDTO<String> simpleDataDTO = new SimpleDataDTO<>();
+        simpleDataDTO.setMessage("success");
+        return simpleDataDTO;
+    }
+
+    @RequestMapping(value = "/article/{id:^\\w+$}", method = RequestMethod.PUT)
+    @ResponseStatus(code = HttpStatus.OK)
+    public @ResponseBody
+    Object putBlog(@RequestBody Blog blog, HttpServletRequest request, @PathVariable("id") String id) {
+        Assert.hasText(blog.getImage_url(), "image url null");
+        Assert.hasText(blog.getTitle(), "title is null");
+        Assert.hasText(blog.getTitle_secondary(), "title_secondary is null");
+        Assert.hasText(blog.getContent(), "content is null");
+        blog.setId(id);
+        blogService.updateBlog(blog);
         SimpleDataDTO<String> simpleDataDTO = new SimpleDataDTO<>();
         simpleDataDTO.setMessage("success");
         return simpleDataDTO;

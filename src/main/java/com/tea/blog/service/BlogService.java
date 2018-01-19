@@ -36,5 +36,5 @@ public interface BlogService {
 
     void createBlog(Blog blog);
 
-
+    void updateBlog(Blog blog);
 }

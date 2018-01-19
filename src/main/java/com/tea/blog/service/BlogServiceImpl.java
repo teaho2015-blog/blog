@@ -127,6 +127,12 @@ public class BlogServiceImpl implements BlogService {
         blogDAO.add(blog);
     }
 
+    @Override
+    public void updateBlog(Blog blog) {
+        blogDAO.updateById(blog);
+    }
+
+
     public BlogDAO getBlogDAO() {
         return blogDAO;
     }

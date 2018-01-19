@@ -46,4 +46,7 @@ public interface BlogDAO {
 
     @Update("UPDATE B_BLOG SET DELETE_FLAG=1 WHERE ID=#{0}")
     void deleteById(String id);
+
+    @Update("UPDATE B_BLOG SET TITLE=#{title}, TITLE_SECONDARY=#{title_secondary}, IMAGE_URL=#{image_url}, CONTENT=#{content} WHERE ID=#{id}")
+    void updateById(Blog blog);
 }
