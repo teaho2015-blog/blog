@@ -29,7 +29,7 @@ public interface BlogDAO {
 
 
 
-    @Select("SELECT * FROM B_BLOG A WHERE ID=#{0} WHERE DELETE_FLAG=0 ")
+    @Select("SELECT * FROM B_BLOG A WHERE ID=#{0} AND DELETE_FLAG=0 ")
     public Blog get(String id);
     
 /**
