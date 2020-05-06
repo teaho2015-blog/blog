@@ -15,7 +15,7 @@ public class UUIDGenerator {
      * 生成32位UUID，不含“-”符
      * @return
      */
-    public static final String generateUUID(){
+    public static String generateUUID(){
         String uuid = UUID.randomUUID().toString();
         return uuid.replaceAll("-", "");
     }

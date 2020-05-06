@@ -31,6 +31,11 @@
             <!--classpath:spring/quartz/applicationContext-quartz-demo.xml-->
             <!--classpath:spring/quartz/applicationContext-quartz-config.xml-->
 
+            <!-- common -->
+            classpath:spring/common/applicationContext-common-service.xml
+            classpath:spring/api/applicationContext-bean-api.xml
+
+            classpath:spring/common/applicationContext-config.xml
             <!-- datasource -->
             classpath:spring/applicationContext-datasource.xml
             <!--2015.4.13 filter within spring container -->
@@ -48,11 +53,6 @@
 
 
 
-            <!-- common -->
-            classpath:spring/common/applicationContext-common-service.xml
-            classpath:spring/api/applicationContext-bean-api.xml
-
-            classpath:spring/common/applicationContext-config.xml
 
 
 

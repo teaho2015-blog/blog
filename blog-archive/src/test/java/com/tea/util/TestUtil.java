@@ -34,17 +34,11 @@ public class TestUtil {
     }
 
     public static String generateRedirectViewPath(String path) {
-        StringBuilder redirectViewPath = new StringBuilder();
-        redirectViewPath.append("redirect:");
-        redirectViewPath.append(path);
-        return redirectViewPath.toString();
+        return "redirect:" + path;
     }
 
     public static String generateForwardViewPath(String path) {
-        StringBuilder redirectViewPath = new StringBuilder();
-        redirectViewPath.append("forward:");
-        redirectViewPath.append(path);
-        return redirectViewPath.toString();
+        return "forward:" + path;
     }
 
 

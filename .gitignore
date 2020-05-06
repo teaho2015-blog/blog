@@ -5,7 +5,7 @@
 
 #build
 /out
-/target
+target/
 
 # misc
 .DS_Store

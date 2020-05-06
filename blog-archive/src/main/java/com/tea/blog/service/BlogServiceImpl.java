@@ -48,6 +48,9 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public Page<Blog> getPage(int pageNum, int pageSize, boolean checkEmpty) throws NotFoundException {
+
+        System.out.println(blogDAO.getTotalNum());
+
         Page<Blog> page = new Page<>(pageNum, blogDAO.getTotalNum(), pageSize,
                 blogDAO.getBlogList(Page.getStartOfPage(pageNum,pageSize), pageSize ));
         if (checkEmpty && page.isEmpty()) {
