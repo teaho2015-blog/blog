@@ -7,6 +7,7 @@
  */
 package net.teaho.blog.server.api.dto;
 
+import net.teaho.blog.server.api.url.*;
 import net.teaho.blog.server.common.Builder;
 import net.teaho.blog.server.blog.domain.Blog;
 

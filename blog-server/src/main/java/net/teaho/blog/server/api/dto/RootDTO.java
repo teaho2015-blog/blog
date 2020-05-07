@@ -5,6 +5,8 @@
 package net.teaho.blog.server.api.dto;
 
 
+import net.teaho.blog.server.api.url.*;
+
 public class RootDTO {
 
     public final String documentation_url = new DevelopmentPath(new Domain()).getName();

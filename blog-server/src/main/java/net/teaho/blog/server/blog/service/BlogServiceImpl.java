@@ -4,6 +4,7 @@
  */
 package net.teaho.blog.server.blog.service;
 
+import lombok.extern.slf4j.Slf4j;
 import net.teaho.blog.server.common.Constants;
 import net.teaho.blog.server.api.url.NullMaterial;
 import net.teaho.blog.server.api.url.UniversalPath;
@@ -14,7 +15,6 @@ import net.teaho.blog.server.common.exception.NotFoundException;
 import net.teaho.blog.server.util.DateUtil;
 import net.teaho.blog.server.util.UUIDGenerator;
 import net.teaho.blog.server.util.jdbc.support.Page;
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -30,6 +30,7 @@ import java.time.format.DateTimeFormatter;
 import static java.io.File.separator;
 
 @Service
+@Slf4j
 public class BlogServiceImpl implements BlogService {
     @Autowired
     private BlogDAO blogDAO;
@@ -37,7 +38,6 @@ public class BlogServiceImpl implements BlogService {
     public @Value("${app.pics.location}") String IMAGE_PATH;
 
 
-    private static final Logger LOG = Logger.getLogger(BlogServiceImpl.class);
 
 
     @Override

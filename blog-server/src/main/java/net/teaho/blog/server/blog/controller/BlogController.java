@@ -5,23 +5,22 @@
 package net.teaho.blog.server.blog.controller;
 
 
+import lombok.extern.slf4j.Slf4j;
 import net.teaho.blog.server.blog.service.BlogService;
 import net.teaho.blog.server.common.exception.NotFoundException;
 import net.teaho.blog.server.util.jdbc.support.Page;
-import org.apache.log4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 
-
+@Slf4j
 @RestController
 @RequestMapping("/")
 public class BlogController {
 
     /** 日志实例 */
-    protected final Logger logger = Logger.getLogger(getClass());
 
     protected final static String BLOG_HOME_URL = "/page/blog/blog_home.jsp";
     protected final static String ARTICLE_URL = "/page/blog/article.jsp";
@@ -50,7 +49,7 @@ public class BlogController {
             mv.addObject(MODEL_NAME_CURRENTPAGENUM, page.getCurrentPageNo());
             mv.addObject(MODEL_NAME_PAGESIZE, page.getPageSize());
         } catch (NotFoundException e) {
-            logger.info("page data is empty, but nullable page is allow for home page!!", e);
+            log.info("page data is empty, but nullable page is allow for home page!!", e);
         }
 
         return mv;
