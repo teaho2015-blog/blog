@@ -15,11 +15,12 @@ npm-debug.log*
 
 # intellij IDEA
 /.idea
+*.iml
 
 # tmp dir
 /tmp
 
 # custom properties files
-/src/main/resources/properties/app.properties
+app.properties
 
-*.iml
+
