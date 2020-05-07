@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <property name="log.path" value="/data/logs"/>
+    <springProperty scope="context" name="logName" source="spring.application.name" defaultValue="localhost"/>
+<!--    <property name="request.log.path" value="/data/base_arch/components/al-gateway-capi/logs/request.log"/>-->
+    <property name="CONSOLE_LOG_PATTERN"
+              value="|%level|%d{yyyy-MM-dd HH:mm:ss.SSS}|%thread|%tid-%X{spanId}|%C|%M|%L|uid=%X{uid}|%msg|%X{callChain}%n"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout>
+                <pattern>${console_log_pattern}</pattern>
+            </layout>
+        </encoder>
+    </appender>
+
+    <!-- 文件输出日志 (文件大小策略进行文件输出，超过指定大小对文件备份) -->
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.path}/${logName}/${logName}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logName}.%d{yyyy-MM-dd}.zip</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <cleanHistoryOnStart>true</cleanHistoryOnStart>
+        </rollingPolicy>
+        <layout>
+            <pattern>${console_log_pattern}</pattern>
+        </layout>
+    </appender>
+
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="file"/>
+    </root>
+
+    <logger name="request" level="INFO" additivity="false">
+        <appender-ref ref="request"/>
+    </logger>
+</Configuration>
