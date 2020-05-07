@@ -47,16 +47,16 @@ public class ManageServiceImpl implements ManageService {
             String image_url = filePath.replace(rpath, "");
 //            image_url = image_url.substring(1);
             image_url = image_url.replace(File.separator, "/");
-            blog.setImage_url(image_url);
+            blog.setImageUrl(image_url);
 
-        } else if (blog.getImage_url() ==null||"".equals(blog.getImage_url())){
-            blog.setImage_url(Constants.BLOG.DEFAULT_IMAGE_URL);
+        } else if (blog.getImageUrl() ==null||"".equals(blog.getImageUrl())){
+            blog.setImageUrl(Constants.BLOG.DEFAULT_IMAGE_URL);
         }
         blog.setDate(DateUtil.getCurrentTimestamp());
-        blog.setCreator_id(Constants.USER.ID);
-        blog.setCreator_name(Constants.USER.NAME);
-        blog.setCreate_time(DateUtil.getCurrentTimestamp());
-        blog.setDelete_flag(0);
+        blog.setCreatorId(Constants.USER.ID);
+        blog.setCreatorName(Constants.USER.NAME);
+        blog.setCreateTime(DateUtil.getCurrentTimestamp());
+        blog.setDeleteFlag(0);
         blogDAO.add(blog);
     }
 

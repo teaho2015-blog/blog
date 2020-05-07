@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-@MapperScan("net.teaho.blog.server")
+@MapperScan("net.teaho.blog.server.*.dao")
 public class BlogServerApplication {
 
     public static void main(String[] args) {

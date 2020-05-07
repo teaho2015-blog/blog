@@ -6,6 +6,7 @@ package net.teaho.blog.server.api.controller;
 
 
 import com.alibaba.fastjson.JSONObject;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import net.teaho.blog.server.common.Constants;
 import net.teaho.blog.server.api.dto.*;
@@ -29,11 +30,12 @@ import java.util.stream.Collectors;
 @Slf4j
 @RestController
 @RequestMapping("/api/v1/blog")
+@RequiredArgsConstructor
 public class BlogAPIController {
 
     private final static int DEFAULT_PAGE_NUM = 1;
 
-    private BlogService blogService;
+    private final BlogService blogService;
 
     @RequestMapping(value = "/page/{id:^\\d+$}", method = RequestMethod.GET)
     @ResponseStatus(code = HttpStatus.OK)
@@ -88,9 +90,9 @@ public class BlogAPIController {
     @ResponseStatus(code = HttpStatus.OK)
     public @ResponseBody
     Object postBlog(Blog blog, HttpServletRequest request) {
-        Assert.hasText(blog.getImage_url(), "image url null");
+        Assert.hasText(blog.getImageUrl(), "image url null");
         Assert.hasText(blog.getTitle(), "title is null");
-        Assert.hasText(blog.getTitle_secondary(), "title_secondary is null");
+        Assert.hasText(blog.getTitleSecondary(), "title_secondary is null");
         Assert.hasText(blog.getContent(), "content is null");
         blogService.createBlog(blog);
         SimpleDataDTO<String> simpleDataDTO = new SimpleDataDTO<>();
@@ -102,9 +104,9 @@ public class BlogAPIController {
     @ResponseStatus(code = HttpStatus.OK)
     public @ResponseBody
     Object putBlog(@RequestBody Blog blog, HttpServletRequest request, @PathVariable("id") String id) {
-        Assert.hasText(blog.getImage_url(), "image url null");
+        Assert.hasText(blog.getImageUrl(), "image url null");
         Assert.hasText(blog.getTitle(), "title is null");
-        Assert.hasText(blog.getTitle_secondary(), "title_secondary is null");
+        Assert.hasText(blog.getTitleSecondary(), "title_secondary is null");
         Assert.hasText(blog.getContent(), "content is null");
         blog.setId(id);
         blogService.updateBlog(blog);
@@ -141,6 +143,7 @@ public class BlogAPIController {
     @ExceptionHandler({NullPointerException.class})
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public Object handleNullPointException(HttpServletRequest request, NullPointerException e) {
+        log.error("error while request: " + request.getRequestURI(), e);
         return InternalErrorDTO.newBuilder().defualtDocumentation_url().message("NullPointerException, "+ e.getMessage()).build();
     }
 
@@ -153,13 +156,5 @@ public class BlogAPIController {
         return InternalErrorDTO.newBuilder().defualtDocumentation_url().message("IOException, " + e.getMessage()).addErrors(list).build();
     }
 
-
-    public BlogService getBlogService() {
-        return blogService;
-    }
-
-    public void setBlogService(BlogService blogService) {
-        this.blogService = blogService;
-    }
 }
 

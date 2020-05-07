@@ -10,6 +10,9 @@ spring:
     username: root
     password: 2222
     driverClassName: com.mysql.jdbc.Driver
+  mvc:
+    view:
+      prefix: /WEB-INF/
 
 app:
   pics:

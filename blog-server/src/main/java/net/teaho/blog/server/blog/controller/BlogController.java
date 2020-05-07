@@ -5,6 +5,7 @@
 package net.teaho.blog.server.blog.controller;
 
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import net.teaho.blog.server.blog.service.BlogService;
 import net.teaho.blog.server.common.exception.NotFoundException;
@@ -18,6 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 @Slf4j
 @RestController
 @RequestMapping("/")
+@RequiredArgsConstructor
 public class BlogController {
 
     /** 日志实例 */
@@ -32,7 +34,7 @@ public class BlogController {
     protected static final String MODEL_NAME_CURRENTPAGENUM = "currentPageNum";
     protected static final String MODEL_NAME_PAGESIZE = "pageSize";
 
-    private BlogService blogService;
+    private final BlogService blogService;
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     @ResponseStatus(code = HttpStatus.OK)
@@ -103,12 +105,5 @@ public class BlogController {
     }
 
 
-    public BlogService getBlogService() {
-        return blogService;
-    }
-
-    public void setBlogService(BlogService blogService) {
-        this.blogService = blogService;
-    }
 }
 

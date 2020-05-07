@@ -1,0 +1,31 @@
+body {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    /*background-color: ;*/
+    /*background: rgba(255, 255, 255, 0.1);*/
+    background: #ecf0f1;
+}
+
+.content {
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 3px dotted #e5e5e5;
+}
+
+.panel-group a {
+    color: #101010;
+
+}
+
+.panel-group a:hover,
+.panel-group a:focus {
+    background-color: transparent;
+}
+
+.menu {
+
+}
+

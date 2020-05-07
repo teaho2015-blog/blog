@@ -117,21 +117,21 @@ public class BlogBuilder {
     public Blog build() {
         Blog blog = new Blog();
         blog.setId((id==null||"".equals(id))? UUIDGenerator.generateUUID() : id);
-        blog.setImage_url(image_url);
+        blog.setImageUrl(image_url);
         blog.setDate(date);
         blog.setTitle(title);
-        blog.setTitle_secondary(title_secondary);
+        blog.setTitleSecondary(title_secondary);
         blog.setContent(content);
-        blog.setCreator_id(creator_id);
-        blog.setCreator_name(creator_name);
-        blog.setCreate_time(create_time);
-        blog.setUpdator_id(updator_id);
-        blog.setUpdator_name(updator_name);
-        blog.setUpdate_time(update_time);
-        blog.setDeletor_id(deletor_id);
-        blog.setDeletor_name(deletor_name);
-        blog.setDelete_time(delete_time);
-        blog.setDelete_flag(delete_flag);
+        blog.setCreatorId(creator_id);
+        blog.setCreatorName(creator_name);
+        blog.setCreateTime(create_time);
+        blog.setUpdatorId(updator_id);
+        blog.setUpdatorName(updator_name);
+        blog.setUpdateTime(update_time);
+        blog.setDeletorId(deletor_id);
+        blog.setDeletorName(deletor_name);
+        blog.setDeleteTime(delete_time);
+        blog.setDeleteFlag(delete_flag);
         return blog;
 
     }
