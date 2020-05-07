@@ -15,7 +15,7 @@ npm-debug.log*
 
 # intellij IDEA
 /.idea
-.iml
+*.iml
 
 # tmp dir
 /tmp
