@@ -21,3 +21,5 @@ npm-debug.log*
 
 # custom properties files
 /src/main/resources/properties/app.properties
+
+*.iml
