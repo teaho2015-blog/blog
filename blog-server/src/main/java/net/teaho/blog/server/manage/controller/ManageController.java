@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 
-@RestController
+//@RestController
 @RequestMapping("/manage")
 @Slf4j
 public class ManageController {

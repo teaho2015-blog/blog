@@ -61,13 +61,13 @@ public class BlogAPIController {
 
 
 
-    @RequestMapping(value = "/article/{id:^\\w+$}", method = RequestMethod.DELETE)
+/*    @RequestMapping(value = "/article/{id:^\\w+$}", method = RequestMethod.DELETE)
     @ResponseStatus(code = HttpStatus.OK)
     public @ResponseBody
     Object deleteArticle(HttpServletRequest request, @PathVariable("id") String id) {
         blogService.deleteArticle(id);
         return "success";
-    }
+    }*/
 
     @RequestMapping(value = "/article/{id:^\\w+$}/attachElderId", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
@@ -86,7 +86,7 @@ public class BlogAPIController {
     }
 
 
-    @RequestMapping(value = "/article", method = RequestMethod.POST)
+/*    @RequestMapping(value = "/article", method = RequestMethod.POST)
     @ResponseStatus(code = HttpStatus.OK)
     public @ResponseBody
     Object postBlog(Blog blog, HttpServletRequest request) {
@@ -126,7 +126,7 @@ public class BlogAPIController {
         SimpleDataDTO<JSONObject> dataDTO = new SimpleDataDTO<>();
         dataDTO.setData(jsonObject);
         return dataDTO;
-    }
+    }*/
 
 
 
