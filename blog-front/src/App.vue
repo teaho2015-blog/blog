@@ -1,9 +1,10 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
+      <router-link to="/home">Home</router-link> |
       <router-link to="/cats">Cats</router-link> |
-      <router-link to="/dogs">Dogs</router-link>
+      <router-link to="/dogs">Dogs</router-link> |
+      <router-link to="/">blog</router-link>
     </div>
 
     <b-container>
@@ -31,3 +32,26 @@
   }
 }
 </style>
+<script>
+    import axios from 'axios'
+    export default {
+        name: 'App',
+        data () {
+            return {
+                itemList: []
+            }
+        },
+        mounted () {
+            this.getData()
+        },
+        methods: {
+            getData () {
+                axios.get('/data/blog.json').then(response => {
+                    console.log(response.data)
+                }, response => {
+                    console.log('error')
+                })
+            }
+        }
+    }
+</script>

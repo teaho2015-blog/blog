@@ -5,6 +5,8 @@ import Cats from './views/Cats.vue'
 import Dogs from './views/Dogs.vue'
 import Pet from './views/Pet.vue'
 
+import Blogs from './views/Blogs.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -12,9 +14,14 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/',
+      name: 'blog',
+      component: Blogs
     },
     {
       path: '/cats',
