@@ -14,8 +14,8 @@ npm-debug.log*
 /coverage
 
 # intellij IDEA
-/.idea
-*.iml
+.idea/
+./*.iml
 
 # tmp dir
 /tmp

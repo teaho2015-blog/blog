@@ -194,6 +194,11 @@ $(function() {
                 visiblePages: pageSize,
                 currentPage: _blogPager.currentPageNum,
                 wrapper : "<ul class=\"pagination\"></ul>",
+                // first: '<li class="first"><a href="javascript:;">第一页</a></li>',
+                prev: '<li class="prev"><a href="javascript:;"><</a></li>',
+                next: '<li class="next"><a href="javascript:;">></a></li>',
+                // last: '<li class="last"><a href="javascript:;">最后一页</a></li>',
+                page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
                 onPageChange: function (num, type) {
                     //$('#text').html('当前第' + num + '页');
                     console.log("num : "+ num);

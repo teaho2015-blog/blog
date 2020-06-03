@@ -20,7 +20,7 @@ public class UUIDGenerator {
         return uuid.replaceAll("-", "");
     }
 
-    public static void main(String[] args) {
-        System.out.println(generateUUID());
-    }
+//    public static void main(String[] args) {
+//        System.out.println(generateUUID());
+//    }
 }
