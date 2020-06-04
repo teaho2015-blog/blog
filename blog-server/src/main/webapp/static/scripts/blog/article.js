@@ -124,7 +124,8 @@ ArticleAnimator.contentizeElement = function($el, d){
   $el.find('h3.byline time').html(moment().diff(moment(d.date),'months')>2?moment(d.date).locale("zh_cn").format('MMMM Do YYYY a'): moment(d.date).locale("zh_cn").fromNow());
   //$el.find('h3.byline .author').html(d.creator_name); // reserved
   this.nextPostIndex[d.id] = d.elderid;
-
+  console.log('Lazy load:' + $el.find('img.lazy').attr('data-original'));
+  $el.find('img.lazy').lazyload();
 };
 
 ArticleAnimator.animatePage = function(callback){
