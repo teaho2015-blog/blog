@@ -74,7 +74,7 @@ public class BlogController {
         mv.setViewName("forward:" +  BLOG_HOME_URL);
         Page page = blogService.getPage(pageNum);
 
-        mv.addObject("blogList", page.getResult());
+//        mv.addObject("blogList", page.getResult());
 //        mv.addObject("blogTotalNum", page.getTotalCount());
         mv.addObject("blogTotalPageNum", page.getTotalPageCount());
         mv.addObject("currentPageNum", page.getCurrentPageNo());

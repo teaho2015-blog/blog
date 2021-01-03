@@ -166,7 +166,15 @@ $(function() {
                 $itemTemplateClone.find(".post-subtitle").text(article.title_secondary);
                 $itemTemplateClone.find(".post-meta").attr("data-time", article.date );
                 $itemTemplateClone.find(".post-meta").text("发布于 "+ moment().diff(moment(article.date),'months')>2?moment(article.date).locale("zh_cn").format('MMMM Do YYYY a'): moment(article.date).locale("zh_cn").fromNow());
-                $itemTemplateClone.find(".post-preview>a").attr("href", $itemTemplateClone.find(".post-preview>a").attr("data-context-path")+"/article/"+article.id);
+                // type = 2, external url
+                if (article.type === 1) {
+                    $itemTemplateClone.find(".post-preview>a").attr("href", $itemTemplateClone.find(".post-preview>a").attr("data-context-path")+"/article/"+article.id);
+                } else if (article.type === 2) {
+                    console.debug('outgoing url:' + article.externalUrl);
+                    $itemTemplateClone.find(".post-preview>a").attr("href",
+                        article.externalUrl);
+                }
+
                 elementBuffer += $itemTemplateClone.get(0).innerHTML;
             }
 

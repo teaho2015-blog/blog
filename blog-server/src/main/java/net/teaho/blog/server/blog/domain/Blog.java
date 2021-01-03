@@ -32,6 +32,8 @@ public class Blog {
     private String titleSecondary;
 //    private String pre_content;
     private String content;
+    private Integer type;
+    private String externalUrl;
     private String creatorId;
     private String creatorName;
     private Timestamp createTime;

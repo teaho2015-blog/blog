@@ -22,6 +22,8 @@ public class BlogDTO {
     private String title;
     private String title_secondary;
     private String content;
+    private Integer type;
+    private String externalUrl;
     private String creator_id;
     private String creator_name;
     private Timestamp create_time;
@@ -179,6 +181,22 @@ public class BlogDTO {
         this.attachedElderId_url = attachedElderId_url;
     }
 
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
+    }
+
+    public String getExternalUrl() {
+        return externalUrl;
+    }
+
+    public void setExternalUrl(String externalUrl) {
+        this.externalUrl = externalUrl;
+    }
+
     public static InnerBuilder newBuilder() {
         return new InnerBuilder();
     }
@@ -217,6 +235,16 @@ public class BlogDTO {
 
         public InnerBuilder content(String str) {
             blogDTO.content = str;
+            return this;
+        }
+
+        public InnerBuilder type(Integer i) {
+            blogDTO.type = i;
+            return this;
+        }
+
+        public InnerBuilder externalUrl(String url) {
+            blogDTO.externalUrl = url;
             return this;
         }
 
@@ -282,23 +310,25 @@ public class BlogDTO {
 
         public InnerBuilder parse(Blog blog) {
             id(blog.getId())
-                    .image_url(blog.getImageUrl())
-                    .date(blog.getDate() == null ? null : (Date) blog.getDate().clone())
-                    .content(blog.getContent())
-                    .title(blog.getTitle())
-                    .title_secondary(blog.getTitleSecondary())
-                    .creator_id(blog.getCreatorId())
-                    .creator_name(blog.getCreatorName())
-                    .create_time(blog.getCreateTime())
-                    .updator_id(blog.getUpdatorId())
-                    .updator_name(blog.getUpdatorName())
-                    .update_time(blog.getUpdateTime())
-                    .deletor_id(blog.getDeletorId())
-                    .deletor_name(blog.getDeletorName())
-                    .delete_time(blog.getDeleteTime())
-                    .delete_flag(blog.getDeleteFlag())
-                    .html_url( new UniversalPath(new ArticlePath(new Domain()), blog.getId()).getName())
-                    .attachedElderId_url(new AttachElderIdPath(new UniversalPath(new ArticlePath(new BlogPath(new APIPath(new Domain()))), blog.getId())).getName());
+                .image_url(blog.getImageUrl())
+                .date(blog.getDate() == null ? null : (Date) blog.getDate().clone())
+                .content(blog.getContent())
+                .title(blog.getTitle())
+                .title_secondary(blog.getTitleSecondary())
+                .type(blog.getType())
+                .externalUrl(blog.getExternalUrl())
+                .creator_id(blog.getCreatorId())
+                .creator_name(blog.getCreatorName())
+                .create_time(blog.getCreateTime())
+                .updator_id(blog.getUpdatorId())
+                .updator_name(blog.getUpdatorName())
+                .update_time(blog.getUpdateTime())
+                .deletor_id(blog.getDeletorId())
+                .deletor_name(blog.getDeletorName())
+                .delete_time(blog.getDeleteTime())
+                .delete_flag(blog.getDeleteFlag())
+                .html_url(new UniversalPath(new ArticlePath(new Domain()), blog.getId()).getName())
+                .attachedElderId_url(new AttachElderIdPath(new UniversalPath(new ArticlePath(new BlogPath(new APIPath(new Domain()))), blog.getId())).getName());
             return this;
         }
 

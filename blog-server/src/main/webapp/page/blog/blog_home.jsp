@@ -7,7 +7,9 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-
+<%
+    String sourceHost = "https://blog.cdn.teaho.net";
+%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,23 +23,23 @@
 
     <title>Tea's Blog</title>
 
-    <link rel="icon" href="<%-- ${pageContext.request.contextPath} --%>/static/images/t.png" />
+    <link rel="icon" href="<%-- ${pageContext.request.contextPath} --%>${sourceHost}/static/images/t.png"/>
 
     <!-- Bootstrap Core CSS -->
-    <link href="<%-- ${pageContext.request.contextPath} --%>/static/library/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="<%-- ${pageContext.request.contextPath} --%>${sourceHost}/static/library/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="<%-- ${pageContext.request.contextPath} --%>/static/styles/blog/blog-theme.css" rel="stylesheet">
+    <link href="<%-- ${pageContext.request.contextPath} --%>${sourceHost}/static/styles/blog/blog-theme.css" rel="stylesheet">
 
-    <link href="<%-- ${pageContext.request.contextPath} --%>/static/styles/blog/blog-home.css" rel="stylesheet">
+    <link href="<%-- ${pageContext.request.contextPath} --%>${sourceHost}/static/styles/blog/blog-home.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="<%-- ${pageContext.request.contextPath} --%>/static/library/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<%-- ${pageContext.request.contextPath} --%>${sourceHost}/static/library/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- progress bar -->
-    <link href='<%-- ${pageContext.request.contextPath} --%>/static/library/nprogress/nprogress.css' rel='stylesheet' type='text/css'>
+    <link href='<%-- ${pageContext.request.contextPath} --%>${sourceHost}/static/library/nprogress/nprogress.css' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -83,7 +85,7 @@
 
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
-<header class="intro-header" style="background-image: url('<%-- ${pageContext.request.contextPath} --%>/static/images/blog/blog-home-bg.jpg'); position : relative;">
+<header class="intro-header" style="background-image: url('<%-- ${pageContext.request.contextPath} --%>${sourceHost}/static/images/blog/blog-home-bg.jpg'); position : relative;">
     <div class="mask"></div>
     <div class="container">
 
@@ -111,7 +113,7 @@
 <!-- Main Content -->
 <div class="container" id="main-wrapper">
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" >
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div id="article-wrapper">
 
             </div>
@@ -129,63 +131,63 @@
                 </div>
                 <hr>
             </c:forEach>--%>
-          <%--  <div class="post-preview">
-                <a href="post.html">
-                    <h2 class="post-title">
-                        Man must explore, and this is exploration at its greatest
-                    </h2>
-                    <h3 class="post-subtitle">
-                        Problems look mighty small from 150 miles up
-                    </h3>
-                </a>
-                <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="post.html">
-                    <h2 class="post-title">
-                        I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-                    </h2>
-                </a>
-                <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="post.html">
-                    <h2 class="post-title">
-                        Science has not yet mastered prophecy
-                    </h2>
-                    <h3 class="post-subtitle">
-                        We predict too much for the next year and yet far too little for the next ten.
-                    </h3>
-                </a>
-                <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="post.html">
-                    <h2 class="post-title">
-                        Failure is not an option
-                    </h2>
-                    <h3 class="post-subtitle">
-                        Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-                    </h3>
-                </a>
-                <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
-            </div>
-            <hr>--%>
+            <%--  <div class="post-preview">
+                  <a href="post.html">
+                      <h2 class="post-title">
+                          Man must explore, and this is exploration at its greatest
+                      </h2>
+                      <h3 class="post-subtitle">
+                          Problems look mighty small from 150 miles up
+                      </h3>
+                  </a>
+                  <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
+              </div>
+              <hr>
+              <div class="post-preview">
+                  <a href="post.html">
+                      <h2 class="post-title">
+                          I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
+                      </h2>
+                  </a>
+                  <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>
+              </div>
+              <hr>
+              <div class="post-preview">
+                  <a href="post.html">
+                      <h2 class="post-title">
+                          Science has not yet mastered prophecy
+                      </h2>
+                      <h3 class="post-subtitle">
+                          We predict too much for the next year and yet far too little for the next ten.
+                      </h3>
+                  </a>
+                  <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
+              </div>
+              <hr>
+              <div class="post-preview">
+                  <a href="post.html">
+                      <h2 class="post-title">
+                          Failure is not an option
+                      </h2>
+                      <h3 class="post-subtitle">
+                          Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+                      </h3>
+                  </a>
+                  <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
+              </div>
+              <hr>--%>
             <!-- Pager -->
             <nav class="pager" data-current-page-num="${currentPageNum}" data-total-page-num="${blogTotalPageNum}" data-pagesize="${pageSize}">
-               <%-- <ul class="pagination">
-                   &lt;%&ndash; <li class="pre-page"><a href="javascript:;">&laquo;</a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li class="next-page"><a href="javascript:;">&raquo;</a></li>&ndash;%&gt;
-                </ul>--%>
+                <%-- <ul class="pagination">
+                    &lt;%&ndash; <li class="pre-page"><a href="javascript:;">&laquo;</a></li>
+                     <li><a href="#"></a></li>
+                     <li><a href="#"></a></li>
+                     <li><a href="#"></a></li>
+                     <li><a href="#"></a></li>
+                     <li><a href="#"></a></li>
+                     <li><a href="#"></a></li>
+                     <li class="next-page"><a href="javascript:;">&raquo;</a></li>&ndash;%&gt;
+                 </ul>--%>
             </nav><!-- /.Pager -->
         </div>
         <div class="template hidden">
@@ -198,7 +200,8 @@
                         ${blog.title_secondary}
                     </h3>
                 </a>
-                <p class="post-meta" data-time="<fmt:formatDate value="${blog.date}" pattern="yyyy-MM-dd"/>">Posted on <fmt:formatDate value="${blog.date}" type="date" pattern="EEEE, MMMM d, yyyy"/></p>
+                <p class="post-meta" data-time="<fmt:formatDate value="${blog.date}" pattern="yyyy-MM-dd"/>">Posted on
+                    <fmt:formatDate value="${blog.date}" type="date" pattern="EEEE, MMMM d, yyyy"/></p>
             </div>
             <hr>
         </div>
@@ -212,28 +215,29 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p class="copyright text-muted">Copyright &copy; Tea's Blog 2016.All rights reserved. My works are licensed under <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>. </p>
+                <p class="copyright text-muted">Copyright &copy; Tea's Blog 2016.All rights reserved. My works are licensed under
+                    <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>. </p>
             </div>
         </div>
     </div>
 </footer>
 
 <!-- jQuery -->
-<script type="text/javascript" src='<%-- ${pageContext.request.contextPath} --%>/static/library/jquery/jquery-1.10.2.js'></script>
+<script type="text/javascript" src='<%-- ${pageContext.request.contextPath} --%>${sourceHost}/static/library/jquery/jquery-1.10.2.js'></script>
 <!-- Bootstrap core JavaScript  -->
-<script src="<%-- ${pageContext.request.contextPath} --%>/static/library/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="<%-- ${pageContext.request.contextPath} --%>${sourceHost}/static/library/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <!-- Theme JavaScript -->
-<script src="<%-- ${pageContext.request.contextPath} --%>/static/scripts/blog/blog-theme.min.js"></script>
+<script src="<%-- ${pageContext.request.contextPath} --%>${sourceHost}/static/scripts/blog/blog-theme.min.js"></script>
 
-<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/library/jquery/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>${sourceHost}/static/library/jquery/jquery.easing.1.3.js"></script>
 <!-- https://github.com/keenwon/jqPaginator -->
-<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/library/jqPaginator/jqPaginator.min.js"></script>
-<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/library/moment/moment-with-locales.js"></script>
+<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>${sourceHost}/static/library/jqPaginator/jqPaginator.min.js"></script>
+<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>${sourceHost}/static/library/moment/moment-with-locales.js"></script>
 <!-- nprogress -->
-<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/library/nprogress/nprogress.js"></script>
+<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>${sourceHost}/static/library/nprogress/nprogress.js"></script>
 
-<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/scripts/blog/blog-home.js"></script>
+<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>${sourceHost}/static/scripts/blog/blog-home.js"></script>
 
 <c:import url="../util/google-analytics.jsp"/>
 

@@ -159,6 +159,13 @@
         </dependency>
         <!--jstl end-->
 
+        <!--for jsp动态刷新-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -171,6 +178,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>1.4.2.RELEASE</version>
                 <executions>
                     <execution>
                         <goals>
@@ -193,7 +201,7 @@
                 <includes>
                     <include>**/**</include>
                 </includes>
-                <targetPath></targetPath>
+                <targetPath>META-INF/resources</targetPath>
                 <filtering>false</filtering>
             </resource>
         </resources>
