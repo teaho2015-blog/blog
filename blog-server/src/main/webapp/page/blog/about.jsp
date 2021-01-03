@@ -96,11 +96,19 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+            <p>"I know that I know nothing."</p>
+            <p>-- from 2020</p>
+
+            <br/>
+            <hr/>
+            <br/>
+
             <p>代码渣，伪文青。希望做到知行合一。</p>
             <p>专注于填坑。由于擅长于挖坑，所以经常在填坑的同时又挖了许多坑。</p>
             <p>业余大概逃不开读书，看电影，听音乐，看NBA，拍照这几件事。</p>
             <p>从现在到未来很长一段时间里，应该会是一名后台工程师。</p>
-
+            <p>-- from 2016</p>
             <br/>
             <hr/>
             <br/>
@@ -172,8 +180,11 @@
             <br/>
             <br/>
             <br/>
+            <p>经反复比对，本站遗憾采用Disqus评论系统，如若您怀揣任何宝贵的建议或意见，烦清翻下墙。</p>
+
             <p>本站内容除特殊说明外皆为原创(包括内容配图)，并受 <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>Creative Commons BY-NC-SA 4.0</a> 开源协议保护。</p>
             <p> <a href="/development/">API说明</a></p>
+
             <br/><br/>
         </div>
     </div>
@@ -212,7 +223,7 @@
                         </a>
                     </li>
                 </ul>-->
-                <p class="copyright text-muted">Copyright &copy; Tea's Blog 2016.All rights reserved. My works are licensed under <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>. </p>
+                <p class="copyright text-muted">Copyright &copy; Tea's Blog 2016-2021.All rights reserved. My works are licensed under <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>. </p>
             </div>
         </div>
     </div>
