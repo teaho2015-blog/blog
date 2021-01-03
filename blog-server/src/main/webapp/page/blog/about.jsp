@@ -18,13 +18,13 @@
     <meta name="author" content="">
 
     <title>Tea's Blog - About</title>
-    <link rel="icon" href="<%-- ${pageContext.request.contextPath} --%>/static/images/t.png" />
+    <link rel="icon" href="<%-- ${pageContext.request.contextPath} --%>https://blog.cdn.teaho.net/static/images/t.png" />
 
     <!-- Bootstrap Core CSS -->
-    <link href="<%-- ${pageContext.request.contextPath} --%>/static/library/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="<%-- ${pageContext.request.contextPath} --%>https://blog.cdn.teaho.net/static/library/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="<%-- ${pageContext.request.contextPath} --%>/static/styles/blog/blog-theme.css" rel="stylesheet">
+    <link href="<%-- ${pageContext.request.contextPath} --%>https://blog.cdn.teaho.net/static/styles/blog/blog-theme.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,11 +34,11 @@
     <![endif]-->
 
     <!-- Custom Fonts -->
-    <link href="<%-- ${pageContext.request.contextPath} --%>/static/library/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<%-- ${pageContext.request.contextPath} --%>https://blog.cdn.teaho.net/static/library/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-    <link href="<%-- ${pageContext.request.contextPath} --%>/static/styles/blog/about.css" rel="stylesheet">
+    <link href="<%-- ${pageContext.request.contextPath} --%>https://blog.cdn.teaho.net/static/styles/blog/about.css" rel="stylesheet">
 
 </head>
 
@@ -77,7 +77,7 @@
 
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
-<header class="intro-header" style="background-image: url('<%-- ${pageContext.request.contextPath} --%>/static/images/blog/about-bg.jpg');background-position: 30% center;">
+<header class="intro-header" style="background-image: url('<%-- ${pageContext.request.contextPath} --%>https://blog.cdn.teaho.net/static/images/blog/about-bg.jpg');background-position: 30% center;">
     <div class="mask"></div>
     <div class="container">
         <div class="row">

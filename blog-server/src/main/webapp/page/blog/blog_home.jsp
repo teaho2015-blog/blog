@@ -39,7 +39,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- progress bar -->
-    <link href='<%-- ${pageContext.request.contextPath} --%>${sourceHost}/static/library/nprogress/nprogress.css' rel='stylesheet' type='text/css'>
+    <link href='<%-- ${pageContext.request.contextPath} --%>/static/library/nprogress/nprogress.css' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -178,21 +178,11 @@
               <hr>--%>
             <!-- Pager -->
             <nav class="pager" data-current-page-num="${currentPageNum}" data-total-page-num="${blogTotalPageNum}" data-pagesize="${pageSize}">
-                <%-- <ul class="pagination">
-                    &lt;%&ndash; <li class="pre-page"><a href="javascript:;">&laquo;</a></li>
-                     <li><a href="#"></a></li>
-                     <li><a href="#"></a></li>
-                     <li><a href="#"></a></li>
-                     <li><a href="#"></a></li>
-                     <li><a href="#"></a></li>
-                     <li><a href="#"></a></li>
-                     <li class="next-page"><a href="javascript:;">&raquo;</a></li>&ndash;%&gt;
-                 </ul>--%>
             </nav><!-- /.Pager -->
         </div>
         <div class="template hidden">
             <div class="post-preview">
-                <a href="/article/" data-context-path="<%-- ${pageContext.request.contextPath} --%>">
+                <a href="/article/" data-context-path="">
                     <h2 class="post-title">
                         ${blog.title}
                     </h2>

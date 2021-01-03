@@ -11,30 +11,19 @@
 <head>
     <title>Tea's Article</title>
     <meta name="viewport" content="initial-scale=1.0, width=device-width, minimum-scale=1.0, maximum-scale=2.0">
-    <link rel="icon" href="<%-- ${pageContext.request.contextPath} --%>/static/images/t.png" />
+    <link rel="icon" href="<%-- ${pageContext.request.contextPath} --%>https://blog.cdn.teaho.net/static/images/t.png" />
 
-     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <!-- Bootstrap core CSS -->
-    <link href="<%-- ${pageContext.request.contextPath} --%>/static/library/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="<%-- ${pageContext.request.contextPath} --%>https://blog.cdn.teaho.net/static/library/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <!-- Bootstrap theme -->
     <%--<link href="${pageContext.request.contextPath}/static/library/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">--%>
 
-    <link href='<%-- ${pageContext.request.contextPath} --%>/static/styles/blog/article.css' rel='stylesheet' type='text/css'>
+    <link href='<%-- ${pageContext.request.contextPath} --%>https://blog.cdn.teaho.net/static/styles/blog/article.css' rel='stylesheet' type='text/css'>
 
 
 </head>
 <body>
-<%--<div class="fixed-svg si-icons">
-    <span class="si-icon si-icon-hamburger-cross" data-icon-name="hamburgerCross"></span>
-    <ol class="navBar">
-        <li><a href="javascript:void(0);"><img src="images/home.png" /></a></li>
-        <li><a href="javascript:void(0);"><img src="images/write.png" /></a></li>
-        <li><a href="javascript:void(0);"><img src="images/setting.png" /></a></li>
-
-        <!--<li><a href="#">子</a></li>-->
-
-    </ol>
-</div>--%>
 
 
 
@@ -68,12 +57,14 @@
 </article>
 
 </body>
-<script type="text/javascript" src='<%-- ${pageContext.request.contextPath} --%>/static/library/jquery/jquery-1.10.2.js'></script>
-<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>/static/library/bootstrap/dist/js/bootstrap.js"></script>
-<script type="text/javascript" src='<%-- ${pageContext.request.contextPath} --%>/static/library/moment/moment-with-locales.js'></script>
+<script type="text/javascript" src='<%-- ${pageContext.request.contextPath} --%>https://blog.cdn.teaho.net/static/library/jquery/jquery-1.10.2.js'></script>
+<script type="text/javascript" src="<%-- ${pageContext.request.contextPath} --%>https://blog.cdn.teaho.net/static/library/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src='<%-- ${pageContext.request.contextPath} --%>https://blog.cdn.teaho.net/static/library/moment/moment-with-locales.js'></script>
+<script type="text/javascript" src='<%-- ${pageContext.request.contextPath} --%>https://blog.cdn.teaho.net/static/library/jquery/lazyload.js'></script>
 
 
-<script type="text/javascript" src='<%-- ${pageContext.request.contextPath} --%>/static/scripts/blog/article.js'></script>
+
+<script type="text/javascript" src='<%-- ${pageContext.request.contextPath} --%>https://blog.cdn.teaho.net/static/scripts/blog/article.js'></script>
 <!-- svg file -->
 <!--<link rel="stylesheet" type="text/css" href="css/demo.css" />-->
 <%--<link rel="stylesheet" type="text/css" href="css/component.css" />--%>
@@ -82,31 +73,7 @@
 
 <%--<script src="js/svgicons-config.js"></script>--%>
 <%--<script src="js/svgicons.js"></script>--%>
-<%--
-<script>
-    (function() {
-        // initialize all
 
-        [].slice.call( document.querySelectorAll( '.si-icon' ) ).forEach( function( el ) {
-            var svgicon = new svgIcon( el, svgIconConfig );
-//            alert("1");
-        } );
-
-
-//        new svgIcon( document.querySelector( '.si-icons-easing .si-icon-hamburger-cross' ), svgIconConfig, { easing : mina.elastic, speed: 600 } );
-
-    })();
-    $(function(){
-        $(".fixed-svg .si-icon-hamburger-cross").click(function(){
-            var navBar = $(".fixed-svg .navBar");
-            if(navBar.is(":visible")){
-                $(".fixed-svg .navBar").hide();
-            }else{
-                $(".fixed-svg .navBar").slideDown();
-            }
-        });
-    });
-</script>--%>
 
 <c:import url="../util/google-analytics.jsp"/>
 
