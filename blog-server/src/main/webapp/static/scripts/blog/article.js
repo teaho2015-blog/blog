@@ -116,7 +116,7 @@ ArticleAnimator.createPost = function(opts, callback){
 };
 
 ArticleAnimator.contentizeElement = function($el, d){
-
+  var self = this;
   $el.find('.big-image').css({ backgroundImage: "url(" + /*getRootPath() + */"" + d.image_url + ")" });
   $el.find('h1.title').html(d.title);
   $el.find('h2.description').html(d.title_secondary);
@@ -124,8 +124,12 @@ ArticleAnimator.contentizeElement = function($el, d){
   $el.find('h3.byline time').html(moment().diff(moment(d.date),'months')>2?moment(d.date).locale("zh_cn").format('MMMM Do YYYY a'): moment(d.date).locale("zh_cn").fromNow());
   //$el.find('h3.byline .author').html(d.creator_name); // reserved
   this.nextPostIndex[d.id] = d.elderid;
-  console.log('Lazy load:' + $el.find('img.lazy').attr('data-original'));
+  console.debug('Lazy load:' + $el.find('img.lazy').attr('data-original'));
   $el.find('img.lazy').lazyload();
+
+  $el.find('.show_comment').click(function () {
+    loadDisqus(this, self.currentPostIndex, window.location.href);
+  });
 };
 
 ArticleAnimator.animatePage = function(callback){
@@ -156,7 +160,8 @@ ArticleAnimator.animatePage = function(callback){
 
 ArticleAnimator.bindGotoNextClick = function(){
   var self  = this;
-  var e     = 'ontouchstart' in window ? 'touchstart' : 'click';
+  // for mobile
+  var e = 'ontouchend' in window ? 'touchend' : 'click';
 
   this.$next.find('.big-image').on(e, function(e){
     e.preventDefault();
@@ -188,6 +193,7 @@ ArticleAnimator.bindPopstate = function(){
     self.$next.replaceWith( history.state.next );
     self.refreshCurrentAndNextSelection();
     self.refreshTitle();
+    self.rebindCurrentDisqus();
     self.createPost({ type: 'next' });
     self.bindGotoNextClick();
   });
@@ -208,6 +214,14 @@ ArticleAnimator.refreshCurrentAndNextSelection = function(){
 
 ArticleAnimator.refreshTitle = function() {
   $html.find("head>title").text(this.postCache[this.currentPostIndex].title || this.constants.defaultTitle);
+};
+
+ArticleAnimator.rebindCurrentDisqus = function() {
+  var self = this;
+  this.$current.find('.show_comment').click(function () {
+    console.debug('loadDisqus, page index=' + self.currentPostIndex)
+    loadDisqus(this, self.currentPostIndex, window.location.href);
+  });;
 };
 
 ArticleAnimator.nextElementClone = function(){

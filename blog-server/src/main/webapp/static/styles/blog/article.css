@@ -211,6 +211,15 @@ body article.page .content p:last-child {
   margin-bottom: 3em;
 }
 
+article.page .show_comment, article.page .disqus_not_loaded {
+  margin-bottom: 3em;
+  display: block;
+}
+
+article.page .show_comment.hidden {
+  display: none;
+}
+
 .fixed-svg{
     position: fixed;
     /*width: 100px;*/
@@ -257,5 +266,16 @@ ol,li{ list-style:none;}
 }
 
 
+a {
+  color: #239928;
 
+}
+a:hover,
+a:focus {
+  color: /*#0085A1,#7f9981*/rgb(47, 152, 66);
+}
+a img:hover,
+a img:focus {
+  cursor: zoom-in;
+}
 

@@ -7,9 +7,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%
-    String sourceHost = "https://blog.cdn.teaho.net";
-%>
+<c:import url="../util/config.jsp"/>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -205,7 +203,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p class="copyright text-muted">Copyright &copy; Tea's Blog 2016.All rights reserved. My works are licensed under
+                <p class="copyright text-muted">Copyright &copy; Tea's Blog 2016-2021.All rights reserved. My works are licensed under
                     <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>. </p>
             </div>
         </div>
