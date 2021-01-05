@@ -6,4 +6,5 @@
 <%
     String sourceHost = "https://blog.cdn.teaho.net";
 //    String sourceHost = "https://localhost:22200";
+    request.setAttribute("sourceHost", sourceHost);
 %>
