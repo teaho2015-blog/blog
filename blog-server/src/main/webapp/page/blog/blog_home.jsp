@@ -92,7 +92,7 @@
                 <div class="site-heading">
                     <h1>Tea's Blog</h1>
                     <hr class="small">
-                    <span class="subheading">Trust the process.</span>
+                    <span class="subheading">A lifetime learner.</span>
 
                 </div>
                 <div class="page-scroller">
