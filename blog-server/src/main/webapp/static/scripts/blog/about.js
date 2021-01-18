@@ -6,6 +6,11 @@ $(function() {
     $("[data-toggle='tooltip']").tooltip({
     });
 
+    $('.navbar-toggle-custom').click(function (e) {
+        var _this = $(this);
+        _this.toggleClass('navbar-toggle-custom-show');
+        $('.navbar-collapse-menu').toggleClass('navbar-collapse-menu-show');
+    });
    /* $('.contact-list>li').smoove({
         offset:'30%',
         opacity: 0,

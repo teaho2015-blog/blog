@@ -51,15 +51,16 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle-custom navbar-toggle-custom-normal" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
-                Menu <i class="fa fa-bars"></i>
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-times" aria-hidden="true"></i>
             </button>
-            <a class="navbar-brand" href="<%-- ${pageContext.request.contextPath} --%>/">Tea's Blog</a>
+            <a class="navbar-brand" href="/">Tea's Blog</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="<%-- ${pageContext.request.contextPath} --%>/">博客</a>
@@ -73,6 +74,23 @@
             </ul>
         </div>
         <!-- /.navbar-collapse -->
+        <div class="navbar-collapse-menu">
+            <div class="menu-item" data-direction="bt">
+                <div class="menu-item-inner">
+                    <a class="menu-item-span" href="/">博客</a>
+                </div>
+            </div>
+            <div class="menu-item" data-direction="lr">
+                <div class="menu-item-inner">
+                    <a class="menu-item-span" href="javascript:;">归档</a>
+                </div>
+            </div>
+            <div class="menu-item" data-direction="bfa-barst">
+                <div class="menu-item-inner">
+                    <a class="menu-item-span" href="javascript:;">关于/ 联系</a>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- /.container -->
 </nav>

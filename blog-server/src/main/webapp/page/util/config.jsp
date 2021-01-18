@@ -5,6 +5,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String sourceHost = "https://blog.cdn.teaho.net";
-//    String sourceHost = "https://localhost:22200";
+//    String sourceHost = "http://localhost:22200";
     request.setAttribute("sourceHost", sourceHost);
 %>

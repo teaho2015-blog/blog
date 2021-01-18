@@ -2,6 +2,12 @@
  * Created by teaho2015@gmail.com on 2016/12/2.
  */
 $(function() {
+
+    $('.navbar-toggle-custom').click(function (e) {
+        var _this = $(this);
+        _this.toggleClass('navbar-toggle-custom-show');
+        $('.navbar-collapse-menu').toggleClass('navbar-collapse-menu-show');
+    });
     // One Page Smooth Scrolling
     $('.page-scroller a').bind('click', function(event) {
         var $anchor = $(this);
@@ -56,6 +62,7 @@ $(function() {
             }
         }
     };
+
 
 
     var pager = function (controller, path_prefix) {
@@ -253,7 +260,24 @@ $(function() {
 
     };
 
+    var menu = function (ctrl, bar) {
+
+        var _menu = {
+            ctrl: null,
+            bar: null
+        };
+
+
+        function init() {
+            _menu.ctrl = ctrl || {};
+            _menu.bar = bar || {};
+        }
+
+        init();
+        return _menu;
+    };
     window.pager = pager;
+    // window.menu = menu;
     //window.utils = utils;
 
 })(window, document, $, undefined);
