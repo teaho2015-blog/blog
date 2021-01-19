@@ -184,7 +184,13 @@ body article.page .content {
   padding: 0 3em;
 }
 
-body article.page .content h3 {
+@media only screen and (max-width: 500px) {
+  body article.page .content {
+    padding: 0 1em;
+  }
+}
+
+body article.page .content h3.byline {
   color: #999;
   font-family: 'Source Sans Pro', serif;
   font-weight: 400;
@@ -229,7 +235,7 @@ article.page .show_comment.hidden {
     z-index:1000;
 }
 
-ol,li{ list-style:none;}
+/*ol,li{ list-style:none;}*/
 .fixed-svg .navBar{
     margin: 0;
     padding: 0;
