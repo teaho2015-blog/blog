@@ -161,7 +161,8 @@ ArticleAnimator.animatePage = function(callback){
 ArticleAnimator.bindGotoNextClick = function(){
   var self  = this;
   // for mobile
-  var e = 'ontouchend' in window ? 'touchend' : 'click';
+  // var e = 'ontouchend' in window ? 'touchend' : 'click';
+  var e = 'click';
 
   this.$next.find('.big-image').on(e, function(e){
     e.preventDefault();
