@@ -110,7 +110,7 @@
                 <div class="site-heading">
                     <h1>Tea's Blog</h1>
                     <hr class="small">
-                    <span class="subheading">A lifetime learner.</span>
+                    <span class="subheading">？</span>
 
                 </div>
                 <div class="page-scroller">
@@ -216,17 +216,8 @@
 
 <hr>
 
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p class="copyright text-muted">Copyright &copy; Tea's Blog 2016-2021.All rights reserved. My works are licensed under
-                    <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>. </p>
-            </div>
-        </div>
-    </div>
-</footer>
+<c:import url="../util/footer.jsp"/>
+
 
 <!-- jQuery -->
 <script type="text/javascript" src='<%-- ${pageContext.request.contextPath} --%>${sourceHost}/static/library/jquery/jquery-1.10.2.js'></script>
