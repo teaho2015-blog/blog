@@ -194,7 +194,19 @@
                                     <i class="fa fa-wordpress fa-stack-1x fa-inverse"></i>
                                 </span>
                     </a>
+
                 </li>
+
+                <li>
+                    <a href="javascript:;" target="_blank" data-toggle="tooltip" data-placement="top" title="我的微信：hotingleong">
+                                <span class="fa-stack fa-lg custom-fa-mid">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-weixin fa-stack-1x fa-inverse"></i>
+                                </span>
+                    </a>
+
+                </li>
+
             </ul>
 
             <br/>
