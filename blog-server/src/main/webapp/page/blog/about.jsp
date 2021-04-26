@@ -66,7 +66,7 @@
                     <a href="<%-- ${pageContext.request.contextPath} --%>/">博客</a>
                 </li>
                 <li>
-                    <a href="javascript:;">归档</a>
+                    <a href="/archive/">归档</a>
                 </li>
                 <li>
                     <a href="javascript:;">关于/ 联系</a>
@@ -82,7 +82,7 @@
             </div>
             <div class="menu-item" data-direction="lr">
                 <div class="menu-item-inner">
-                    <a class="menu-item-span" href="javascript:;">归档</a>
+                    <a class="menu-item-span" href="/archive/">归档</a>
                 </div>
             </div>
             <div class="menu-item" data-direction="bfa-barst">

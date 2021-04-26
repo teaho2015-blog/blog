@@ -20,6 +20,8 @@ npm-debug.log*
 # tmp dir
 /tmp
 
+blog-server.iml
+
 # custom properties files
 app.properties
 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tea's Article</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, minimum-scale=1.0, maximum-scale=2.0">
+    <link rel="icon" href="https://blog.cdn.teaho.net/static/images/t.png"/>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap core CSS -->
+    <link href="https://blog.cdn.teaho.net/static/library/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <!--<link href="${pageContext.request.contextPath}/static/library/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">-->
+    <link href='https://blog.cdn.teaho.net/static/styles/blog/article.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<!-- Page. -->
+<article class='page' data-id=''>
+    <div class='big-image' style="">
+
+        <div class='inner'>
+            <div class='fader'>
+                <div class='text'>
+                    <a class='goto-next'>Read Next</a>
+
+                    <h1 class='title'></h1>
+
+                    <h2 class='description'></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='content'>
+        <h3 class='byline'>
+            <time></time>
+            发布
+        </h3>
+        <h1 class='title'></h1>
+        <h2 class='description'></h2>
+        <div class='text'>
+        </div>
+        <a class='show_comment'>查看评论</a>
+    </div>
+</article>
+</body>
+<script type="text/javascript" src='https://blog.cdn.teaho.net/static/library/jquery/jquery-1.10.2.js'></script>
+<script type="text/javascript" src="https://blog.cdn.teaho.net/static/library/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src='https://blog.cdn.teaho.net/static/library/jquery/lazyload.js'></script>
+
+<script type="text/javascript" src='https://blog.cdn.teaho.net/static/scripts/blog/disqus.js'></script>
+<!--<script type="text/javascript" src='https://blog.cdn.teaho.net/static/scripts/blog/article.js'></script>-->
+<script>
+    //page init
+    $(function(){
+        $('article.page').find('img.lazy').lazyload();
+        $('article.page').find('.show_comment').click(function () {
+            loadDisqus(this, $('article.page').attr('data-id'), window.location.href);
+        });
+    });
+
+</script>
+
+<script>
+    //google analysis
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-89534092-2', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+</html>
+
