@@ -50,7 +50,7 @@ def genArchivePage(data):
         item['data-id'] = elem.ID
         # item['class'] = ['post']
         item.select_one('p.post-meta')['data-time'] = elem.CREATE_TIME
-        item.select_one('p.post-meta').append(str(elem.DATE))
+        item.select_one('p.post-meta').append(str(elem.DATE).replace('-', '/'))
         if elem.TYPE == 1:
             item.select_one('a')['href'] = conf['domain'] + conf['article_path'] + conf['article_file_name'].replace('{id}', elem.ID)
         elif elem.TYPE == 2:

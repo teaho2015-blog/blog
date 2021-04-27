@@ -48,6 +48,16 @@
             font-size: 14px;
         }
 
+        @media (max-width: 768px) {
+            .post-preview > a > .post-title {
+                font-size: 18px;
+            }
+            .post-preview > a > .post-subtitle {
+                font-size: 15px;
+            }
+        }
+
+
     </style>
 
 </head>
@@ -106,7 +116,8 @@
 
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
-<header class="intro-header" style="background-image: url('https://blog.cdn.teaho.net/archive/archive-bg.jpg');background-position: 30% center;">
+<header class="intro-header"
+        style="background-image: url('https://blog.cdn.teaho.net/archive/archive-bg.jpg');background-position: 30% center;">
     <div class="mask"></div>
     <div class="container">
         <div class="row">
@@ -128,10 +139,10 @@
             <div id="article-wrapper"></div>
             <div class="template hidden">
                 <div class="post-preview row" data-id="">
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
                         <p class="post-meta" data-time=""></p>
                     </div>
-                    <a class="col-lg-10 col-md-10 col-sm-10 col-xs-10" href="/article/" data-context-path="">
+                    <a class="col-lg-10 col-md-10 col-sm-10 col-xs-9" href="/article/" data-context-path="">
                         <h2 class="post-title">
                             ${blog.title}
                         </h2>
