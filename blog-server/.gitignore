@@ -25,4 +25,5 @@ blog-server.iml
 # custom properties files
 app.properties
 
+*.zip
 
