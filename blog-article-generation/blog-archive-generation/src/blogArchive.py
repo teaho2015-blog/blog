@@ -65,6 +65,7 @@ def genArchivePage(data):
         if elem.TYPE == 2:
             continue
         article_page = article_soup.__copy__()
+        article_page.select_one('head title').string = elem.TITLE + ' - ' + article_page.select_one('head title').string
         article_wrapper = article_page.select_one("article.page")
         article_wrapper['data-id'] = elem.ID
         article_wrapper.select_one('div.big-image')['style'] = "background-image: url({img_url})".replace("{img_url}", elem.IMAGE_URL)
