@@ -8,8 +8,9 @@ conf = {
     "domain": "",
     "article_path": "/blog-article-generation/blog-page-generation/article/",
     "article_file_name": "article-{id}.html",
-    "article_file_path": "D:/akuCode/blog/blog-article-generation/blog-page-generation/article/",
-    "archive_file_path": "D:/akuCode/blog/blog-article-generation/blog-page-generation/"
+    "article_file_path": "/home/teaho/IdeaProjects/mine/blog/blog-article-generation/blog-page-generation/article/",
+    "archive_file_path": "/home/teaho/IdeaProjects/mine/blog/blog-article-generation/blog-page-generation/",
+    "home_file_path": "/home/teaho/IdeaProjects/mine/blog/blog-article-generation/blog-page-generation/home/"
 }
 
 
