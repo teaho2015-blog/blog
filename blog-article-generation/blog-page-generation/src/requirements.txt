@@ -1,1 +1,3 @@
-# 编写该文件，便于项目部署
+beautifulsoup4==4.10.0
+PyMySQL==1.0.2
+SQLAlchemy==1.4.22
