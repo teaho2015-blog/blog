@@ -67,7 +67,7 @@ const config: Config = {
           items: [
             { label: '归档', to: 'blog/archive' },
             { label: '笔记', to: 'docs/skill' },
-            { label: '资源', to: 'resources' },
+            // { label: '资源', to: 'resources' },
             // { label: '友链', to: 'friends' },
             { label: '工具推荐', to: 'docs/tools' },
           ],
