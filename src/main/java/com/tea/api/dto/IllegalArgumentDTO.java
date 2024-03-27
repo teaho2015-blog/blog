@@ -11,7 +11,8 @@ import com.tea.api.url.Domain;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InternalErrorDTO {
+public class IllegalArgumentDTO {
+
     private String documentation_url = new DevelopmentPath(new Domain()).getName();
 
     private String message = "";
@@ -47,12 +48,12 @@ public class InternalErrorDTO {
         return new InnerBuilder();
     }
 
-    public static class InnerBuilder implements Builder<InternalErrorDTO> {
+    public static class InnerBuilder implements Builder<IllegalArgumentDTO> {
 
-        private InternalErrorDTO buildObj;
+        private IllegalArgumentDTO buildObj;
 
         public InnerBuilder() {
-            buildObj = new InternalErrorDTO();
+            buildObj = new IllegalArgumentDTO();
         }
 
         public InnerBuilder documentation_url(String str) {
@@ -75,13 +76,12 @@ public class InternalErrorDTO {
             return this;
         }
 
-        public InnerBuilder addErrors(List msgList) {
-            buildObj.error.addAll(msgList);
+        public InnerBuilder addErrors(List<String> errors) {
+            buildObj.error.addAll(errors);
             return this;
         }
-
         @Override
-        public InternalErrorDTO build() {
+        public IllegalArgumentDTO build() {
             return buildObj;
         }
     }
