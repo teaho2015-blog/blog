@@ -1,11 +1,12 @@
 :root {
-  --ifm-color-primary: #12affa;
-  --ifm-color-primary-dark: #05a1ec;
-  --ifm-color-primary-darker: #0598df;
-  --ifm-color-primary-darkest: #047eb8;
-  --ifm-color-primary-light: #2cb8fb;
-  --ifm-color-primary-lighter: #b0e6ff;
-  --ifm-color-primary-lightest: #d5f1fd;
+  --ifm-color-primary: #2f9842;
+  --ifm-color-primary-dark: #2a893b;
+  --ifm-color-primary-darker: #288138;
+  --ifm-color-primary-darkest: #216a2e;
+  --ifm-color-primary-light: #34a749;
+  --ifm-color-primary-lighter: #36af4c;
+  --ifm-color-primary-lightest: #3fc457;
+
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: misans, ui-sans-serif, system-ui, -apple-system;
 
@@ -53,8 +54,14 @@
 }
 
 html[data-theme='dark'] {
-  --ifm-color-primary: hsl(214deg 100% 60%);
-  --ifm-color-primary-light: hsl(214deg 100% 75%);
+  --ifm-color-primary: #3fc457;
+  --ifm-color-primary-dark: #37b24d;
+  --ifm-color-primary-darker: #34a849;
+  --ifm-color-primary-darkest: #2b8b3c;
+  --ifm-color-primary-light: #53ca68;
+  --ifm-color-primary-lighter: #5dcd71;
+  --ifm-color-primary-lightest: #7ad68b;
+
   --ifm-heading-color: hsl(0deg 0% 100%);
   --ifm-menu-color: #eceef1;
   --ifm-text-color: var(--ifm-menu-color);
