@@ -56,11 +56,11 @@ const config: Config = {
           position: 'right',
           to: 'blog',
         },
-        {
-          label: '项目',
-          position: 'right',
-          to: 'project',
-        },
+        // {
+        //   label: '项目',
+        //   position: 'left',
+        //   to: 'project',
+        // },
         {
           label: '更多',
           position: 'right',
