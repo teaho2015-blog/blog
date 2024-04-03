@@ -70,6 +70,7 @@ const config: Config = {
             // { label: '资源', to: 'resources' },
             // { label: '友链', to: 'friends' },
             { label: '工具推荐', to: 'docs/tools' },
+            { label: 'spring', href: 'https://spring-source-code-learning.gitbook.teaho.net/' },
           ],
         },
         {
