@@ -9,15 +9,15 @@ const beian1 = '闽公网安备35021102000847号'
 
 const config: Config = {
   title: '愧怍的小站',
-  url: 'https://kuizuo.cn',
+  url: 'https://word.teaho.net',
   baseUrl: '/',
-  favicon: 'img/favicon.ico',
-  organizationName: 'kuizuo',
+  favicon: 'img/logo.png',
+  organizationName: 'word.teaho.net',
   projectName: 'blog',
   customFields: {
-    bio: '道阻且长，行则将至',
+    bio: '',
     description:
-      '是一个由愧怍创建的个人博客，主要分享编程开发知识和项目，该网站基于 React 驱动的静态网站生成器 Docusaurus 构建。',
+      '',
   },
   themeConfig: {
     // announcementBar: {
@@ -45,9 +45,9 @@ const config: Config = {
     },
     navbar: {
       logo: {
-        alt: '愧怍',
-        src: 'img/logo.webp',
-        srcDark: 'img/logo.webp',
+        alt: "Tea's Blog",
+        src: 'img/logo.png',
+        // srcDark: 'img/logo.webp',
       },
       hideOnScroll: true,
       items: [
@@ -70,7 +70,7 @@ const config: Config = {
             // { label: '资源', to: 'resources' },
             // { label: '友链', to: 'friends' },
             { label: '工具推荐', to: 'docs/tools' },
-            { label: 'spring', href: 'https://spring-source-code-learning.gitbook.teaho.net/' },
+            { label: 'Spring Learning', href: 'https://spring-source-code-learning.gitbook.teaho.net' },
           ],
         },
         {
@@ -95,7 +95,7 @@ const config: Config = {
         {
           title: '社交媒体',
           items: [
-            { label: '关于我', to: '/about' },
+            { label: '关于我', to: '/about2' },
             { label: 'GitHub', href: social.github.href },
             { label: 'Twitter', href: social.twitter.href },
             { label: '掘金', href: social.juejin.href },
@@ -177,6 +177,11 @@ const config: Config = {
         dark: 'rgb(50, 50, 50)',
       },
     },
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
   } satisfies Preset.ThemeConfig,
   presets: [
     [
@@ -186,7 +191,11 @@ const config: Config = {
           path: 'docs',
           sidebarPath: 'sidebars.ts',
         },
-        blog: false,
+        blog: false, // doc only mode, Optional: disable the blog plugin
+        // blog: {
+        //   routeBasePath: '/', // Serve the blog at the site's root
+        //   /* other blog options */
+        // },
         theme: {
           customCss: ['./src/css/custom.scss'],
         },
@@ -197,7 +206,7 @@ const config: Config = {
           trackingID: 'G-S4SD5NXWXF',
           anonymizeIP: true,
         },
-        debug: process.env.NODE_ENV === 'development',
+        debug: true,
       } satisfies Preset.Options,
     ],
   ],
@@ -221,11 +230,11 @@ const config: Config = {
     [
       './src/plugin/plugin-content-blog', // 为了实现全局 blog 数据，必须改写 plugin-content-blog 插件
       {
-        path: 'blog',
+        routeBasePath: '/',
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
           `https://github.com/kuizuo/blog/edit/main/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
-        blogDescription: '代码人生：编织技术与生活的博客之旅',
+        blogDescription: '2代码人生：编织技术与生活的博客之旅',
         blogSidebarCount: 10,
         blogSidebarTitle: 'Blogs',
         postsPerPage: 10,
