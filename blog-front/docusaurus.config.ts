@@ -8,11 +8,11 @@ const beian = '闽ICP备2020017848号-2'
 const beian1 = '闽公网安备35021102000847号'
 
 const config: Config = {
-  title: '愧怍的小站',
+  title: "Tea's Blog",
   url: 'https://word.teaho.net',
   baseUrl: '/',
   favicon: 'img/logo.png',
-  organizationName: 'word.teaho.net',
+  organizationName: 'teaho.net',
   projectName: 'blog',
   customFields: {
     bio: '',
