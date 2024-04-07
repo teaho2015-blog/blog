@@ -4,8 +4,12 @@
  */
 package com.tea;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+
 import java.io.File;
 
+@Configuration
 public class Constants {
 
     public static class USER{

@@ -18,6 +18,7 @@
     <security:http auto-config="true" use-expressions="true"   authentication-manager-ref="myManager" >
         <security:access-denied-handler error-page="/manage/denied" />
         <security:intercept-url pattern="/manage/login" access="permitAll"/>
+        <security:intercept-url pattern="/**" access="permitAll"/>
         <security:intercept-url pattern="/static/*" access="permitAll"/>
         <!--<security:intercept-url pattern="/main/admin" access="hasRole('ROLE_ADMIN'),hasRole('ROLE_USER')"/>-->
         <security:intercept-url pattern="/manage/*" access="hasRole('ROLE_USER')" />
@@ -47,12 +48,11 @@
                 logout-url="/manage/logout"/>
 
         <!-- Uncomment to limit the number of sessions a user can have -->
-        <security:session-management invalid-session-url="/page/manage/timeout.jsp">
+        <security:session-management invalid-session-url="/">
             <security:concurrency-control max-sessions="1" error-if-maximum-exceeded="true" />
         </security:session-management>
 
     </security:http>
-
 
     <!-- 指定一个自定义的authentication-manager :customUserDetailsService -->
     <security:authentication-manager id="myManager" alias="myManager">
@@ -71,7 +71,5 @@
     <bean id="customUserDetailsService" class="com.tea.manage.service.CustomUserDetailsService">
     <!--    <property name="userDAO" ref="userDAO"/>-->
     </bean>
-
-   <!-- <bean id="userDAO" class="com.tea.homepage.manage.dao.UserDAO"/>-->
 
 </beans>

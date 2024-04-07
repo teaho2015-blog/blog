@@ -5,9 +5,7 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd"
        default-lazy-init="true" default-autowire="byName">
 
-    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="locations" value="classpath:properties/jdbc.properties" />
-    </bean>
+
 
     <bean id="dataSource" destroy-method="close"
           class="org.apache.commons.dbcp.BasicDataSource">
