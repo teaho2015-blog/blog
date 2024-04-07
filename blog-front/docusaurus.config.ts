@@ -158,12 +158,14 @@ const config: Config = {
       ],
     },
     giscus: {
-      repo: 'kuizuo/blog',
-      repoId: 'MDEwOlJlcG9zaXRvcnkzOTc2MjU2MTI=',
+      repo: 'teaho2015-blog/blog',
+      repoId: 'MDEwOlJlcG9zaXRvcnk4Mjg0MzI2OA==',
       category: 'General',
-      categoryId: 'DIC_kwDOF7NJDM4CPK95',
+      categoryId: 'DIC_kwDOBPAWhM4Cegj6',
       theme: 'light',
-      darkTheme: 'dark_dimmed',
+      darkTheme: 'noborder_dark',
+      loading: "lazy",
+      lang: "zh-CN",
     } satisfies Partial<GiscusConfig>,
     tableOfContents: {
       minHeadingLevel: 2,
