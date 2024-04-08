@@ -5,7 +5,6 @@ import { GiscusConfig } from './src/components/Comment'
 import social from './data/social'
 
 const beian = '闽ICP备2020017848号-2'
-const beian1 = '闽公网安备35021102000847号'
 
 const config: Config = {
   title: "Tea's Blog",
@@ -52,9 +51,9 @@ const config: Config = {
       hideOnScroll: true,
       items: [
         {
-          label: '博客',
+          label: 'Blog',
           position: 'right',
-          to: 'blog',
+          to: '/',
         },
         // {
         //   label: '项目',
@@ -62,20 +61,34 @@ const config: Config = {
         //   to: 'project',
         // },
         {
+          label: '归档',
+          position: 'right',
+          to: 'archive',
+        },
+        {
+          label: '合集',
+          position: 'right',
+          items: [
+            { label: 'Spring剖析', href: 'https://spring-source-code-learning.gitbook.teaho.net' },
+            { label: 'Design Pattern分析', href: 'https://design-pattern-learning.gitbook.teaho.net' },
+            
+          ],
+        },
+        {
+          label: '关于/联系',
+          position: 'right',
+          to: 'about',
+        },
+        {
           label: '更多',
           position: 'right',
           items: [
-            { label: '归档', to: 'blog/archive' },
+            { label: '归档', to: 'archive' },
             { label: '笔记', to: 'docs/skill' },
             // { label: '资源', to: 'resources' },
             // { label: '友链', to: 'friends' },
             { label: '工具推荐', to: 'docs/tools' },
-            { label: 'Spring Learning', href: 'https://spring-source-code-learning.gitbook.teaho.net' },
           ],
-        },
-        {
-          type: 'localeDropdown',
-          position: 'right',
         },
       ],
     },
@@ -83,46 +96,56 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: '学习',
+          title: '站内',
           items: [
-            { label: '博客', to: 'blog' },
-            { label: '归档', to: 'blog/archive' },
-            { label: '技术笔记', to: 'docs/skill' },
-            { label: '实战项目', to: 'project' },
-            { label: '前端示例', to: 'https://example.kuizuo.cn' },
+            { label: 'Blog', to: '/' },
+            { label: 'Archive', to: 'archive' },
+
           ],
         },
         {
-          title: '社交媒体',
+          title: '联系',
           items: [
-            { label: '关于我', to: '/about2' },
+            { label: '关于我', position: 'right', to: '/about2' },
             { label: 'GitHub', href: social.github.href },
             { label: 'Twitter', href: social.twitter.href },
-            { label: '掘金', href: social.juejin.href },
-            { label: 'Discord', href: social.discord.href },
+            {
+              html: `
+                  <a href="mailto:teaho2015@gmail.com" title="gmail" target="_blank" rel="noreferrer noopener" aria-label="gmail">
+                    <img src="https://cdn.simpleicons.org/Gmail#EA4335" alt="Deploys by Netlify" width="25" height="25" />
+                  </a>
+                `,
+            },
+            {
+              html: `
+                  <div style="top:50%;">
+                  <img src="https://cdn.simpleicons.org/wechat##07C160" alt="wechat:hotingleong" width="15" height="15" /> hotingleong
+
+                  </div>
+                `,
+            },
+
+            
           ],
         },
         {
-          title: '更多',
+          title: '条款',
           items: [
             { label: '友链', position: 'right', to: 'friends' },
             { label: '导航', position: 'right', to: 'resources' },
             {
               html: `
-                <a href="https://docusaurus.io/zh-CN/" target="_blank" rel="noreferrer noopener">
-                  <img src="/img/buildwith.png" alt="build with docusaurus" width="120" height="50"/>
-                <a/>
+                  <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
+                    <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" />
+                  </a>
                 `,
             },
           ],
         },
       ],
+      
       copyright: `
-        <p style="margin-bottom: 0;"><a href="http://beian.miit.gov.cn/">${beian}</a></p>
-        <p style="display: inline-flex; align-items: center;"><img style="height:20px;margin-right: 0.5rem;" src="/img/police.png" alt="police" height="20"/><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=${beian1.match(
-          /\d+/,
-        )?.[0]}" >${beian1}</a></p>
-        <p>Copyright © 2020 - PRESENT 愧怍 Built with Docusaurus.</p>
+        <p>Copyright © Tea's Blog 2016-${new Date().getFullYear()}.All rights reserved. My works are licensed under CC BY-NC-SA 4.0 .</p>
         `,
     },
     algolia: {
@@ -245,8 +268,8 @@ const config: Config = {
           defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
         feedOptions: {
           type: 'all',
-          title: '愧怍',
-          copyright: `Copyright © ${new Date().getFullYear()} 愧怍 Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
+          title: 'teaho2015',
+          copyright: `Copyright © ${new Date().getFullYear()} teaho2015 Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
         },
       },
     ],
@@ -256,7 +279,7 @@ const config: Config = {
       tagName: 'meta',
       attributes: {
         name: 'description',
-        content: '愧怍的个人博客',
+        content: 'headTagsContent',
       },
     },
   ],
@@ -265,11 +288,11 @@ const config: Config = {
     'https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Semibold.min.css',
   ],
   i18n: {
-    defaultLocale: 'zh-CN',
+    defaultLocale: 'en-GB',
     locales: ['en', 'zh-CN'],
     localeConfigs: {
       en: {
-        htmlLang: 'en-GB',
+        htmlLang: 'en',
       },
     },
   },
