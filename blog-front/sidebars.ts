@@ -306,30 +306,7 @@ const sidebars: SidebarsConfig = {
       label: '数据库',
       type: 'link',
       href: 'https://spring-source-code-learning.gitbook.teaho.net/',
-      // link: {
-      //   // title: '',
-      //   // description: '',
-      //   type: 'generated-index',
-      //   keywords: ['database', 'mysql', 'mongodb', 'redis', 'elasticsearch'],
-      // },
-      // items: [
-      //   {
-      //     label: 'Mysql',
-      //     type: 'category',
-      //     link: {
-      //       type: 'link',
-      //       id: 'skill/database/mysql/mysql-note',
-      //       href: 'https://spring-source-code-learning.gitbook.teaho.net/',
-      //     },
-      //     items: [
-      //       {
-      //         type: 'link',
-      //         dirName: 'skill/database/mysql',
-      //         href: 'https://spring-source-code-learning.gitbook.teaho.net/',
-      //       },
-      //     ],
-      //   },
-      // ],
+
     },
   ],
 }
