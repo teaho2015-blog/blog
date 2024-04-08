@@ -4,7 +4,6 @@ import { themes } from 'prism-react-renderer'
 import { GiscusConfig } from './src/components/Comment'
 import social from './data/social'
 
-const beian = '闽ICP备2020017848号-2'
 
 const config: Config = {
   title: "Tea's Blog",
@@ -71,7 +70,7 @@ const config: Config = {
           items: [
             { label: 'Spring剖析', href: 'https://spring-source-code-learning.gitbook.teaho.net' },
             { label: 'Design Pattern分析', href: 'https://design-pattern-learning.gitbook.teaho.net' },
-            
+            { label: 'Java8基础API分析', href: 'https://java-api-learning.gitbook.teaho.net' },
           ],
         },
         {
@@ -108,7 +107,6 @@ const config: Config = {
           items: [
             { label: '关于我', position: 'right', to: '/about2' },
             { label: 'GitHub', href: social.github.href },
-            { label: 'Twitter', href: social.twitter.href },
             {
               html: `
                   <a href="mailto:teaho2015@gmail.com" title="gmail" target="_blank" rel="noreferrer noopener" aria-label="gmail">
@@ -269,7 +267,7 @@ const config: Config = {
         feedOptions: {
           type: 'all',
           title: 'teaho2015',
-          copyright: `Copyright © ${new Date().getFullYear()} teaho2015 Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
+          copyright: `Copyright © ${new Date().getFullYear()} teaho2015 Built with Docusaurus.`,
         },
       },
     ],
