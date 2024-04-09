@@ -13,9 +13,9 @@ const config: Config = {
   organizationName: 'teaho.net',
   projectName: 'blog',
   customFields: {
-    bio: '',
+    bio: "Tea's Blog",
     description:
-      '',
+      "Tea's Blog",
   },
   themeConfig: {
     // announcementBar: {
@@ -42,6 +42,7 @@ const config: Config = {
       },
     },
     navbar: {
+      title: "Blog", 
       logo: {
         alt: "Tea's Blog",
         src: 'img/logo.png',
@@ -49,21 +50,11 @@ const config: Config = {
       },
       hideOnScroll: true,
       items: [
-        {
-          label: 'Blog',
-          position: 'right',
-          to: '/',
-        },
         // {
-        //   label: '项目',
+        //   label: 'Blog',
         //   position: 'left',
-        //   to: 'project',
+        //   to: '/',
         // },
-        {
-          label: '归档',
-          position: 'right',
-          to: 'archive',
-        },
         {
           label: '合集',
           position: 'right',
@@ -80,9 +71,21 @@ const config: Config = {
           ],
         },
         {
+          label: '归档',
+          position: 'right',
+          to: 'archive',
+        },
+        {
           label: '关于/联系',
           position: 'right',
           to: 'about',
+        },
+         {
+          label: '更多',
+          position: 'right',
+          items: [
+            { label: 'changelog', to: 'changelog' },
+          ],
         },
         // {
         //   label: '更多',
