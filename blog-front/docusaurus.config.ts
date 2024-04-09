@@ -17,6 +17,7 @@ const config: Config = {
     description:
       "Tea's Blog",
   },
+  // themes: ['@docusaurus/theme-search-algolia'],
   themeConfig: {
     // announcementBar: {
     //   id: 'announcementBar-3',
@@ -87,6 +88,10 @@ const config: Config = {
             { label: 'changelog', to: 'changelog' },
           ],
         },
+        {
+          type: 'search',
+          position: 'right',
+        },
         // {
         //   label: '更多',
         //   position: 'right',
@@ -155,11 +160,9 @@ const config: Config = {
         <p>Copyright © Tea's Blog 2016-${new Date().getFullYear()}.All rights reserved. My works are licensed under CC BY-NC-SA 4.0 .</p>
         `,
     },
-    algolia: {
-      appId: 'GV6YN1ODMO',
-      apiKey: '50303937b0e4630bec4a20a14e3b7872',
-      indexName: 'kuizuo',
-    },
+    // algolia: {
+    //   contextualSearch: true,
+    // },
     prism: {
       theme: themes.oneLight,
       darkTheme: themes.oneDark,
