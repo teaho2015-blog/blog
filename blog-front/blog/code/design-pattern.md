@@ -1,5 +1,5 @@
 ---
-slug: design-pattern
+slug: article/design-pattern
 title: 设计模式学习笔记
 date: 2017-04-15
 authors: teaho2015

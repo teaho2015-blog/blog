@@ -68,9 +68,13 @@ const config: Config = {
           label: '合集',
           position: 'right',
           items: [
-            { label: 'Spring剖析', href: 'https://spring-source-code-learning.gitbook.teaho.net' },
+            { label: 'Spring、Spring Boot、Spring Cloud剖析', href: 'https://spring-source-code-learning.gitbook.teaho.net' },
             { label: 'Design Pattern分析', href: 'https://design-pattern-learning.gitbook.teaho.net' },
             { label: 'Java8基础API分析', href: 'https://java-api-learning.gitbook.teaho.net' },
+            { label: 'Java开发知识点总结', href: 'https://offer-prepare.teaho.net' },
+            { label: 'Mysql query optimization summary', href: 'https://mysql.gitbook.teaho.net' },
+            { label: 'dubbo一些笔记', href: 'https://dubbo-learning.gitbook.teaho.net' }
+
           ],
         },
         {
