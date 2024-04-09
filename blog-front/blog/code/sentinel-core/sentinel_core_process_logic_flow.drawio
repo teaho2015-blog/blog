@@ -1,0 +1,30 @@
+<mxfile host="app.diagrams.net" modified="2023-06-16T12:05:23.350Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="AC8IJAFO1JFS1Rhb6ISQ" version="21.3.8" type="device">
+  <diagram id="5IWKKuLNqF0EeJNL2qdH" name="第 1 页">
+    <mxGraphModel dx="1382" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SsTIxsWcf3aVZrdFePvN-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="SsTIxsWcf3aVZrdFePvN-1" target="SsTIxsWcf3aVZrdFePvN-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mIE7QhbwrdlD8reAyAsr-1" value="entry(name, trafficType, batchCount, args)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="SsTIxsWcf3aVZrdFePvN-3">
+          <mxGeometry x="-0.1538" y="-2" relative="1" as="geometry">
+            <mxPoint x="122" y="6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SsTIxsWcf3aVZrdFePvN-1" value="SphU" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="330" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mIE7QhbwrdlD8reAyAsr-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="SsTIxsWcf3aVZrdFePvN-2" target="mIE7QhbwrdlD8reAyAsr-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SsTIxsWcf3aVZrdFePvN-2" value="CtSph" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="330" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mIE7QhbwrdlD8reAyAsr-2" value="CtSph" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
