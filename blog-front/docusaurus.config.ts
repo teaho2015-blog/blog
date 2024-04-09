@@ -72,8 +72,10 @@ const config: Config = {
             { label: 'Design Pattern分析', href: 'https://design-pattern-learning.gitbook.teaho.net' },
             { label: 'Java8基础API分析', href: 'https://java-api-learning.gitbook.teaho.net' },
             { label: 'Java开发知识点总结', href: 'https://offer-prepare.teaho.net' },
+            { label: '环游中国多省的一些记录', href: 'https://travel-around-china.gitbook.teaho.net' },
             { label: 'Mysql query optimization summary', href: 'https://mysql.gitbook.teaho.net' },
-            { label: 'dubbo一些笔记', href: 'https://dubbo-learning.gitbook.teaho.net' }
+            { label: 'dubbo一些笔记', href: 'https://dubbo-learning.gitbook.teaho.net' },
+
 
           ],
         },
