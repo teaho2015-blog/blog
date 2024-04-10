@@ -69,7 +69,7 @@ export default function BlogSection(): JSX.Element {
 
   return (
     <section className={clsx('container padding-vert--sm', styles.blogContainer)}>
-      <SectionTitle icon="ri:quill-pen-line" href={'/blog'}>
+      <SectionTitle icon="ri:quill-pen-line" href={'/'}>
         <Translate id="homepage.blog.title">近期博客</Translate>
       </SectionTitle>
       <div ref={ref} className={clsx('row', styles.list)}>

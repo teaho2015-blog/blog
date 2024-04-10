@@ -60,11 +60,11 @@ export default function UserCard({ isNavbar = false }: { isNavbar?: boolean }) {
       </div>
       <div className={styles.bio}>{bio}</div>
       <div className={styles.num}>
-        <Link className={styles.numItem} href="/blog/archive">
+        <Link className={styles.numItem} href="/archive">
           <Icon icon="carbon:blog" width="20" height="20" />
           {count.blog}
         </Link>
-        <Link className={styles.numItem} href="/blog/tags">
+        <Link className={styles.numItem} href="/tags">
           <Icon icon="ri:price-tag-3-line" width="20" height="20" />
           {count.tag}
         </Link>

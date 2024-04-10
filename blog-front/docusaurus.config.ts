@@ -17,6 +17,7 @@ const config: Config = {
     description:
       "Tea's Blog",
   },
+  onBrokenLinks: "warn",
   // themes: ['@docusaurus/theme-search-algolia'],
   themeConfig: {
     // announcementBar: {
@@ -24,18 +25,6 @@ const config: Config = {
     //   content: ``,
     // },
     metadata: [
-      {
-        name: 'keywords',
-        content: '愧怍, kuizuo',
-      },
-      {
-        name: 'keywords',
-        content: 'blog, javascript, typescript, node, react, vue, web',
-      },
-      {
-        name: 'keywords',
-        content: '编程爱好者, Web开发者, 写过爬虫, 学过逆向, 现在主攻ts全栈',
-      },
     ],
     docs: {
       sidebar: {
@@ -119,7 +108,7 @@ const config: Config = {
         {
           title: '联系',
           items: [
-            { label: '关于我', position: 'right', to: '/about2' },
+            { label: '关于我', position: 'right', to: '/about' },
             { label: 'GitHub', href: social.github.href },
             {
               html: `
@@ -200,7 +189,7 @@ const config: Config = {
       theme: 'light',
       darkTheme: 'noborder_dark',
       loading: "lazy",
-      lang: "zh-CN",
+      lang: "en",
     } satisfies Partial<GiscusConfig>,
     tableOfContents: {
       minHeadingLevel: 2,
@@ -269,9 +258,9 @@ const config: Config = {
       {
         routeBasePath: '/',
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
-          `https://github.com/kuizuo/blog/edit/main/${blogDirPath}/${blogPath}`,
+          `https://github.com/teaho2015-blog/blog/edit/main/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
-        blogDescription: '2代码人生：编织技术与生活的博客之旅',
+        blogDescription: 'test',
         blogSidebarCount: 10,
         blogSidebarTitle: 'Blogs',
         postsPerPage: 10,
@@ -299,15 +288,15 @@ const config: Config = {
     'https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Normal.min.css',
     'https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Semibold.min.css',
   ],
-  i18n: {
-    defaultLocale: 'en-GB',
-    locales: ['en', 'zh-CN'],
-    localeConfigs: {
-      en: {
-        htmlLang: 'en',
-      },
-    },
-  },
+  // i18n: {
+  //   defaultLocale: 'en',
+  //   locales: ['en'],
+  //   localeConfigs: {
+  //     // en: {
+  //     //   htmlLang: 'en-GB',
+  //     // },
+  //   },
+  // },
 }
 
 export default config
