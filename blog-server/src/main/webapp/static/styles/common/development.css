@@ -1,0 +1,19 @@
+@media only screen and (min-width: 768px) {
+    .intro-header {
+        min-height: 0;
+        height: auto;
+        width: 100%;
+
+    }
+}
+
+p {
+    font-size: 14px;
+}
+
+header.intro-header {
+    background: no-repeat fixed 50% 38%;
+    background-size: cover;
+}
+
+

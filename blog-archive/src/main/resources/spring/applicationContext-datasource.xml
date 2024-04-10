@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-lazy-init="true" default-autowire="byName">
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <array>
+                <value>classpath:properties/jdbc.properties</value>
+            </array>
+        </property>
+    </bean>
+
+    <bean id="dataSource" destroy-method="close"
+          class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="${jdbc.driverClassName}" />
+        <property name="url" value="${jdbc.url}" />
+        <property name="username" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}" />
+         <!-- 初始化连接池时连接数量为5个 -->
+       <!--<property name="initialPoolSize" value="5" />-->
+       <!-- 允许最小连接数量为5个 -->
+       <!--<property name="minPoolSize" value="5" />-->
+       <!-- 允许最大连接数量为20个 -->
+       <!--<property name="maxPoolSize" value="20" />-->
+       <!-- 允许连接池最大生成100个PreparedStatement对象 -->
+       <!--<property name="maxStatements" value="100" />-->
+        <!--连接有效时间，连接超过3600秒未使用，则该连接丢弃-->
+       <!--<property name="maxIdleTime" value="3600" />-->
+       <!-- 连接用完时，一次产生的新连接步进值为2 -->
+       <!--<property name="acquireIncrement" value="2" />-->
+       <!-- 获取连接失败后再尝试10次，再失败则返回DAOException异常 -->
+       <!--<property name="acquireRetryAttempts" value="10" />-->
+       <!--&lt;!&ndash; 获取下一次连接时最短间隔600毫秒，有助于提高性能 &ndash;&gt;-->
+       <!--<property name="acquireRetryDelay" value="600" />-->
+       <!-- 检查连接的有效性 -->
+       <!--<property name="testConnectionOnCheckin" value="true" />-->
+       <!-- 每个1200秒检查连接对象状态 -->
+       <!--<property name="idleConnectionTestPeriod" value="1200" />-->
+       <!--&lt;!&ndash; 获取新连接的超时时间为10000毫秒 &ndash;&gt;-->
+       <!--<property name="checkoutTimeout" value="10000" />-->
+    </bean>
+
+    <bean id="jdbcTemplate"
+          class="org.springframework.jdbc.core.JdbcTemplate" >
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+
+
+</beans>
