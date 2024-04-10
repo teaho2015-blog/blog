@@ -19,11 +19,8 @@ type SocialValue = {
 
 const social: Social = {
   github: 'https://github.com/teaho2015',
-  wx: 'https://img.kuizuo.cn/wechat.png',
-  // zhihu: 'https://www.zhihu.com/people/kuizuo',
-  // cloudmusic: 'https://music.163.com/#/user/home?id=1333010742',
+  wx: '/img/about/wx.jpg',
   email: 'mailto:teaho2015@gmail.com',
-  discord: 'https://discord.gg/M8cVcjDxkz',
 }
 
 const socialSet: Record<keyof Social | 'rss', SocialValue> = {
@@ -68,12 +65,6 @@ const socialSet: Record<keyof Social | 'rss', SocialValue> = {
     title: '网易云',
     icon: 'ri:netease-cloud-music-line',
     color: '#C20C0C',
-  },
-  rss: {
-    href: '/blog/rss.xml',
-    title: 'RSS',
-    icon: 'ri:rss-line',
-    color: '#FFA501',
   },
 }
 

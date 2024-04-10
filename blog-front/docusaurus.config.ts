@@ -7,7 +7,7 @@ import social from './data/social'
 
 const config: Config = {
   title: "Tea's Blog",
-  url: 'https://word.teaho.net',
+  url: 'https://blog.teaho.net',
   baseUrl: '/',
   favicon: 'img/logo.png',
   organizationName: 'teaho.net',
@@ -160,9 +160,11 @@ const config: Config = {
         <p>Copyright © Tea's Blog 2016-${new Date().getFullYear()}.All rights reserved. My works are licensed under CC BY-NC-SA 4.0 .</p>
         `,
     },
-    // algolia: {
-    //   contextualSearch: true,
-    // },
+    algolia: {
+      appId: 'GVPKO1Q921',
+      apiKey: '1de910ab6530a04cc51eeb9dd60786a3',
+      indexName: 'teaho',
+    },
     prism: {
       theme: themes.oneLight,
       darkTheme: themes.oneDark,
@@ -238,8 +240,8 @@ const config: Config = {
           priority: 0.5,
         },
         gtag: {
-          trackingID: 'G-S4SD5NXWXF',
-          anonymizeIP: true,
+          trackingID: 'G-0T8ST6E0FN',
+          anonymizeIP: false,
         },
         debug: true,
       } satisfies Preset.Options,
@@ -249,7 +251,7 @@ const config: Config = {
     'docusaurus-plugin-image-zoom',
     'docusaurus-plugin-sass',
     '@docusaurus/plugin-ideal-image',
-    ['docusaurus-plugin-baidu-tongji', { token: 'c9a3849aa75f9c4a4e65f846cd1a5155' }],
+    ['docusaurus-plugin-baidu-tongji', { token: '751fad25d8bfffcee48a1a764be9d401' }],
     [
       '@docusaurus/plugin-pwa',
       {
