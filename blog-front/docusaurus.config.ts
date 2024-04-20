@@ -32,7 +32,7 @@ const config: Config = {
       },
     },
     navbar: {
-      title: "Blog", 
+      title: "Tea's Blog",
       logo: {
         alt: "Tea's Blog",
         src: 'img/logo.png',
@@ -48,6 +48,7 @@ const config: Config = {
         {
           label: '合集',
           position: 'right',
+          to: "/collections",
           items: [
             { label: 'Spring、Spring Boot、Spring Cloud剖析', href: 'https://spring-source-code-learning.gitbook.teaho.net' },
             { label: 'Design Pattern分析', href: 'https://design-pattern-learning.gitbook.teaho.net' },
@@ -102,6 +103,7 @@ const config: Config = {
           items: [
             { label: 'Blog', to: '/' },
             { label: 'Archive', to: 'archive' },
+            { label: '合集', to: 'collections' },
 
           ],
         },
@@ -126,7 +128,7 @@ const config: Config = {
                 `,
             },
 
-            
+
           ],
         },
         {
@@ -142,7 +144,7 @@ const config: Config = {
           ],
         },
       ],
-      
+
       copyright: `
         <p>Copyright © Tea's Blog 2016-${new Date().getFullYear()}.All rights reserved. My works are licensed under CC BY-NC-SA 4.0 .</p>
         `,
