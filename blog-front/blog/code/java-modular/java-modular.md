@@ -6,7 +6,7 @@ authors: teaho2015
 tags: [java]
 keywords: [java]
 description: JEP 261:Module System(模块系统)
-image: "/img/blog/java-modular/header.jpeg"
+image: "/img/blog/java-modular/header.jpg"
 sticky: 1
 ---
 
