@@ -340,3 +340,18 @@ div[class^='announcementBar_'] {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+
+img[src*='#left'] {
+  float: left;
+  display: block;
+  margin: auto;
+}
+img[src*='#right'] {
+  display: block;
+  float: right;
+}
+img[src*='#center'] {
+  display: block;
+  margin: auto;
+}
