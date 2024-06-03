@@ -4,6 +4,9 @@ const sidebars: SidebarsConfig = {
   'ai-arch': [
     'ai-arch/introduction',
   ],
+  babel: [
+    'babel/introduction',
+  ],
   tools: [
     {
       label: 'test',
