@@ -28,11 +28,12 @@ const config: Config = {
     ],
     docs: {
       sidebar: {
-        hideable: true,
+        hideable: false,
+        autoCollapseCategories: true,
       },
     },
     navbar: {
-      title: "Tea's Blog",
+      title: "",
       logo: {
         alt: "Tea's Blog",
         src: 'img/logo.png',
@@ -40,11 +41,11 @@ const config: Config = {
       },
       hideOnScroll: true,
       items: [
-        // {
-        //   label: 'Blog',
-        //   position: 'left',
-        //   to: '/',
-        // },
+        {
+          label: "Tea's Blog",
+          position: 'left',
+          to: '/',
+        },
         {
           label: '合集',
           position: 'right',
@@ -57,7 +58,7 @@ const config: Config = {
             { label: '环游中国多省的一些记录', href: 'https://travel-around-china.gitbook.teaho.net' },
             { label: 'Mysql query optimization summary', href: 'https://mysql.gitbook.teaho.net' },
             { label: 'dubbo一些笔记', href: 'https://dubbo-learning.gitbook.teaho.net' },
-
+            { label: '算法架构和人工智能', to: 'docs/ai-arch' },
 
           ],
         },
