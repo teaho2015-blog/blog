@@ -6,6 +6,9 @@ const sidebars: SidebarsConfig = {
     'ai-arch/cpp/cpp',
 
   ],
+  k8s: [
+    'k8s/introduction',
+  ],
   babel: [
     'babel/introduction',
   ],
