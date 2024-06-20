@@ -150,11 +150,11 @@ const config: Config = {
         <p>Copyright © Tea's Blog 2016-${new Date().getFullYear()}.All rights reserved. My works are licensed under CC BY-NC-SA 4.0 .</p>
         `,
     },
-    algolia: {
-      appId: 'GVPKO1Q921',
-      apiKey: '1de910ab6530a04cc51eeb9dd60786a3',
-      indexName: 'teaho',
-    },
+    // algolia: {
+    //   appId: 'GVPKO1Q921',
+    //   apiKey: '1de910ab6530a04cc51eeb9dd60786a3',
+    //   indexName: 'teaho',
+    // },
     prism: {
       theme: themes.oneLight,
       darkTheme: themes.oneDark,
@@ -241,6 +241,9 @@ const config: Config = {
     'docusaurus-plugin-image-zoom',
     'docusaurus-plugin-sass',
     '@docusaurus/plugin-ideal-image',
+    // '@docusaurus/theme-search-algolia',
+    '@aldridged/docusaurus-plugin-lunr',
+    ['docusaurus-lunr-search', {languages: ['en']}],
     ['docusaurus-plugin-baidu-tongji', { token: '751fad25d8bfffcee48a1a764be9d401' }],
     [
       '@docusaurus/plugin-pwa',

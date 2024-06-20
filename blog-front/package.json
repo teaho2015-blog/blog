@@ -22,16 +22,17 @@
     "index": "docker run -it --env-file=.env -e \"CONFIG=$(cat docsearch.json | jq -r tostring)\" algolia/docsearch-scraper"
   },
   "dependencies": {
+    "@aldridged/docusaurus-plugin-lunr": "1.0.0-alpha.10",
     "@docusaurus/core": "3.1.0",
     "@docusaurus/plugin-debug": "^3.2.0",
     "@docusaurus/plugin-google-gtag": "^3.2.1",
     "@docusaurus/plugin-ideal-image": "3.1.0",
     "@docusaurus/plugin-pwa": "3.1.0",
     "@docusaurus/preset-classic": "3.1.0",
-    "@docusaurus/theme-search-algolia": "3.1.0",
     "@giscus/react": "^2.3.0",
     "@popperjs/core": "^2.11.8",
     "dayjs": "^1.11.10",
+    "docusaurus-lunr-search": "^3.4.0",
     "docusaurus-plugin-baidu-tongji": "0.0.0-beta.4",
     "docusaurus-plugin-image-zoom": "^1.0.0",
     "docusaurus-plugin-sass": "^0.2.5",
