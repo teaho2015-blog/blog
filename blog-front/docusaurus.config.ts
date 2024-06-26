@@ -243,7 +243,7 @@ const config: Config = {
     '@docusaurus/plugin-ideal-image',
     // '@docusaurus/theme-search-algolia',
     '@aldridged/docusaurus-plugin-lunr',
-    ['docusaurus-lunr-search', {languages: ['en']}],
+    ['docusaurus-lunr-search', {languages: ['en', 'zh']}],
     ['docusaurus-plugin-baidu-tongji', { token: '751fad25d8bfffcee48a1a764be9d401' }],
     [
       '@docusaurus/plugin-pwa',
