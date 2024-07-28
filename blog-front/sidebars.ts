@@ -8,6 +8,7 @@ const sidebars: SidebarsConfig = {
   ],
   k8s: [
     'k8s/introduction',
+    'k8s/install/k8s-install',
   ],
   babel: [
     'babel/introduction',
