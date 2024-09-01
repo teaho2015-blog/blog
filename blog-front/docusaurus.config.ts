@@ -217,6 +217,7 @@ const config: Config = {
         docs: {
           path: 'docs',
           sidebarPath: 'sidebars.ts',
+          showLastUpdateTime: true, // 启用显示最后更新时间
         },
         blog: false, // doc only mode, Optional: disable the blog plugin
         // blog: {
