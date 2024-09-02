@@ -22,7 +22,7 @@ Persistent Volume Claim（PVC）：Pod 所希望使用的持久化存储的属�
 k8s自动创建pv的机制：Dynamic Provisioning和StorageClass。
 
 
-![img.png](img.png)
+![persistence.jpg](persistence.jpg)
 
 从图中我们可以看到，在这个体系中：
 * PVC 描述的，是 Pod 想要使用的持久化存储的属性，比如存储的大小、读写权限等。

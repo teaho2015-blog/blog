@@ -21,9 +21,7 @@ Network Namespace包含：
   构建了整个集群的公共网桥。
 * Veth Pair，虚拟网卡对，相当于网线。
 
-
-
-![img2.png](img2.png)
+![connect_external.jpg](connect_external.jpg)
 
 我们在进行系统级编程的时候，有一个非常重要的优化原则，就是要减少用户态到内核态的切换次数，并且把核心的处理逻辑都放在内核态进行。
 
