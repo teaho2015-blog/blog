@@ -59,7 +59,7 @@ const config: Config = {
             { label: 'Mysql query optimization summary', href: 'https://mysql.gitbook.teaho.net' },
             { label: 'dubbo一些笔记', href: 'https://dubbo-learning.gitbook.teaho.net' },
             { label: '算法架构和人工智能', to: 'docs/ai-arch' },
-
+            { label: '容器和Kubernetes', to: '/docs/k8s' },
           ],
         },
         {
@@ -105,7 +105,6 @@ const config: Config = {
             { label: 'Blog', to: '/' },
             { label: 'Archive', to: 'archive' },
             { label: '合集', to: 'collections' },
-
           ],
         },
         {
@@ -217,6 +216,7 @@ const config: Config = {
         docs: {
           path: 'docs',
           sidebarPath: 'sidebars.ts',
+          showLastUpdateTime: true, // 启用显示最后更新时间
         },
         blog: false, // doc only mode, Optional: disable the blog plugin
         // blog: {

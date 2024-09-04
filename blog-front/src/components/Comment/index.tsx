@@ -16,8 +16,10 @@ const defaultConfig: Partial<GiscusProps> & { darkTheme: string } = {
   lang: 'zh-CN',
   theme: 'light',
   darkTheme: 'dark_dimmed',
+
 }
 
+// https://imroc.cc/note/docusaurus/giscus
 export default function Comment(): JSX.Element {
   const themeConfig = useThemeConfig() as ThemeConfig & { giscus: GiscusConfig }
   const { i18n } = useDocusaurusContext()
