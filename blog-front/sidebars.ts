@@ -9,6 +9,7 @@ const sidebars: SidebarsConfig = {
   k8s: [
     'k8s/introduction',
     'k8s/install/k8s-install',
+    'k8s/history/history',
     'k8s/container/container',
     'k8s/concept/concept',
     'k8s/pod/pod',
