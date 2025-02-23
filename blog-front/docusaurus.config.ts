@@ -2,6 +2,8 @@ import type { Config } from '@docusaurus/types'
 import type * as Preset from '@docusaurus/preset-classic'
 import { themes } from 'prism-react-renderer'
 import { GiscusConfig } from './src/components/Comment'
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 import social from './data/social'
 
 
@@ -217,6 +219,8 @@ const config: Config = {
           path: 'docs',
           sidebarPath: 'sidebars.ts',
           showLastUpdateTime: true, // 启用显示最后更新时间
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: false, // doc only mode, Optional: disable the blog plugin
         // blog: {
