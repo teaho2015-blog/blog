@@ -13,6 +13,8 @@ const sidebars: SidebarsConfig = {
       // },
       items: [
         'ai-arch/alg/dl-base',
+        'ai-arch/alg/transformer',
+
 
       ],
     },
