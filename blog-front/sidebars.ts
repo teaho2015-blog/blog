@@ -18,6 +18,17 @@ const sidebars: SidebarsConfig = {
 
       ],
     },
+    {
+      label: 'LLM',
+      type: 'category',
+      link: {
+        type: 'doc',
+        id: 'ai-arch/llm/llm',
+      },
+      items: [
+
+      ],
+    },
   ],
   k8s: [
     'k8s/introduction',
