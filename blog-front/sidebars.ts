@@ -4,7 +4,20 @@ const sidebars: SidebarsConfig = {
   'ai-arch': [
     'ai-arch/introduction',
     'ai-arch/cpp/cpp',
+    {
+      label: '算法',
+      type: 'category',
+      // link: {
+      //   type: 'doc',
+      //   id: 'alg /link',
+      // },
+      items: [
+        'ai-arch/alg/dl-base',
+        'ai-arch/alg/transformer',
 
+
+      ],
+    },
   ],
   k8s: [
     'k8s/introduction',
