@@ -48,8 +48,7 @@
     "react-popper": "^2.3.0",
     "rehype-katex": "7",
     "remark-math": "6",
-    "sass": "^1.64.1",
-    "sharp": "^0.33.5"
+    "sass": "^1.64.1"
   },
   "devDependencies": {
     "@docusaurus/eslint-plugin": "3.1.0",
