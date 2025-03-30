@@ -26,7 +26,7 @@ const sidebars: SidebarsConfig = {
         id: 'ai-arch/llm/llm',
       },
       items: [
-
+        'ai-arch/llm/chatGLM/chatglm-tuning'
       ],
     },
   ],
