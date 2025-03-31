@@ -26,7 +26,9 @@ const sidebars: SidebarsConfig = {
         id: 'ai-arch/llm/llm',
       },
       items: [
-        'ai-arch/llm/chatGLM/chatglm-tuning'
+        'ai-arch/llm/chatGLM/chatglm-tuning',
+        'ai-arch/llm/dify/dify-rag',
+        'ai-arch/llm/rag/rag-application',
       ],
     },
   ],
