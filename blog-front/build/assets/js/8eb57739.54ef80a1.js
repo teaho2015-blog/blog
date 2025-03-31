@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[5119],{9525:l=>{l.exports=JSON.parse('{"label":"film","permalink":"/tags/film","allTagsPath":"/tags","count":1,"unlisted":false}')}}]);

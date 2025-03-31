@@ -1,0 +1,22 @@
+{
+  "name": "Tea's Blog",
+  "short_name": "Tea's Blog",
+  "theme_color": "#2f9842",
+  "background_color": "#0d203a",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./index.html",
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://blog.teaho.net/manifest.json"
+    }
+  ],
+  "icons": [
+    {
+      "src": "img/icons/icon-128.pnag",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[1761],{8116:e=>{e.exports=JSON.parse('{"permalink":"/tags/film","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"test","blogTitle":"Blog"}')}}]);

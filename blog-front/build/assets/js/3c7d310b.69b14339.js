@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[9794],{3459:e=>{e.exports=JSON.parse('{"permalink":"/tags/design-pattern","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"test","blogTitle":"Blog"}')}}]);
