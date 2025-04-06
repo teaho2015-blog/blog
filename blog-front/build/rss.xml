@@ -4,11 +4,170 @@
         <title>teaho2015</title>
         <link>https://blog.teaho.net/</link>
         <description>Tea's Blog Blog</description>
-        <lastBuildDate>Sun, 08 Dec 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 05 Jan 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2025 teaho2015 Built with Docusaurus.</copyright>
+        <item>
+            <title><![CDATA[技术支撑团队的指标评估和实施]]></title>
+            <link>https://blog.teaho.net/article/teamwork-measure</link>
+            <guid>https://blog.teaho.net/article/teamwork-measure</guid>
+            <pubDate>Sun, 05 Jan 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[技术支撑团队的指标评估和实施]]></description>
+            <content:encoded><![CDATA[<blockquote>
+<p>该篇是我在工作里的团队指标调研和方案</p>
+</blockquote>
+<br>
+<h2 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="背景">背景<a href="https://blog.teaho.net/article/teamwork-measure#%E8%83%8C%E6%99%AF" class="hash-link" aria-label="Direct link to 背景" title="Direct link to 背景">​</a></h2>
+<p>从业务研发团队又转到技术平台型团队（算法架构），在日常迭代和碰撞中，一个问题时不时在我脑海浮现。<br>
+<!-- -->在业务团队，我们可以很轻松的将技术人员的开发优先级和效率，通过业务北极星指标等业务大盘指标和项目需求数去量化和理性判断。<br>
+<!-- -->但是，技术平台型团队呢？（比如我们团队主业是提供技术组件、性能和稳定性解决方案给算法工程师等使用，其次是前沿探索）</p>
+<ol>
+<li>技术支撑
+如何判断<strong>优先级</strong>(双刃剑)？假设在满工作量运转下，大概根据大业务部门的业务目标和重点能够区分任务的优先程度。
+但另一个，怎么判断整体<strong>效率</strong>和<strong>效益</strong>呢？
+我的答案是指标量化。我会在实施方向一节谈谈。</li>
+<li>前沿探索
+不再本文谈论范围。一句话带过，我认为是需要发挥能动性，但要探索收敛 --- 1. 可输出的成果。（落地或者外界影响力）2. 将部门或者大部门的探索收编。</li>
+</ol>
+<h2 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="现状">现状<a href="https://blog.teaho.net/article/teamwork-measure#%E7%8E%B0%E7%8A%B6" class="hash-link" aria-label="Direct link to 现状" title="Direct link to 现状">​</a></h2>
+<p>据我了解目前有各项服务稳定性指标，但是工具和服务效率无机制。
+所以我下面正篇讨论会围绕<strong>工具和服务效</strong>率展开。</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="实施方向">实施方向<a href="https://blog.teaho.net/article/teamwork-measure#%E5%AE%9E%E6%96%BD%E6%96%B9%E5%90%91" class="hash-link" aria-label="Direct link to 实施方向" title="Direct link to 实施方向">​</a></h2>
+<h3 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="谈谈指标量化">谈谈指标量化<a href="https://blog.teaho.net/article/teamwork-measure#%E8%B0%88%E8%B0%88%E6%8C%87%E6%A0%87%E9%87%8F%E5%8C%96" class="hash-link" aria-label="Direct link to 谈谈指标量化" title="Direct link to 谈谈指标量化">​</a></h3>
+<p>在日常业务和工作中，我们每天面对一大堆的带有指标的图表和文档，各式各样玩出花的监控看板，同时我们总有一些被量化误导的经历，有时候我们对于量化会有抵触和迷思，因为大概想着量化会骗人和会失去自由度等等，我想回答两个问题。</p>
+<ol>
+<li>到底应不应该量化？</li>
+<li>如何量化？</li>
+</ol>
+<p><strong>到底应不应该量化？</strong> 首先我们是在商业世界的科技行业里，从商业角度，卖出了多少，这个月赚了多少，扣除成本、三费啥的剩多少。自上而下来说，天然就是有数字的。
+从科技角度，简单来说，在创意阶段某些可能要些直觉和感性，但会越来越少。在实施阶段/实施团队中，比如我的一些方案，看似是直觉，但是很多回过头看不过是用脚投票的选择。
+其次，有量化的团队，比起没有的团队，我认为容易把握范围、方向和成绩。<br>
+<!-- -->最后，往底层聊，人除了不断用理性去“度量”事情，不断量化，没有其他方法能够推进一些事情。<br>
+<!-- -->现阶段问题点：<br>
+<!-- -->数据是会“骗人”，因为目前来说，我们不可能参数化所有变量。<br>
+<!-- -->数据量化过多，过于重视数据量化，可能杀死创造空间。<br>
+<!-- -->所以，我认为针对技术平台团队的量化只可发挥同环比指导意义，并且需要因应发展阶段不断改造和细化。</p>
+<p><strong>如何量化呢，</strong></p>
+<ol>
+<li>基于团队服务目标去量化。</li>
+<li>用什么量化？数字/数据作为一个公平的，可细化到最小粒度去指代现实客体的手段，是最适合用来量化的。</li>
+<li>量化的尺度？基于团队服务目标，在迭代收口位置做好数据记录。</li>
+</ol>
+<h3 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="方向细化">方向细化<a href="https://blog.teaho.net/article/teamwork-measure#%E6%96%B9%E5%90%91%E7%BB%86%E5%8C%96" class="hash-link" aria-label="Direct link to 方向细化" title="Direct link to 方向细化">​</a></h3>
+<p>这节对项目迭代中的技术支撑及其评估做了细化：
+<img loading="lazy" alt="img.png" src="https://blog.teaho.net/assets/images/workflow-6f63dc4dd9c8a1e9426dd413b8879da5.png" width="2282" height="1044" class="img_zKyM"></p>
+<ol>
+<li>工具、框架、平台支持   -&gt; 工具覆盖范围的效率点指标 + 问卷</li>
+<li>人力支持 分两部分<!-- -->
+<ol>
+<li>涉及业务数据流的，如开发、测试、质量 -&gt; 和业务指标绑定</li>
+<li>不涉及业务流的，例如排查技术问题 -&gt; 问卷</li>
+</ol>
+</li>
+</ol>
+<h3 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="收益">收益<a href="https://blog.teaho.net/article/teamwork-measure#%E6%94%B6%E7%9B%8A" class="hash-link" aria-label="Direct link to 收益" title="Direct link to 收益">​</a></h3>
+<p>通过实施本方案</p>
+<ol>
+<li>对于技术工具和支撑型团队，能够有一个正循环指标，指导迭代方案</li>
+<li>对于服务目标团队<!-- -->
+<ol>
+<li>能够评估工具给研发提高的效率</li>
+<li>能够激发技术工具团队的积极性，有调研证明，当工作体验提升了也能激发业务研发的主观能动性[6]，间接为业务贡献</li>
+<li>能够用于评估业务研发团队的技术需求效率，例如评估重构效率提升和引入静态代码平台等的效用。</li>
+</ol>
+</li>
+</ol>
+<h3 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="愿景">愿景<a href="https://blog.teaho.net/article/teamwork-measure#%E6%84%BF%E6%99%AF" class="hash-link" aria-label="Direct link to 愿景" title="Direct link to 愿景">​</a></h3>
+<p>希望在算法架构团队或者质量团队所负责的流程中实施，最后经过完善后，推广到整个互部的平台部门。</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="指标备选">指标备选<a href="https://blog.teaho.net/article/teamwork-measure#%E6%8C%87%E6%A0%87%E5%A4%87%E9%80%89" class="hash-link" aria-label="Direct link to 指标备选" title="Direct link to 指标备选">​</a></h2>
+<p>业界有不少公司在做这个事情。比如，google有专门的<a href="https://landing.google.com/engprod/" target="_blank" rel="noopener noreferrer">工程生产力团队</a>，很多公司也有用到一些指标去衡量平台化团队的生产力。</p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="dora">DORA<a href="https://blog.teaho.net/article/teamwork-measure#dora" class="hash-link" aria-label="Direct link to DORA" title="Direct link to DORA">​</a></h3>
+<blockquote>
+<p><a href="https://dora.dev/research/?view=summary" target="_blank" rel="noopener noreferrer">https://dora.dev/research/?view=summary</a></p>
+</blockquote>
+<table><thead><tr><th>指标</th><th></th></tr></thead><tbody><tr><td>部署频率</td><td>将服务更改部署到生产环境的频率</td></tr><tr><td>更改的前置时间</td><td>从第一个提交到部署所需的时间</td></tr><tr><td>恢复服务的时间</td><td>由于生产事故、或者异常中断后重新部署的时间</td></tr><tr><td>更改失败率</td><td>导致失败或需要修复的生产部署的百分比</td></tr></tbody></table>
+<p>经典的<strong>微服务设计</strong>的度量指标，比较适合短平快的成熟团队去使用。目前Netflix公司的技术平台团队使用。
+不足是，我认为更改度量时间，应该改为从分支创建到最终部署所需时间。</p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="devex">DevEx<a href="https://blog.teaho.net/article/teamwork-measure#devex" class="hash-link" aria-label="Direct link to DevEx" title="Direct link to DevEx">​</a></h3>
+<blockquote>
+<p><a href="https://queue.acm.org/detail.cfm?id=3595878&amp;utm_source=the+new+stack&amp;utm_medium=referral&amp;utm_content=inline-mention&amp;utm_campaign=tns+platform" target="_blank" rel="noopener noreferrer">DevEx: What Actually Drives Productivity - ACM Queue</a></p>
+</blockquote>
+<p>DevEx指标称为开发者体验指标。作者是 Abi Noda、Margaret-Anne Storey 博士、Nicole Forsgren 博士、和 Michaela Greiler 博士。
+<strong>Spotify</strong>公司会用到这个指标框架去改进技术团队。
+<img loading="lazy" alt="img.png" src="https://blog.teaho.net/assets/images/DevEx-641e1c834b6af878bf3d4e3c3a8911a7.png" width="810" height="585" class="img_zKyM">
+DevEx重视这三点，反馈回路，流式状态，认知负载。</p>
+<ul>
+<li>反馈回路：有研究表明，技术团队更频繁的交付效率，业务的脱颖而出可能性更高。</li>
+<li>认知负载：软件开发本身是很复杂的，简单一个接口或页面功能下面可能依赖了一些服务。所以要想办法减少开发者上下游认知成本。</li>
+<li>流式状态：研究表明，开发者处于热爱工作的状态，能够交付更高质量的产品。</li>
+</ul>
+<p>基于上面，DevEx提出了这些衡量指标：
+<img loading="lazy" alt="img.png" src="https://blog.teaho.net/assets/images/DevEx_Measure-912ad221e67426c7535a90e2f64dfaea.png" width="1173" height="856" class="img_zKyM"></p>
+<p>总结：DevEx会注重到人的体验，除了迭代，加入了开发者体验的选项。</p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="pmp-metrics">PMP metrics<a href="https://blog.teaho.net/article/teamwork-measure#pmp-metrics" class="hash-link" aria-label="Direct link to PMP metrics" title="Direct link to PMP metrics">​</a></h3>
+<blockquote>
+<p>PMP项目管理指标</p>
+</blockquote>
+<p>首先PMP涵盖很多东西，PMP涵盖的方面包括但不限于：</p>
+<ul>
+<li>完成项目所需的章程、范围管理</li>
+<li>如何交付及准时交付</li>
+<li>成本控制-成本预算、过程中计算挣值和折旧</li>
+<li>质量把控</li>
+<li>团队配置和沟通</li>
+</ul>
+<p>我认为呢，PMP是一套完整的项目管理方法论，但对于仅希望明确技术团队的效率和效益来说，显得太多了。</p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="内部调研">内部调研<a href="https://blog.teaho.net/article/teamwork-measure#%E5%86%85%E9%83%A8%E8%B0%83%E7%A0%94" class="hash-link" aria-label="Direct link to 内部调研" title="Direct link to 内部调研">​</a></h3>
+<p>调研了公司信息技术部的做法，这里不放出来。</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="指标决策">指标决策<a href="https://blog.teaho.net/article/teamwork-measure#%E6%8C%87%E6%A0%87%E5%86%B3%E7%AD%96" class="hash-link" aria-label="Direct link to 指标决策" title="Direct link to 指标决策">​</a></h2>
+<table><thead><tr><th></th><th>DORA</th><th>DevEx</th><th>PMP metric</th><th>内部调研</th><th>汇总</th></tr></thead><tbody><tr><td>开发成本</td><td>低</td><td>中</td><td>高</td><td>低</td><td>1、4</td></tr><tr><td>可维护性</td><td>偏高</td><td>偏高</td><td>低</td><td>高</td><td>1、2、3、4</td></tr><tr><td>业务适配度</td><td>高</td><td>偏高</td><td>低</td><td>中</td><td>1</td></tr><tr><td>迁移成本</td><td>低</td><td>中</td><td>巨大</td><td>中</td><td>1、4</td></tr></tbody></table>
+<p>看中业务适配度、迁移成本、开发成本。
+方案考虑1、4。
+可考虑融合1、4方案。</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="实施">实施<a href="https://blog.teaho.net/article/teamwork-measure#%E5%AE%9E%E6%96%BD" class="hash-link" aria-label="Direct link to 实施" title="Direct link to 实施">​</a></h2>
+<p>基于Dora指标体系去做，按照每个Q去统计，并且同环比对比。数据记录在Iceberg，最终通过内部大数据看板展示。</p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="指标的解释和完善">指标的解释和完善<a href="https://blog.teaho.net/article/teamwork-measure#%E6%8C%87%E6%A0%87%E7%9A%84%E8%A7%A3%E9%87%8A%E5%92%8C%E5%AE%8C%E5%96%84" class="hash-link" aria-label="Direct link to 指标的解释和完善" title="Direct link to 指标的解释和完善">​</a></h3>
+<table><thead><tr><th>指标</th><th>阐释</th></tr></thead><tbody><tr><td>部署频率</td><td>将服务更改部署到生产环境的频率</td></tr><tr><td>更改的前置时间</td><td>从第一个提交到部署所需的时间</td></tr><tr><td>恢复服务的时间</td><td>由于生产事故、或者异常中断后重新部署的时间</td></tr><tr><td>更改失败率</td><td>导致失败或需要修复的生产部署的百分比</td></tr></tbody></table>
+<p><strong>如何收集：</strong></p>
+<p><img loading="lazy" alt="img.png" src="https://blog.teaho.net/assets/images/indicator_collecting-1fc517d536929fb0f990446500f9cb54.png" width="2742" height="560" class="img_zKyM"></p>
+<ol>
+<li>部署频率（次数）<!-- -->
+<ol>
+<li>收集服务的上下线的数据。（Matrix可能在数据工场有数据，部署平台需要看下）</li>
+</ol>
+</li>
+<li>更改的前置时间<!-- -->
+<ol>
+<li>时间 = 通过merge request时间点 - git命令获取分支创建的时间</li>
+</ol>
+</li>
+<li>服务恢复时间<!-- -->
+<ol>
+<li>收集事故复盘</li>
+<li>收集回滚后，第二次上线的时间间隔</li>
+</ol>
+</li>
+<li>更改失败率<!-- -->
+<ol>
+<li>收集回滚次数</li>
+</ol>
+</li>
+</ol>
+<p>One more thing：调研AI报告，生成AI监控看板（<a href="https://www.toolify.ai/zh/category/ai-monitor-report-builder%EF%BC%89" target="_blank" rel="noopener noreferrer">https://www.toolify.ai/zh/category/ai-monitor-report-builder）</a></p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="问卷">问卷<a href="https://blog.teaho.net/article/teamwork-measure#%E9%97%AE%E5%8D%B7" class="hash-link" aria-label="Direct link to 问卷" title="Direct link to 问卷">​</a></h2>
+<p>这里不放出来。</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="referecne">Referecne<a href="https://blog.teaho.net/article/teamwork-measure#referecne" class="hash-link" aria-label="Direct link to Referecne" title="Direct link to Referecne">​</a></h2>
+<p>[1]<a href="https://landing.google.com/engprod/" target="_blank" rel="noopener noreferrer">https://landing.google.com/engprod/</a> google工程生产力团队<br>
+<!-- -->[2]<a href="https://dora.dev/research/?view=summary" target="_blank" rel="noopener noreferrer">https://dora.dev/research/?view=summary</a> DORA模型<br>
+<!-- -->[3]<a href="https://microservices.io/articles/glossary" target="_blank" rel="noopener noreferrer">https://microservices.io/articles/glossary</a><br>
+<!-- -->[4]Andrew Stellman.深入浅出PMP[M].中国:东南大学出版社 线上阅读<br>
+<!-- -->[5]<a href="https://queue.acm.org/detail.cfm?id=3595878&amp;utm_source=the+new+stack&amp;utm_medium=referral&amp;utm_content=inline-mention&amp;utm_campaign=tns+platform" target="_blank" rel="noopener noreferrer">https://queue.acm.org/detail.cfm?id=3595878&amp;utm_source=the+new+stack&amp;utm_medium=referral&amp;utm_content=inline-mention&amp;utm_campaign=tns+platform</a><br>
+<!-- -->[6]<a href="https://www.sciencedirect.com/science/article/pii/S0164121218300323?via%3Dihub" target="_blank" rel="noopener noreferrer">https://www.sciencedirect.com/science/article/pii/S0164121218300323?via%3Dihub</a></p>]]></content:encoded>
+            <category>work</category>
+            <category>measure</category>
+        </item>
         <item>
             <title><![CDATA[茅台2023财报速读]]></title>
             <link>https://blog.teaho.net/article/maotai2023sudu</link>
@@ -130,6 +289,64 @@
             <category>statement</category>
         </item>
         <item>
+            <title><![CDATA[中国的房市是怎么运转的？]]></title>
+            <link>https://blog.teaho.net/article/house-market</link>
+            <guid>https://blog.teaho.net/article/house-market</guid>
+            <pubDate>Wed, 04 Dec 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[中国的房市是怎么运转的？]]></description>
+            <content:encoded><![CDATA[<blockquote>
+<p>读《置身事内》总结</p>
+</blockquote>
+<br>
+<h2 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="简介">简介<a href="https://blog.teaho.net/article/house-market#%E7%AE%80%E4%BB%8B" class="hash-link" aria-label="Direct link to 简介" title="Direct link to 简介">​</a></h2>
+<p>看本书之前，我想探讨的问题是：中国的房子怎么来的？如何衡量房价高低？<br>
+<!-- -->第一个问题可以凭理解和以往知识输出。而第二个问题，我查了查网上资料，发现世上顶尖的房地产投资者们没有准确答案（难怪曼昆老师不怎么写）。</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="中国房地产市场图解">中国房地产市场图解<a href="https://blog.teaho.net/article/house-market#%E4%B8%AD%E5%9B%BD%E6%88%BF%E5%9C%B0%E4%BA%A7%E5%B8%82%E5%9C%BA%E5%9B%BE%E8%A7%A3" class="hash-link" aria-label="Direct link to 中国房地产市场图解" title="Direct link to 中国房地产市场图解">​</a></h2>
+<p><img loading="lazy" alt="img.png" src="https://blog.teaho.net/assets/images/house_market-8f02dc1d797421dca537e64bb0f948d4.png" width="2980" height="1748" class="img_zKyM">
+按照我的理解，大致画了下。</p>
+<ul>
+<li>从左往右看，这就是土地从收编、出让、走入百姓家和影响经济的全过程。</li>
+<li>从上往下看，就是各权衡方的操作。</li>
+<li>整体看，这就“土地财政”的 <strong>资本闭环</strong>。</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="房价">房价<a href="https://blog.teaho.net/article/house-market#%E6%88%BF%E4%BB%B7" class="hash-link" aria-label="Direct link to 房价" title="Direct link to 房价">​</a></h2>
+<h3 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="房地产市场特点">房地产市场特点<a href="https://blog.teaho.net/article/house-market#%E6%88%BF%E5%9C%B0%E4%BA%A7%E5%B8%82%E5%9C%BA%E7%89%B9%E7%82%B9" class="hash-link" aria-label="Direct link to 房地产市场特点" title="Direct link to 房地产市场特点">​</a></h3>
+<ol>
+<li>刚需：人们的基本需求，比如稳定居住点、结婚、落户、孩子上学等。</li>
+<li>投资品</li>
+<li>信用：前两个因素共同决定了房产是一个占经济GDP比重高的一个产业，我国住房消费占居民消费支出比重长期维持在20%以上。那么其关联的借贷信用体系（见第一节图）可谓庞大。</li>
+<li>关联产业多：上中下游产业，“七通一平”，钢筋水泥，施工装备，软硬装，日常家具设施。</li>
+</ol>
+<h3 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="因素分析">因素分析<a href="https://blog.teaho.net/article/house-market#%E5%9B%A0%E7%B4%A0%E5%88%86%E6%9E%90" class="hash-link" aria-label="Direct link to 因素分析" title="Direct link to 因素分析">​</a></h3>
+<ol>
+<li>人口  从供需角度，人口影响着土地需求。</li>
+<li>经济（收入）经济好坏影响收入多少和人们购房期望。</li>
+<li>政策<!-- -->
+<ol>
+<li>利率</li>
+<li>土地供应及建设准入</li>
+</ol>
+</li>
+</ol>
+<p>以上三点是我认为影响房产的因素，但只抛砖引玉，暂无法证伪。</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="额外后记">额外后记<a href="https://blog.teaho.net/article/house-market#%E9%A2%9D%E5%A4%96%E5%90%8E%E8%AE%B0" class="hash-link" aria-label="Direct link to 额外后记" title="Direct link to 额外后记">​</a></h2>
+<p>1、
+这本书当然不仅说了土地财政。我认为重点有两个：</p>
+<ol>
+<li>中央政府与地方政府：汇报关系与权力划分、大小权衡、分税制。这是百年前钱穆先生放在首位分析的事情，钱穆的方法论是分析这几方面：政府组织，科举，赋税，经济，国防兵役。</li>
+<li>中国以往推动经济模式。经济结构重投资、重生产、轻<strong>消费</strong>。</li>
+</ol>
+<p>2、
+之前在网上看到一篇这样的博客文章<a href="https://houbb.github.io/2025/02/09/5min-read-books-014-zhishenshinei%EF%BC%8C%E5%8F%91%E7%8E%B0%E6%9C%89%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BD%9C%E8%80%85%E9%80%9A%E8%BF%87%E4%B8%80%E4%B8%AA%E7%BB%9F%E4%B8%80%E7%9A%84%E6%A1%86%E6%9E%B6%EF%BC%8C%E7%94%9F%E6%88%90%E4%BA%86%E3%80%8A%E7%BD%AE%E8%BA%AB%E4%BA%8B%E5%86%85%E3%80%8B%E7%9A%84%E6%80%BB%E7%BB%93%E3%80%82%E8%AF%B4%E5%AE%9E%E8%AF%9D%E6%9C%89%E7%82%B9%E5%B0%8F%E8%A7%A6%E5%8A%A8%EF%BC%8C%E5%80%92%E4%B8%8D%E6%98%AF%E4%B8%BA%E5%8F%AF%E8%83%BD%E4%BB%A5%E4%B8%8A%E6%88%91%E5%86%99%E7%9A%84%E9%83%BD%E8%83%BD%E5%A4%9FAI%E7%94%9F%E6%88%90%E8%80%8C%E6%84%9F%EF%BC%8C%E8%80%8C%E6%98%AF%E5%8F%91%E7%8E%B0%E5%A6%82%E6%9E%9C%E4%B8%8D%E5%9C%A8%E4%B9%8E%E8%BE%93%E5%85%A5%EF%BC%8C%E7%8E%B0%E5%9C%A8%E9%80%9A%E8%BF%87%E8%BF%99%E7%A7%8D%E7%94%9F%E6%88%90%E6%96%B9%E5%BC%8F%E7%BB%8F%E8%90%A5%E8%87%AA%E5%AA%92%E4%BD%93%E7%9A%84%E6%88%90%E6%9C%AC%E7%A1%AE%E5%AE%9E%E4%BD%8E%EF%BC%8C%E4%BC%B0%E8%AE%A1%E5%8F%AA%E8%A6%81%E6%AF%8F%E5%A4%A915%E5%88%86%E9%92%9F%EF%BC%885%E5%88%86%E9%92%9F%E7%94%9F%E6%88%9010%E5%88%86%E9%92%9F%E6%B6%A6%E9%A5%B0%EF%BC%89%E5%B0%B1%E8%83%BD%E7%BB%8F%E8%90%A5%E4%B8%80%E4%B8%AA%E8%87%AA%E5%AA%92%E4%BD%93%E5%8F%B7%E4%BA%86%E3%80%82" target="_blank" rel="noopener noreferrer">https://houbb.github.io/2025/02/09/5min-read-books-014-zhishenshinei，发现有公众号作者通过一个统一的框架，生成了《置身事内》的总结。说实话有点小触动，倒不是为可能以上我写的都能够AI生成而感，而是发现如果不在乎输入，现在通过这种生成方式经营自媒体的成本确实低，估计只要每天15分钟（5分钟生成10分钟润饰）就能经营一个自媒体号了。</a></p>
+<p>3、
+<img loading="lazy" alt="img.png" src="https://blog.teaho.net/assets/images/img-a8109683efb321af7f4f6bc1fb64a1ab.png" width="860" height="193" class="img_zKyM">
+查资料时想到deepseek这服务器资源问题都几周了，联想到一个有意思的事，服务可用性这一被研发工程师奉之圭臬的红线问题，某个时刻真的这么重要么？
+每个时代每个时刻变量如牛毛，只能稍稍筛选以为重要的。或许到最后又只得出结论，但建好事，莫问前程了。</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="reference">reference<a href="https://blog.teaho.net/article/house-market#reference" class="hash-link" aria-label="Direct link to reference" title="Direct link to reference">​</a></h2>
+<p>[1]兰小欢.置身事内[M].中国:上海人民出版社, 2021</p>]]></content:encoded>
+            <category>travel</category>
+        </item>
+        <item>
             <title><![CDATA[欧洲旅游疑问集]]></title>
             <link>https://blog.teaho.net/article/europe</link>
             <guid>https://blog.teaho.net/article/europe</guid>
@@ -152,7 +369,7 @@
 <p>一般分为古希腊时期、罗马时期、中世纪（哥特式、拜占庭式）、文艺复兴、巴洛克和洛可可风格、
 18世纪的古典复兴、新艺术风格、现年的未来主义。因为一些建筑我没有途径或者现实较常见，
 所以在图中没有提及一些重要分支：工艺风格、现代主义等。</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="筷子成为主流的历史">筷子成为主流的历史<a href="https://blog.teaho.net/article/europe#%E7%AD%B7%E5%AD%90%E6%88%90%E4%B8%BA%E4%B8%BB%E6%B5%81%E7%9A%84%E5%8E%86%E5%8F%B2" class="hash-link" aria-label="Direct link to 筷子成为主流的历�史" title="Direct link to 筷子成为主流的历史">​</a></h2>
+<h2 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="筷子成为主流的历史">筷子成为主流的历史<a href="https://blog.teaho.net/article/europe#%E7%AD%B7%E5%AD%90%E6%88%90%E4%B8%BA%E4%B8%BB%E6%B5%81%E7%9A%84%E5%8E%86%E5%8F%B2" class="hash-link" aria-label="Direct link to 筷子成为主流的历史" title="Direct link to 筷子成为主流的历史">​</a></h2>
 <p>搜集资料时，我重点关注回答这三个问题</p>
 <ol>
 <li>筷子餐具文化圈的分布范围。</li>
@@ -239,7 +456,7 @@
 <blockquote>
 <p>基于0.5.0版本</p>
 </blockquote>
-<h2 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="简介">简介<a href="https://blog.teaho.net/article/thrift-rpc#%E7%AE%80%EF%BF%BD%EF%BF%BD%E4%BB%8B" class="hash-link" aria-label="Direct link to 简介" title="Direct link to 简介">​</a></h2>
+<h2 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="简介">简介<a href="https://blog.teaho.net/article/thrift-rpc#%E7%AE%80%E4%BB%8B" class="hash-link" aria-label="Direct link to 简介" title="Direct link to 简介">​</a></h2>
 <p>Thrift作为一种接口定义语言（IDL）和二进制通信协议被应用在程序设计的服务创建和定义中，我们更常见称呼Thrift为RPC框架。
 在使用Thrift中，我认为Thrift有如下特点：</p>
 <ol>
@@ -585,7 +802,7 @@ Sentinel经历过很多公司的线上大流量验证，我们也能在其中看
             <description><![CDATA[JEP 261:Module System(模块系统)]]></description>
             <content:encoded><![CDATA[<p>分析JEP 261: Module System(模块系统)。</p>
 <br>
-<h3 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="一个java文件的执行周期">一个java文件的执行周期<a href="https://blog.teaho.net/article/java-modular#%E4%B8%80%E4%B8%AAjava%E6%96%87%E4%BB%B6%E7%9A%84%E6%89%A7%EF%BF%BD%EF%BF%BD%E8%A1%8C%E5%91%A8%E6%9C%9F" class="hash-link" aria-label="Direct link to 一个java文件的执行周期" title="Direct link to 一个java文件的执行周期">​</a></h3>
+<h3 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="一个java文件的执行周期">一个java文件的执行周期<a href="https://blog.teaho.net/article/java-modular#%E4%B8%80%E4%B8%AAjava%E6%96%87%E4%BB%B6%E7%9A%84%E6%89%A7%E8%A1%8C%E5%91%A8%E6%9C%9F" class="hash-link" aria-label="Direct link to 一个java文件的执行周期" title="Direct link to 一个java文件的执行周期">​</a></h3>
 <p>在设计模块化时，JDK的开发者们为Java在编译期和运行期之间引入了一个新的phase--链接期。这是一个可选的phase。</p>
 <p><img loading="lazy" alt="modular_phase.jpg" src="data:image/jpeg;base64,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9Ty+7AA1pC1Dx3H9X3PU8vuw8dx/V9z1PL7sADWkLUPHKFnus1Vy4s/MnxXIRr960EkvvMSFPTz5M9u6umEscAR+CRN4lKaUotFOLUXNv6GZERGZERnzmZ8wBddEYaGJlq1P9XwXdnv6dxx4upKmrY95YwAB6crQAAAAAAAAAAAAAAA1LlOD3+NW827xOrVa1Fi8qVJrWFJTIiyFnq66zvmSXELMzWpGpKJRqNO9vbpAGupTVRZM68HiqmFqZw7+DT5MgDyIknuu4xl6FF508VrJWh/1SwZH9xmPzjI30by/snae7gAq8z2apprMcZG+jeX9k7T3cOMjfRvL+ydp7uABcydNDjI30by/snae7hxkb6N5f2TtPdwALmNNDjI30by/snae7hxkb6N5f2TtPdwALmNNDjI30by/snae7hxkb6N5f2TtPdwALmNNDjI30by/snae7hxkb6N5f2TtPdwALmNNDjI30by/snae7hxkb6N5f2TtPdwALmNNGTEj5jlKvAcYxuwr0ucy7O4hriMxy/7iZdJLzqvmSSSSZlzqSNs4xi1VilDEoK9o1tRUnq46RG484pRrcdWfpUtalKP+KjABYYemkr+9nlulMVUnUdDlGL9/zZ//2Q==" width="571" height="72" class="img_zKyM"></p>
 <h3 class="anchor anchorWithHideOnScrollNavbar_wgfK" id="模块化的使用">模块化的使用<a href="https://blog.teaho.net/article/java-modular#%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9A%84%E4%BD%BF%E7%94%A8" class="hash-link" aria-label="Direct link to 模块化的使用" title="Direct link to 模块化的使用">​</a></h3>

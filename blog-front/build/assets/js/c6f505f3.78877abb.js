@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[8151],{69055:e=>{e.exports=JSON.parse('{"permalink":"/tags/drink","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"test","blogTitle":"Blog"}')}}]);
