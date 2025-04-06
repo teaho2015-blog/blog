@@ -145,6 +145,93 @@ ES作为搜索引擎，密锣紧鼓的网罗了业界各类流行搜索能力。
 ## 执行源码分析
 
 
+### HNSW
+
+ANN 方法常见数据结构实现有：1. 倒排数组，例如IVF 2. 树 3. 哈希，比如LSH，4. 图，例如HNSW。
+
+说说它的结构定义和寻找方式。HNSW--分层的可导航小世界（Hierarchical Navigable Small World），是一种基于图的结构，
+将点分成多层，然后贪婪地遍历局部最近似值，切换到下一层，以上一层的局部点为始发点开始遍历，直到遍历完最低层。
+
+![img_2.png](img_2.png)
+网上很多资料提到了跳表（1990s），没错看着像跳表。
+![img_3.png](img_3.png)
+HNSW论文（2016）也提到这一点：
+> Hierarchical NSW algorithm can be seen as an extension of the probabilistic skip list structure [27] with proximity graphs instead of the linked lists.
+
+HNSW算法是一种跳表的拓展，它采用了类似跳表的分层实现，但是分层使用的不是链表而是相似图。
+
+
+### Lucene源码解读
+> Lucene 10.x分支版本
+
+拉https://github.com/apache/lucene/tree/main的lucene/demo文件夹里的demo跑一下：
+~~~
+public class TestKnnVectorDict extends LuceneTestCase {
+
+  public void testBuild() throws IOException {
+    Path testVectors = getDataPath("../test-files/knn-dict").resolve("knn-token-vectors");
+    
+    try (Directory directory = newDirectory()) {
+      KnnVectorDict.build(testVectors, directory, "dict");
+      //lucene的实现：KnnVectorDict
+      try (KnnVectorDict dict = new KnnVectorDict(directory, "dict")) {
+        assertEquals(50, dict.getDimension());
+        byte[] vector = new byte[dict.getDimension() * Float.BYTES];
+
+        // not found token has zero vector
+        dict.get(new BytesRef("never saw this token"), vector);
+        assertArrayEquals(new byte[200], vector);
+
+        // found token has nonzero vector
+        dict.get(new BytesRef("the"), vector);
+        assertFalse(Arrays.equals(new byte[200], vector));
+
+        // incorrect dimension for output buffer
+        expectThrows(
+            IllegalArgumentException.class, () -> dict.get(new BytesRef("the"), new byte[10]));
+      }
+    }
+  }
+}
+~~~
+
+内存存储：
+~~~~
+// 省略了其他一些字段
+public final class OnHeapHnswGraph extends HnswGraph implements Accountable {
+
+  // ...
+  private final AtomicReference<EntryNode> entryNode; // 表示了HNSW中整个索引的entryPoint
+
+   // the internal graph representation where the first dimension is node id and second dimension is
+  // level
+  // e.g. graph[1][2] is all the neighbours of node 1 at level 2
+  // 索引中节点的邻接信息
+  private NeighborArray[][] graph;
+
+  OnHeapHnswGraph(int M, int numNodes) {
+    this.entryNode = new AtomicReference<>(new EntryNode(-1, 1));
+    // Neighbours' size on upper levels (nsize) and level 0 (nsize0)
+    // We allocate extra space for neighbours, but then prune them to keep allowed maximum
+    this.nsize = M + 1;
+    this.nsize0 = (M * 2 + 1);
+    noGrowth = numNodes != -1;
+    if (noGrowth == false) {
+      numNodes = INIT_SIZE;
+    }
+    this.graph = new NeighborArray[numNodes][];
+  }
+}
+~~~~
+
+文件存储：  
+向量相关的索引文件涉及四种
+- *.vec 存储原始向量
+- *.vemf 原始向量的meta文件
+- *.vex 向量索引文件, Lucene中目前用的HNSW索引
+- *.vem 向量索引文件的meta文件
+
+向量相关的文件写入（flush）是由`Lucene99HnswVectorsWriter.flush`实现的
 
 ## Reference
 
@@ -152,6 +239,8 @@ ES作为搜索引擎，密锣紧鼓的网罗了业界各类流行搜索能力。
 [2]knn-search：https://www.elastic.co/guide/en/elasticsearch/reference/current/knn-search.html  
 [3]Introducing approximate nearest neighbor search in Elasticsearch 8.0  
 [4]HNSW论文：https://arxiv.org/abs/1603.09320  
+[5][Faiss: The Missing Manual | HNSW](https://www.pinecone.io/learn/series/faiss/hnsw/)  
+[6][向量数据库|guanzhengli](https://guangzhengli.com/blog/zh/vector-database/?continueFlag=97da1d8cf844333ce468d7478355837e#%E7%9B%B8%E4%BC%BC%E6%80%A7%E6%90%9C%E7%B4%A2-similarity-search)
 
 
 
