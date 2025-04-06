@@ -4,6 +4,7 @@ const sidebars: SidebarsConfig = {
   'ai-arch': [
     'ai-arch/introduction',
     'ai-arch/cpp/cpp',
+    'ai-arch/gpu/head-first-gpu',
     {
       label: '算法',
       type: 'category',
@@ -14,7 +15,6 @@ const sidebars: SidebarsConfig = {
       items: [
         'ai-arch/alg/dl-base',
         'ai-arch/alg/transformer',
-
 
       ],
     },
