@@ -13,6 +13,15 @@ const sidebars: SidebarsConfig = {
 
       ],
     },
+    {
+      label: 'Elasticsearch',
+      type: 'category',
+      items: [
+        'ai-arch/elasticsearch/es-deploy',
+        'ai-arch/elasticsearch/es-search-phase',
+        'ai-arch/elasticsearch/es-knn',
+      ],
+    },
     'ai-arch/gpu/head-first-gpu',
     {
       label: '算法',
