@@ -4,6 +4,15 @@ const sidebars: SidebarsConfig = {
   'ai-arch': [
     'ai-arch/introduction',
     'ai-arch/cpp/cpp',
+    {
+      label: 'Consul',
+      type: 'category',
+      items: [
+        'ai-arch/consul/consul-deploy',
+        'ai-arch/consul/consul-feature',
+
+      ],
+    },
     'ai-arch/gpu/head-first-gpu',
     {
       label: '算法',
