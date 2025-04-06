@@ -5,6 +5,16 @@ const sidebars: SidebarsConfig = {
     'ai-arch/introduction',
     'ai-arch/cpp/cpp',
     {
+      label: 'Consul',
+      type: 'category',
+      items: [
+        'ai-arch/consul/consul-deploy',
+        'ai-arch/consul/consul-feature',
+
+      ],
+    },
+    'ai-arch/gpu/head-first-gpu',
+    {
       label: '算法',
       type: 'category',
       // link: {
@@ -14,7 +24,6 @@ const sidebars: SidebarsConfig = {
       items: [
         'ai-arch/alg/dl-base',
         'ai-arch/alg/transformer',
-
 
       ],
     },
