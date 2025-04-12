@@ -1,7 +1,7 @@
 ---
 id: rag-application
 slug: /ai-arch/llm/rag-application
-title: RAG应用探索
+title: RAG应用探索和最佳实践论文解读
 date: 2025-01-07
 ---
 
