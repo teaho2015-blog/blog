@@ -69,6 +69,9 @@ const sidebars: SidebarsConfig = {
   babel: [
     'babel/introduction',
   ],
+  'sys-arch': [
+    'sys-arch/introduction',
+  ],
   tools: [
     {
       label: 'test',
