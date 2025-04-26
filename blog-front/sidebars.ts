@@ -71,7 +71,9 @@ const sidebars: SidebarsConfig = {
   ],
   'sys-arch': [
     'sys-arch/introduction',
-    'sys-arch/sec-kill-sys/sec-kill-sys'
+    'sys-arch/sec-kill-sys/sec-kill-sys',
+    'sys-arch/arch-principle/arch-principle',
+    'sys-arch/ad-sys/ad-sys',
   ],
   tools: [
     {
