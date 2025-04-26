@@ -1,0 +1,50 @@
+<mxfile host="Electron" modified="2025-04-26T15:40:46.539Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.5.3 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="c2EtwCikb2c0OvSpPRFp" version="24.5.3" type="device">
+  <diagram name="第 1 页" id="UTmuEIIPwEpaWWoLTp9q">
+    <mxGraphModel dx="1384" dy="843" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0x0X9MrY92VBey7jS3oq-2" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="70" y="480" as="sourcePoint" />
+            <mxPoint x="760" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0x0X9MrY92VBey7jS3oq-1" value="预约期" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="460" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0x0X9MrY92VBey7jS3oq-3" value="等待秒杀（可选）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="460" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0x0X9MrY92VBey7jS3oq-5" value="秒杀期" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="460" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0x0X9MrY92VBey7jS3oq-6" value="预约和秒杀活动" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="380" y="510" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0x0X9MrY92VBey7jS3oq-7" value="商详页" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="350" width="85" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0x0X9MrY92VBey7jS3oq-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.541;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="0x0X9MrY92VBey7jS3oq-7" target="0x0X9MrY92VBey7jS3oq-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0x0X9MrY92VBey7jS3oq-9" value="获取预约详细信息&lt;br&gt;用户添加预约资格" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="0x0X9MrY92VBey7jS3oq-8">
+          <mxGeometry x="-0.3475" y="4" relative="1" as="geometry">
+            <mxPoint x="54" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0x0X9MrY92VBey7jS3oq-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0x0X9MrY92VBey7jS3oq-10" target="0x0X9MrY92VBey7jS3oq-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0x0X9MrY92VBey7jS3oq-12" value="检验用户预约资格" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="0x0X9MrY92VBey7jS3oq-11">
+          <mxGeometry x="0.0857" relative="1" as="geometry">
+            <mxPoint x="55" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0x0X9MrY92VBey7jS3oq-10" value="结算页" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="572.5" y="350" width="85" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
