@@ -195,6 +195,53 @@ public class TestKnnVectorDict extends LuceneTestCase {
 }
 ~~~
 
+#### 写流程分析
+
+
+![img_4.png](write_process.png)
+
+从我的代码可看出，索引写入一般分三步：
+1. 初始化
+2. 添加文档
+3. 写入索引
+
+##### IndexWriterConfig
+IndexWriterConfig囊括了IndexWriter的所有配置。
+- Analyzer 分词器 一般我们根据使用场景，在索引上会定义不同的分词器。
+- Similarity 搜索很重要的一点就是计算搜到的数据的相关度。Similarity是相关度算法的抽象接口，Lucene默认实现了TF-IDF和BM25算法。
+  > Similarity defines the components of Lucene scoring.
+- maxBufferedDocs
+- ramBufferSizeMB
+- IndexReaderWarmer
+- IndexDeletionPolicy
+- IndexCommit
+- OpenMode
+- createdVersionMajor
+- MergeScheduler
+- Codec
+- InfoStream
+- MergePolicy
+- readerPooling
+- FlushPolicy
+- perThreadHardLimitMB
+- useCompoundFile
+- commitOnClose
+- indexSort
+- leafSorter
+- indexSortFields
+- parentField
+- checkPendingFlushOnUpdate
+- softDeletesField
+- maxFullFlushMergeWaitMillis
+- IndexWriterEventListener
+
+##### 总结
+
+一张图总结下写入流程：
+![img_4.png](write_data_process.png)
+
+#### 数据存储分析
+
 内存存储：
 ~~~~
 // 省略了其他一些字段
@@ -225,7 +272,8 @@ public final class OnHeapHnswGraph extends HnswGraph implements Accountable {
 ~~~~
 
 文件存储：  
-向量相关的索引文件涉及四种
+相关数据存储在segments_N（N：int数字）文件里。  
+向量相关的索引文件涉及四种: 
 - *.vec 存储原始向量
 - *.vemf 原始向量的meta文件
 - *.vex 向量索引文件, Lucene中目前用的HNSW索引
