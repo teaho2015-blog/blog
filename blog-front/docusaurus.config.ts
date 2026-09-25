@@ -63,7 +63,7 @@ const config: Config = {
             { label: '算法架构和人工智能', to: 'docs/ai-arch' },
             { label: '架构设计', to: '/docs/sys-arch' },
             { label: '容器和Kubernetes', to: '/docs/k8s' },
-            { label: 'Apollo配置中心原理解读', to: '/docs/apollo' },
+            { label: 'Apollo原理剖析', to: '/docs/apollo' },
           ],
         },
         {

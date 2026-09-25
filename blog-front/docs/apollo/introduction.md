@@ -7,7 +7,7 @@ date: 2026-01-15
 
 ## 关于本系列
 
-本系列文章从部署架构、基础包模块、 Portal/Config/Admin 三大服务的核心流程、 Client 端 SPI 与 Spring 集成等维度，对 Apollo 配置中心做一次自下而上的源码级拆解。文中所有结论均基于 Apollo 官方源码与实际部署经验整理。
+本系列文章从部署架构、基础包模块、Portal/Config/Admin 三大服务的核心流程、Client 端 SPI 与 Spring 集成等维度，对 Apollo 配置中心做一次自下而上的源码级拆解。文中所有结论均基于 Apollo 官方源码与实际部署经验整理。
 
 ## 适用读者
 
