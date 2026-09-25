@@ -75,6 +75,21 @@ const sidebars: SidebarsConfig = {
     'sys-arch/arch-principle/arch-principle',
     'sys-arch/ad-sys/ad-sys',
   ],
+  'apollo': [
+    'apollo/introduction',
+    'apollo/deployment-architecture',
+    'apollo/base-package-modules',
+    'apollo/portal-config-management',
+    'apollo/portal-config-update-flow',
+    'apollo/portal-openapi',
+    'apollo/admin-publish-flow',
+    'apollo/client-config-notification',
+    'apollo/gray-publish',
+    'apollo/java-client-priority',
+    'apollo/springboot-init',
+    'apollo/spi-and-client-config',
+    'apollo/config-principle',
+  ],
   tools: [
     {
       label: 'test',
